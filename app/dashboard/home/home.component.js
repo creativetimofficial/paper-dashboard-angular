@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// import initDemo = require('../../../assets/js/charts.js');
+var initDemo = require('../../../assets/js/initCharts.js');
 var HomeComponent = (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.ngOnInit = function () {
-        // initDemo();
+        initDemo();
     };
     HomeComponent = __decorate([
         core_1.Component({

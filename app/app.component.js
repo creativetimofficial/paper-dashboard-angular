@@ -13,7 +13,7 @@ var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent.prototype.ngOnInit = function () {
-        // $.getScript('../assets/js/material-dashboard.js');
+        // $.getScript('../assets/js/demo.js');
     };
     AppComponent = __decorate([
         core_1.Component({
