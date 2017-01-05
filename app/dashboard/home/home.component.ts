@@ -1,5 +1,6 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import initDemo = require('../../../assets/js/initCharts.js');
+import initNotify = require('../../../assets/js/initNotify.js');
 
 @Component({
     selector: 'home-cmp',
@@ -184,5 +185,6 @@ import initDemo = require('../../../assets/js/initCharts.js');
 export class HomeComponent implements OnInit{
     ngOnInit(){
         initDemo();
+        initNotify();
     }
 }

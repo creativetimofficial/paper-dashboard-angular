@@ -24,6 +24,7 @@
 	float: left;
 	position: relative;
 	text-align: left;
+
 }
 .icon-container [class^="ti-"],
 .icon-container [class*=" ti-"] {
@@ -31,6 +32,7 @@
 	position: absolute;
 	margin-top: 3px;
 	transition: .3s;
+    font-size: 1.2em;
 }
 .icon-container:hover [class^="ti-"],
 .icon-container:hover [class*=" ti-"] {

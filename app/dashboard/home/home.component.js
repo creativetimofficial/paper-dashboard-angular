@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var initDemo = require('../../../assets/js/initCharts.js');
+var initNotify = require('../../../assets/js/initNotify.js');
 var HomeComponent = (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.ngOnInit = function () {
         initDemo();
+        initNotify();
     };
     HomeComponent = __decorate([
         core_1.Component({

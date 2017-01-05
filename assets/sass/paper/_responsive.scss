@@ -1,4 +1,7 @@
 @media (min-width: 992px){
+    .close-layer{
+        display: none;
+    }
     .navbar{
         min-height: 75px;
     }
@@ -127,14 +130,33 @@
         position: relative;
         display: block;
     }
+    .close-layer{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        opacity: 0;
+        display: block;
+        top: 0;
+        right: 0px;
+        content: "";
+        z-index: 1030;
+        overflow-x: hidden;
+        background: transparent;
 
-    .off-canvas-sidebar {
+        @include transition($slow-transition-time, $transition-ease-in);
+        &.visible{
+            opacity: 1;
+        }
+    }
+    .off-canvas-sidebar,
+    .sidebar {
         position: fixed;
         display: block;
         top: 0;
         height: 100%;
         width: 230px;
         right: 0;
+        left: auto;
         z-index: 1032;
         visibility: visible;
         background-color: #999;
@@ -149,6 +171,7 @@
 
         .sidebar-wrapper {
             position: relative;
+            width: 230px;
             z-index: 3;
             overflow-y: scroll;
             height: 100%;

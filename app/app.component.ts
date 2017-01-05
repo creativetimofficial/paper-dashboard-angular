@@ -10,6 +10,6 @@ declare var $:any;
 
 export class AppComponent implements OnInit{
     ngOnInit(){
-        // $.getScript('../assets/js/demo.js');
+        $.getScript('../assets/js/paper-dashboard.js');
     }
 }
