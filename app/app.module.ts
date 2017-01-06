@@ -24,4 +24,3 @@ import { NavbarModule} from './shared/navbar/navbar.module';
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
-//sad
