@@ -304,9 +304,22 @@ hr {
   padding: 4px 0px;
   display: block;
   font-size: 18px;
-  text-align: center;
+  text-align: left;
   font-weight: 400;
   line-height: 30px;
+}
+.sidebar .logo-img,
+.off-canvas-sidebar .logo-img {
+  width: 30px;
+  display: inline-block;
+  max-height: 30px;
+  margin-right: 10px;
+}
+.sidebar .logo-img img,
+.off-canvas-sidebar .logo-img img {
+  width: 40px;
+  top: 14px;
+  position: absolute;
 }
 .sidebar .nav,
 .off-canvas-sidebar .nav {
