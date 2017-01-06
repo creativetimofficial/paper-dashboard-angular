@@ -55,12 +55,23 @@
             padding: $padding-small-vertical $padding-zero;
             display: block;
             font-size: $font-size-large;
-            text-align: center;
+            text-align: left;
             font-weight: $font-weight-normal;
             line-height: 30px;
         }
     }
+    .logo-img{
+        width: 30px;
+        display: inline-block;
+        max-height: 30px;
+        margin-right: 10px;
 
+        img{
+            width: 40px;
+            top: 14px;
+            position: absolute;
+        }
+    }
     .nav{
         margin-top: 20px;
 
