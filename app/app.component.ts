@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LocationStrategy, PlatformLocation, Location} from '@angular/common';
 declare var $:any;
-import initFixedplugin = require('../assets/js/initFixedplugin.js');
+import initFixedPlugin = require('../assets/js/initFixedPlugin.js');
 
 
 @Component({
@@ -12,7 +12,7 @@ import initFixedplugin = require('../assets/js/initFixedplugin.js');
 
 export class AppComponent implements OnInit{
     ngOnInit(){
+        initFixedPlugin();
         $.getScript('../assets/js/paper-dashboard.js');
-        initFixedplugin();
     }
 }

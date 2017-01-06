@@ -1,6 +1,6 @@
 if ('undefined' !== typeof module) {
 
-    module.exports = function initFixedplugin(){
+    module.exports = function initFixedPlugin(){
         $sidebar = $('.sidebar');
         $off_canvas_sidebar = $('.off-canvas-sidebar');
 

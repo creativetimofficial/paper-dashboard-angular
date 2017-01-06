@@ -1,2 +1,2 @@
-declare function initFixedplugin():void;
-export = initFixedplugin;
+declare function initFixedPlugin():void;
+export = initFixedPlugin;
