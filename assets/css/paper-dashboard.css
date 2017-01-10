@@ -258,16 +258,22 @@ hr {
   height: 100vh;
 }
 
-.sidebar {
+.sidebar,
+.bootstrap-navbar {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  width: 260px;
+  display: block;
+  z-index: 5;
+  color: #fff;
+  font-weight: 200;
   background-size: cover;
   background-position: center center;
 }
-.sidebar .sidebar-wrapper {
+.sidebar .sidebar-wrapper,
+.bootstrap-navbar .sidebar-wrapper {
   position: relative;
   max-height: none;
   min-height: 100%;
@@ -276,7 +282,8 @@ hr {
   z-index: 4;
   box-shadow: inset -1px 0px 0px 0px #DDDDDD;
 }
-.sidebar .sidebar-background {
+.sidebar .sidebar-background,
+.bootstrap-navbar .sidebar-background {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -287,7 +294,8 @@ hr {
   background-size: cover;
   background-position: center center;
 }
-.sidebar .logo {
+.sidebar .logo,
+.bootstrap-navbar .logo {
   position: relative;
   padding: 15px 15px;
   z-index: 4;
@@ -2756,8 +2764,12 @@ textarea.form-control {
   }
 
   .navbar-transparent {
+    color: #fff;
     padding-top: 15px;
     background-color: rgba(0, 0, 0, 0.45);
+  }
+  .navbar-transparent .navbar-toggle .icon-bar {
+    background: #fff;
   }
 
   body {
@@ -2784,8 +2796,6 @@ textarea.form-control {
   }
 
   .navbar .container {
-    left: 0;
-    width: 100%;
     -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -2828,13 +2838,12 @@ textarea.form-control {
     opacity: 1;
   }
 
-  .off-canvas-sidebar,
-  .sidebar {
+  .sidebar, .bootstrap-navbar {
     position: fixed;
     display: block;
     top: 0;
     height: 100%;
-    width: 230px;
+    width: 260px;
     right: 0;
     left: auto;
     z-index: 1032;
@@ -2845,19 +2854,18 @@ textarea.form-control {
     text-align: left;
     padding-right: 0px;
     padding-left: 0;
-    -webkit-transform: translate3d(230px, 0, 0);
-    -moz-transform: translate3d(230px, 0, 0);
-    -o-transform: translate3d(230px, 0, 0);
-    -ms-transform: translate3d(230px, 0, 0);
-    transform: translate3d(230px, 0, 0);
+    -webkit-transform: translate3d(260px, 0, 0);
+    -moz-transform: translate3d(260px, 0, 0);
+    -o-transform: translate3d(260px, 0, 0);
+    -ms-transform: translate3d(260px, 0, 0);
+    transform: translate3d(260px, 0, 0);
     -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
-  .off-canvas-sidebar .sidebar-wrapper,
-  .sidebar .sidebar-wrapper {
+  .sidebar .sidebar-wrapper, .bootstrap-navbar .sidebar-wrapper {
     position: relative;
     width: 230px;
     z-index: 3;
@@ -2865,13 +2873,11 @@ textarea.form-control {
     height: 100%;
     box-shadow: inset 1px 0px 0px 0px #DDDDDD;
   }
-  .off-canvas-sidebar .nav,
-  .sidebar .nav {
+  .sidebar .nav, .bootstrap-navbar .nav {
     margin-top: 0;
     padding: 10px 15px 0;
   }
-  .off-canvas-sidebar .nav > li > a,
-  .sidebar .nav > li > a {
+  .sidebar .nav > li > a, .bootstrap-navbar .nav > li > a {
     margin: 0px 0px;
     color: #66615B;
     text-transform: uppercase;
@@ -2880,33 +2886,27 @@ textarea.form-control {
     line-height: 1.4em;
     padding: 10px 0;
   }
-  .off-canvas-sidebar .nav > li > a:hover, .off-canvas-sidebar .nav > li > a.active,
-  .sidebar .nav > li > a:hover,
-  .sidebar .nav > li > a.active {
+  .sidebar .nav > li > a:hover, .sidebar .nav > li > a.active, .bootstrap-navbar .nav > li > a:hover, .bootstrap-navbar .nav > li > a.active {
     color: #403D39;
   }
-  .off-canvas-sidebar .nav > li > a p,
-  .off-canvas-sidebar .nav > li > a .notification,
-  .off-canvas-sidebar .nav > li > a .caret,
   .sidebar .nav > li > a p,
   .sidebar .nav > li > a .notification,
-  .sidebar .nav > li > a .caret {
+  .sidebar .nav > li > a .caret, .bootstrap-navbar .nav > li > a p,
+  .bootstrap-navbar .nav > li > a .notification,
+  .bootstrap-navbar .nav > li > a .caret {
     display: inline-block;
   }
-  .off-canvas-sidebar .nav > li > a .caret,
-  .sidebar .nav > li > a .caret {
+  .sidebar .nav > li > a .caret, .bootstrap-navbar .nav > li > a .caret {
     float: right;
     position: relative;
     top: 12px;
   }
-  .off-canvas-sidebar .nav > li > a i,
-  .sidebar .nav > li > a i {
+  .sidebar .nav > li > a i, .bootstrap-navbar .nav > li > a i {
     font-size: 18px;
     margin-right: 10px;
     line-height: 26px;
   }
-  .off-canvas-sidebar .nav > li.active > a:before,
-  .sidebar .nav > li.active > a:before {
+  .sidebar .nav > li.active > a:before, .bootstrap-navbar .nav > li.active > a:before {
     border-right: none;
     border-left: 12px solid #DDDDDD;
     border-top: 12px solid transparent;
@@ -2916,8 +2916,7 @@ textarea.form-control {
     left: 0px;
     top: 10px;
   }
-  .off-canvas-sidebar .nav > li.active > a:after,
-  .sidebar .nav > li.active > a:after {
+  .sidebar .nav > li.active > a:after, .bootstrap-navbar .nav > li.active > a:after {
     border-right: none;
     border-left: 12px solid #f4f3ef;
     border-top: 12px solid transparent;
@@ -2927,8 +2926,7 @@ textarea.form-control {
     left: -1px;
     top: 10px;
   }
-  .off-canvas-sidebar::after,
-  .sidebar::after {
+  .sidebar::after, .bootstrap-navbar::after {
     top: 0;
     left: 0;
     height: 100%;
@@ -2940,8 +2938,7 @@ textarea.form-control {
     content: "";
     z-index: 1;
   }
-  .off-canvas-sidebar.has-image::after,
-  .sidebar.has-image::after {
+  .sidebar.has-image::after, .bootstrap-navbar.has-image::after {
     top: 0;
     left: 0;
     height: 100%;
@@ -2952,15 +2949,13 @@ textarea.form-control {
     content: "";
     z-index: 1;
   }
-  .off-canvas-sidebar .logo,
-  .sidebar .logo {
+  .sidebar .logo, .bootstrap-navbar .logo {
     position: relative;
     z-index: 4;
     padding-top: 11px;
     padding-bottom: 11px;
   }
-  .off-canvas-sidebar .divider,
-  .sidebar .divider {
+  .sidebar .divider, .bootstrap-navbar .divider {
     height: 1px;
     margin: 10px 0;
   }
@@ -2973,11 +2968,7 @@ textarea.form-control {
     transform: translate3d(0px, 0, 0);
   }
 
-  .nav-open .navbar .container {
-    left: -230px;
-  }
-
-  .nav-open .wrapper {
+  .nav-open .header-wrapper .navbar-default {
     left: 0;
     -webkit-transform: translate3d(-230px, 0, 0);
     -moz-transform: translate3d(-230px, 0, 0);

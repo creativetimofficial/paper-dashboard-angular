@@ -35,7 +35,7 @@
         , e = $.Event('toggle')
 
       if ($el.prop('disabled') == false) {
-        $parent.toggleClass(ch) && checked ? $el.removeAttr(ch) : $el.prop(ch, ch);
+        $parent.toggleClass(ch) && checked ? $el.removeAttr(ch) : $el.attr(ch, ch);
         $el.trigger(e).trigger('change');
       }
     }
