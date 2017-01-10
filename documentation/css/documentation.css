@@ -1,3 +1,23 @@
+.nav-mobile-menu{
+    position: relative;
+    z-index: 2;
+}
+.nav-mobile-menu li a p{
+    font-size: 12px;
+}
+
+.nav-mobile-menu .btn-simple,
+.nav-mobile-menu .btn-simple:hover,
+.nav-mobile-menu .btn-simple:focus{
+    color: #66615B;
+}
+.nav-mobile-menu .navbar-title{
+    display: none;
+}
+.navbar .navbar-nav > li > a.btn{
+    margin: 17px 3px;
+    padding: 7px 18px;
+}
 .tim-row{
     margin-bottom: 40px;
 }
@@ -8,6 +28,10 @@ pre.prettyprint{
     margin-top: 20px;
     padding: 20px;
     text-align: left;
+}
+.navbar-title{
+    height: 100%;
+    padding-top: 5px;
 }
 .atv, .str{
     color: #05AE0E;
@@ -23,6 +47,16 @@ pre.prettyprint{
 }
 .com{
     color: #999;
+}
+.navbar-title .image-container{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    top: -3px;
+    position: relative;
+}
+.navbar-title img {
+    width: 100%;
 }
 .space-top{
     margin-top: 50px;
@@ -57,14 +91,14 @@ pre.prettyprint{
 }
 .header-wrapper {
   position: relative;
-  height: 450px;
+  height: 500px;
 }
 
 .header-wrapper .navbar {
     border-radius: 0;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
-    z-index: 3;
+    z-index: 1031;
 }
 .header-wrapper .header {
     background-color: #ff8f5e;
@@ -91,7 +125,7 @@ pre.prettyprint{
 .header-wrapper .title-container{
     color: #fff;
     position: relative;
-    top: 150px;
+    top: 120px;
     z-index: 3;
 
 }
@@ -112,11 +146,38 @@ pre.prettyprint{
 .logo-container .logo img{
     width: 100%;
 }
+.title-container img{
+    width: 100px;
+    height: 100px;
+}
 .navbar-small .logo-container .brand{
     color: #333333;
 }
+.navbar-default.navbar-transparent .navbar-nav>li>a{
+    color: #FFFFFF;
+}
+.navbar-default .logo-container .brand{
+    color: #444;
+}
+.navbar-default.navbar-transparent .logo-container .brand{
+    color: #FFFFFF !important;
+}
+.navbar-center{
+    float: none;
+    display: inline-block;
+    margin-top: -16px;
+}
+.navbar.navbar-transparent{
+    background-color: transparent;
+    box-shadow: none;
+    color: #fff;
+    border: 0;
+    padding-top: 0px;
+}
 .fixed-section{
-    margin-top: 90px;
+    max-height: 80vh;
+    overflow: scroll;
+    top: 110px;
 }
 .fixed-section ul li{
     list-style: none;
@@ -155,4 +216,45 @@ pre.prettyprint{
 }
 #buttons-row .btn{
     margin-bottom: 15px;
+}
+@media (max-width: 991px) {
+    .fixed-section.affix {
+        position: relative;
+        margin-bottom: 100px;
+    }
+
+    .tim-row .nav.nav-pills{
+        margin-bottom: 25px;
+    }
+
+    .nav-mobile-menu .navbar-title{
+        display: none;
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+  .navbar .navbar-brand {
+    height: 50px;
+    padding: 10px 15px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .footer .copyright {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    float: none !important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 830px){
+    .main-raised{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

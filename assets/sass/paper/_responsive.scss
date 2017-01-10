@@ -97,9 +97,16 @@
     .main-panel{
         width: 100%;
     }
+
     .navbar-transparent{
+        color: #fff;
         padding-top: 15px;
         background-color: rgba(0, 0, 0, 0.45);
+        .navbar-toggle{
+            .icon-bar{
+                background: #fff;
+            }
+        }
     }
     body {
          position: relative;
@@ -114,8 +121,6 @@
        background-color: white;
     }
     .navbar .container{
-         left: 0;
-          width: 100%;
          @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
          position: relative;
     }
@@ -148,13 +153,12 @@
             opacity: 1;
         }
     }
-    .off-canvas-sidebar,
-    .sidebar {
+    .sidebar, .bootstrap-navbar {
         position: fixed;
         display: block;
         top: 0;
         height: 100%;
-        width: 230px;
+        width: 260px;
         right: 0;
         left: auto;
         z-index: 1032;
@@ -166,7 +170,7 @@
         padding-right: 0px;
         padding-left: 0;
 
-        @include transform-translate-x(230px);
+        @include transform-translate-x(260px);
         @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
         .sidebar-wrapper {
@@ -280,10 +284,11 @@
     .nav-open .navbar-collapse{
         @include transform-translate-x(0px);
     }
-    .nav-open .navbar .container{
-        left: -230px;
-    }
-    .nav-open .wrapper{
+    // .nav-open .wrapper{
+    //     left: 0;
+    //     @include transform-translate-x(-230px);
+    // }
+    .nav-open .header-wrapper .navbar-default{
         left: 0;
         @include transform-translate-x(-230px);
     }
@@ -296,7 +301,9 @@
           border-radius: 1px;
           margin: 0 auto;
     }
-
+    // .navbar-header .navbar-toggle .icon-bar{
+    //     background: #fff;
+    // }
     .navbar-header .navbar-toggle {
         margin: 10px 15px 10px 0;
         width: 40px;

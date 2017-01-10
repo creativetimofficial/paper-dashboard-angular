@@ -7,7 +7,7 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Elements - Paper Dashboard Pro by Creative Tim</title>
+	<title>Tutorial - Paper Dashboard Free with Angular2 by Creative Tim</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -28,7 +28,7 @@
 
 
 <div class="header-wrapper">
-        <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default navbar-transparent navbar-fixed-top navbar-color-on-scroll" role="navigation">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -51,12 +51,29 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-              <ul  class="nav navbar-nav navbar-right">
-                    <li>
-                        <button onclick="window.location.href='https://github.com/timcreative/paper-dashboard-pro/issues'" id="issueButton" class="btn btn-simple btn-neutral">Have an issue?</button>
-                    </li>
-               </ul>
+            <div class="collapse navbar-collapse text-center">
+				<ul class="nav navbar-nav navbar-center">
+					<li>
+						<div class="navbar-title hidden text-center">
+							<h4>
+								<div class="image-container">
+									<img src="../assets/img/angular2-logo.png" alt="Angular2 Logo">
+								</div>
+								PD Free with Angular 2
+							</h4>
+						</div>
+					</li>
+				</ul>
+				<ul  class="nav navbar-nav navbar-right">
+				    <li>
+						<a href="https://github.com/timcreative/paper-dashboard-pro/issues">Have an issue?</a>
+				    </li>
+					<li>
+						<a href="https://github.com/creativetimofficial/light-bootstrap-dashboard-angular/" target="_blank" class="btn btn-default btn-simple">
+							<i class="fa fa-github"></i> <p>Contribute</p>
+						</a>
+					</li>
+				</ul>
 
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -65,7 +82,8 @@
         <div class="header">
             <div class="filter"></div>
             <div class="title-container text-center">
-                    <h1>Paper Dashboard PRO</h1>
+				<img src="../assets/img/angular2-logo.png" alt="Angular2 Logo">
+                    <h1>Paper Dashboard Free with Angular2</h1>
                     <h3>Elements description</h3>
             </div>
         </div>
@@ -79,32 +97,21 @@
 <div class="container">
     <div class="row">
         <div class="col-md-2">
-            <div class="fixed-section">
-                <ul>
+            <div class="fixed-section affix-top" data-spy="affix" data-offset-top="390">
+                <ul id="menuresize">
+					<li><a href="#license-row">License</a></li>
                     <li><a href="#buttons-row">Buttons</a></li>
                     <li><a href="#checkbox-row">Checkbox/Radio/Switch</a></li>
                     <li><a href="#dropdown-row">Dropdown</a></li>
                     <li><a href="#inputs-row">Inputs</a></li>
-                    <li><a href="#select-row">Customizable Select</a></li>
-                    <li><a href="#tags-row">Tags</a></li>
                     <li><a href="#textarea-row">Textarea</a></li>
                     <li><a href="#navbar-row">Navigation</a></li>
                     <li><a href="#subscription-row">Footers</a></li>
-                    <li><a href="#pagination-row">Pagination</a></li>
-                    <li><a href="#progressbar-row">Progress Bars</a></li>
-                    <li><a href="#sliders-row">Sliders</a></li>
                     <li><a href="#panels-row">Panels</a></li>
                     <li><a href="#tables-row">Tables</a></li>
-                    <li><a href="#collapsable-row">Collapsible Groups</a></li>
                     <li><a href="#notification-row">Notification</a></li>
-                    <li><a href="#sidebar-row">Sidebar</a></li>
-                    <li><a href="#sweetalert-row">Sweet Alert</a></li>
-                    <li><a href="#datetimepicker-row">DateTimePicker</a></li>
                     <li><a href="#charts-row">Charts</a></li>
                     <li><a href="#google-row">Google Maps</a></li>
-                    <li><a href="#jvector-row">jVector Maps</a></li>
-                    <li><a href="#wizard-row">Wizard</a></li>
-                    <li><a href="#validation-row">jQuery Validation</a></li>
 
                 </ul>
             </div>
@@ -230,20 +237,8 @@
 			<li> Checkboxes</li>
 			<li> Footers</li>
 			<li> Google Maps</li>
-			<li> jVector Maps</li>
-			<li> jQuery Validations</li>
-			<li> Bootstrap Tables</li>
-			<li> DataTables.net</li>
-			<li> DateTimePicker</li>
-			<li> Maps</li>
 			<li> Panels</li>
 			<li> Radio Buttons</li>
-			<li> Sliders</li>
-			<li> Sweet Alert</li>
-			<li> Switches</li>
-			<li> Sidebar</li>
-			<li> Tags</li>
-			<li> Wizard</li>
 		</ul>
 		</p>
 		<p>
@@ -253,9 +248,7 @@
 <!-- buttons row -->
     <div class="tim-row" id="buttons-row">
 
-            <h2>Buttons
-                <small><a href="../examples/components/buttons.html">Live Demo</a></small>
-            </h2>
+            <h2>Buttons</h2>
             <legend></legend>
             <h4>Colors</h4>
                 <p>
@@ -272,11 +265,6 @@
 
                 </p>
                 <br />
-                <div class="area-line">
-                <a data-target="#buttonColor" href="javascript: void(0);" data-toggle="collapse">
-                      See Full Implementation
-                </a>
-<div id="buttonColor" class="collapse">
 <pre class="prettyprint">
 &lt;button class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
 
@@ -291,8 +279,6 @@
 &lt;button class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
 
 </pre>
-</div>
-                </div>
             <h4>Sizes</h4>
                 <p class="space-top">
                     Buttons come in all needed sizes:
@@ -303,11 +289,6 @@
                     <button class="btn btn-primary btn-sm">Small</button>
                     <button class="btn btn-primary btn-xs">Extra Small</button>
                 </p>
-                <div class="area-line">
-                <a data-target="#buttonSize" href="javascript: void(0);" data-toggle="collapse">
-                      See Full Implementation
-                </a>
-<div id="buttonSize" class="collapse">
 <pre class="prettyprint">
 &lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Large&lt;/button&gt;
 
@@ -317,8 +298,6 @@
 
 &lt;button class=&quot;btn btn-primary btn-xs&quot;&gt;Extra Small&lt;/button&gt;
 </pre>
-</div>
-                </div>
             <h4>Styles</h4>
                 <p class="space-top">
                     We added extra classes that help you better customise the look. You can use regular buttons, filled buttons or plain link buttons. Let's see some examples:
@@ -328,11 +307,7 @@
                     <button class="btn btn-primary btn-fill">Filled</button>
                     <button class="btn btn-primary btn-simple">Simple</button>
                 </p>
-                <div class="area-line">
-                <a data-target="#buttonStyle" href="javascript: void(0);" data-toggle="collapse">
-                      See Full Implementation
-                </a>
-<div id="buttonStyle" class="collapse">
+
 <pre class="prettyprint">
 &lt;button class=&quot;btn btn-primary&quot;&gt;Default&lt;/button&gt;
 
@@ -340,8 +315,7 @@
 
 &lt;button class=&quot;btn btn-primary btn-simple&quot;&gt;Simple&lt;/button&gt;
 </pre>
-</div>
-                </div>
+
                 <p class="space-top">
                     Button groups, toolbars, and disabled states all work like they are supposed to.
                 </p>
@@ -389,11 +363,7 @@
                         <i class="ti-instagram"></i>
                     </button>
                 </div>
-                <div class="area-line">
-                <a data-target="#buttonSocial" href="javascript: void(0);" data-toggle="collapse">
-                      See Full Implementation
-                </a>
-                <div id="buttonSocial" class="collapse">
+
 <pre class="prettyprint">
 &lt;button class=&quot;btn btn-icon btn-twitter&quot;&gt;
     &lt;i class=&quot;ti-twitter&quot;&gt;&lt;/i&gt;
@@ -430,17 +400,13 @@
 &lt;/button&gt;
 
 </pre>
-                </div>
-                </div>
 
     </div>
 <!--     end row -->
 
 <!-- checkbox row -->
     <div class="tim-row" id="checkbox-row">
-            <h2> Checkboxes
-                <small><a href="../examples/forms/extended.html">Live Demo</a></small>
-            </h2>
+            <h2> Checkboxes</h2>
             <legend></legend>
             <p>
                 To use the custom checkboxes, you need to import a separate Javascript file called 'bootstrap-checkbox-radio-switch-tags.js'.
@@ -463,12 +429,7 @@
                     Disabled checked
                   </label>
             </p>
-            <p>Usage can be done via Data Attributes:
-            <a data-target="#checkboxDataAttribute" href="javascript: void(0);" data-toggle="collapse">
-                      See example.
-            </a>
-            </p>
-<div id="checkboxDataAttribute" class="collapse">
+            <p>Usage can be done via Data Attributes:</p>
 <pre class="prettyprint">
 &lt;label class=&quot;checkbox&quot; for=&quot;checkbox1&quot;&gt;
 
@@ -503,17 +464,11 @@
 &lt;/label&gt;
 
 </pre>
-</div>
-            <p>Or you can call it via Javascript:
-            <a data-target="#checkboxJavascript" href="javascript: void(0);" data-toggle="collapse">
-                      See example.
-            </a>
-            </p>
-<div id="checkboxJavascript" class="collapse">
+
+            <p>Or you can call it via Javascript:</p>
 <pre class="prettyprint">
 $(':checkbox').checkbox();
 </pre>
-</div>
 
             <p>
                 <h4>Methods</h4>
@@ -531,16 +486,11 @@ $(':checkbox').checkbox();
                         sets the state to unchecked.
                     </li>
                 </ul>
-                <div class="area-line">
-                <a data-target="#checkboxMethod" href="javascript: void(0);" data-toggle="collapse">
-                      See coded example
-                </a>
-<div id="checkboxMethod" class="collapse">
+
 <pre class="prettyprint">
 $(':checkbox').checkbox('check');
 </pre>
-</div>
-                </div>
+
                 <h4>Events</h4>
                 <ul class="list-unstyled">
                     <li>
@@ -553,27 +503,19 @@ $(':checkbox').checkbox('check');
                     </li>
                 </ul>
             </p>
-            <div class="area-line">
-            <a data-target="#checkboxEvent" href="javascript: void(0);" data-toggle="collapse">
-                  See coded example
-            </a>
-<div id="checkboxEvent" class="collapse">
+
 <pre class="prettyprint">
 $(':checkbox').on('toggle', function() {
   // Do something
 });
 </pre>
-</div>
-            </div>
 
     </div>
 <!-- end row -->
 
 <!-- radio row -->
     <div class="tim-row" id="radio-row">
-        <h2> Radio Buttons
-             <small><a href="../examples/forms/extended.html">Live Demo</a></small>
-        </h2>
+        <h2> Radio Buttons</h2>
         <legend></legend>
             <p>
                 To use the custom radio buttons, you need to import a separate Javascript file called 'bootstrap-checkbox-radio-switch-tags.js'.
@@ -597,8 +539,7 @@ $(':checkbox').on('toggle', function() {
                 <i></i>Disabled radio is on
               </label>
             </p>
-            <p>Usage can be done via Data Attributes: <a data-target="#radioDataAttribute" href="javascript: void(0);" data-toggle="collapse">See example.</a></p>
-<div id="radioDataAttribute" class="collapse">
+            <p>Usage can be done via Data Attributes</p>
 <pre class="prettyprint">
 &lt;label class=&quot;radio&quot;&gt;
 
@@ -632,13 +573,12 @@ $(':checkbox').on('toggle', function() {
 
 &lt;/label&gt;
 </pre>
-</div>
-            <p>Or can be called via Javascript: <a data-target="#radioJavascript" href="javascript: void(0);" data-toggle="collapse">See example.</a> </p>
-<div id="radioJavascript" class="collapse">
+            <p>Or can be called via Javascript</p>
+
 <pre class="prettyprint">
 $(':radio').radio();
 </pre>
-</div>
+
             <p>
                 <h4>Methods</h4>
                 <ul class="list-unstyled">
@@ -652,16 +592,11 @@ $(':radio').radio();
                         sets the state to unchecked.
                     </li>
                 </ul>
-                <div class="area-line">
-                <a data-target="#radioMethod" href="javascript: void(0);" data-toggle="collapse">
-                        See coded example
-                </a>
-<div id="radioMethod" class="collapse">
+
 <pre class="prettyprint">
 $(':radio').radio('check');
 </pre>
-</div>
-                </div>
+
                 <h4>Events</h4>
                 <ul class="list-unstyled">
                     <li>
@@ -674,89 +609,18 @@ $(':radio').radio('check');
                     </li>
                 </ul>
             </p>
-            <div class="area-line">
-            <a data-target="#radioEvent" href="javascript: void(0);" data-toggle="collapse">
-                        See coded example
-            </a>
-<div id="radioEvent" class="collapse">
+
 <pre class="prettyprint">
 $(':radio').on('toggle', function() {
   // Do something
 });
 </pre>
 </div>
-            </div>
-</div>
-<!-- end row -->
-
-<!-- switches row -->
-    <div class="tim-row" id="switch-row">
-        <h2> Switches
-            <small><a href="../examples/forms/extended.html">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>
-        If you want to use something more special than a checkbox, we recommend the switch. You can use it as plain, with text or with icons. The default version is the one with text (on and off states).
-        </p>
-
-        <div class="switch"
-             data-on-label=""
-             data-off-label="">
-             <input type="checkbox" checked/>
-        </div>
-
-        <input type="checkbox" checked data-toggle="switch"/>
-        <input type="checkbox" data-toggle="switch" />
-
-         <div class="switch"
-          data-on-label="<i class='fa fa-check'></i>"
-          data-off-label="<i class='fa fa-times'></i>">
-          <input type="checkbox" checked/>
-        </div>
-        <div class="switch"
-          data-on-label="<i class='fa fa-check'></i>"
-          data-off-label="<i class='fa fa-times'></i>">
-          <input type="checkbox"/>
-        </div>
-
-        <br />
-        <div class="area-line">
-        <a data-target="#switchColor" href="javascript: void(0);" data-toggle="collapse">
-                        See Full Implementation
-        </a>
-<div id="switchColor" class="collapse">
-<pre class="prettyprint">
-&lt;div class=&quot;switch&quot;
-     data-on-label=&quot;&quot;
-     data-off-label=&quot;&quot;&gt;
-     &lt;input type=&quot;checkbox&quot; checked/&gt;
-&lt;/div&gt;
-
-&lt;input type=&quot;checkbox&quot; checked data-toggle=&quot;switch&quot;/&gt;
-&lt;input type=&quot;checkbox&quot; data-toggle=&quot;switch&quot; /&gt;
-
- &lt;div class=&quot;switch&quot;
-  data-on-label=&quot;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&quot;
-  data-off-label=&quot;&lt;i class=&#39;fa fa-times&#39;&gt;&lt;/i&gt;&quot;&gt;
-  &lt;input type=&quot;checkbox&quot; checked/&gt;
-&lt;/div&gt;
-&lt;div class=&quot;switch&quot;
-  data-on-label=&quot;&lt;i class=&#39;fa fa-check&#39;&gt;&lt;/i&gt;&quot;
-  data-off-label=&quot;&lt;i class=&#39;fa fa-times&#39;&gt;&lt;/i&gt;&quot;&gt;
-  &lt;input type=&quot;checkbox&quot;/&gt;
-&lt;/div&gt;
-</pre>
-</div>
-        </div>
-
-</div>
 <!-- end row -->
 
 <!-- dropdown row -->
 <div class="tim-row" id="dropdown-row">
-        <h2> Dropdown
-            <small><a href="../examples/forms/extended.html">Live Demo</a></small>
-        </h2>
+        <h2> Dropdown</h2>
         <legend></legend>
         <p>
         We are very proud to present the dropdown, we added a subtle animation for this classic widget.  <br />
@@ -783,10 +647,6 @@ $(':radio').on('toggle', function() {
             </div>
           </div>
 
-
-        <div class="area-line">
-        <a data-target="#dropdown" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-<div id="dropdown" class="collapse">
 <pre class="prettyprint">
 	&lt;div class=&quot;dropdown&quot;&gt;
               &lt;a href=&quot;#&quot; class=&quot;btn dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
@@ -804,17 +664,13 @@ $(':radio').on('toggle', function() {
               &lt;/ul&gt;
         &lt;/div&gt;
 </pre>
-</div>
-        </div>
 
 </div>
 <!-- end row -->
 
 <!-- inputs row -->
     <div class="tim-row" id="inputs-row">
-            <h2>Inputs
-                <small><a href="../examples/forms/regular.html">Live Demo</a></small>
-            </h2>
+            <h2>Inputs</h2>
             <legend></legend>
 
             <p>
@@ -836,7 +692,6 @@ $(':radio').on('toggle', function() {
             <div class="col-md-6">
                   <div class="form-group has-error has-feedback">
                     <input type="text" value="Error" class="form-control" />
-                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
                   </div>
         	</div>
         	<div class="col-md-6">
@@ -846,9 +701,7 @@ $(':radio').on('toggle', function() {
                     </div>
         	</div>
     	</div>
-            <div class="area-line">
-            <a data-target="#inputs" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-    <div id="inputs" class="collapse">
+
 <pre class="prettyprint">
 &lt;div class=&quot;form-group&quot;&gt;
 
@@ -870,8 +723,6 @@ $(':radio').on('toggle', function() {
 
     &lt;input type=&quot;text&quot; value=&quot;Error&quot; class=&quot;form-control&quot; /&gt;
 
-    &lt;span class=&quot;glyphicon glyphicon-remove form-control-feedback&quot;&gt;&lt;/span&gt;
-
 &lt;/div&gt;
 
 
@@ -884,155 +735,21 @@ $(':radio').on('toggle', function() {
 
 &lt;/div&gt;
 </pre>
-</div>
-            </div>
+
     </div>
-<!-- end row -->
-
-<!-- select row -->
-<div class="tim-row" id="select-row">
-    <h2>Customisable Select
-        <small><a href="../examples/forms/extended.html">Live Demo</a></small>
-    </h2>
-    <legend></legend>
-    <p>
-        There are 2 ways to use this input: as a normal select, in which case you need to specify the style as <code>form-control</code>, or as a button, in which case you have to specify the style as <code>btn-{type}</code>. You can also have multiple select options by using the <code>multiple</code> attribute on the select tag. Here are some coded examples.
-    </p>
-    <div class="row">
-       <div class="col-sm-4">
-            <select name="cities" class="selectpicker" data-title="Single Select" data-style="btn-default btn-block">
-                <option value="id">Bahasa Indonesia</option>
-                <option value="ms">Bahasa Melayu</option>
-                <option value="ca">Català</option>
-                <option value="da">Dansk</option>
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="el">Eλληνικά</option>
-                <option value="fr">Français</option>
-                <option value="it">Italiano</option>
-                <option value="hu">Magyar</option>
-                <option value="nl">Nederlands</option>
-                <option value="no">Norsk</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="fi">Suomi</option>
-                <option value="sv">Svenska</option>
-                <option value="tr">Türkçe</option>
-                <option value="is">Íslenska</option>
-                <option value="cs">Čeština</option>
-                <option value="ru">Русский</option>
-                <option value="th">ภาษาไทย</option>
-                <option value="zh">中文 (简体)</option>
-                <option value="zh-TW">中文 (繁體)</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-            </select>
-        </div>
-        <div class="col-sm-4">
-            <select multiple data-title="Multiple Select" name="currency" class="selectpicker" data-style="btn-info btn-fill btn-block">
-                <option value="ARS">ARS</option>
-                <option value="AUD">AUD</option>
-                <option value="BRL">BRL</option>
-                <option value="CAD">CAD</option>
-                <option value="CHF">CHF</option>
-                <option value="CNY">CNY</option>
-                <option value="CZK">CZK</option>
-                <option value="DKK">DKK</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-                <option value="HKD">HKD</option>
-                <option value="HUF">HUF</option>
-                <option value="IDR">IDR</option>
-                <option value="ILS">ILS</option>
-                <option value="INR">INR</option>
-                <option value="JPY">JPY</option>
-                <option value="KRW">KRW</option>
-                <option value="MYR">MYR</option>
-                <option value="MXN">MXN</option>
-                <option value="NOK">NOK</option>
-                <option value="NZD">NZD</option>
-                <option value="PHP">PHP</option>
-                <option value="PLN">PLN</option>
-                <option value="RUB">RUB</option>
-                <option value="SEK">SEK</option>
-                <option value="SGD">SGD</option>
-                <option value="TWD">TWD</option>
-                <option value="USD">USD</option>
-                <option value="VND">VND</option>
-                <option value="ZAR">ZAR</option>
-            </select>
-        </div>
-      </div>
-    <div class="area-line">
-     <a data-target="#customizableSelect" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-<div id="customizableSelect" class="collapse">
-<pre class="prettyprint">
-&lt;!-- simple select --&gt;
-&lt;select name=&quot;cities&quot; class=&quot;selectpicker&quot; data-title=&quot;Single Select&quot; data-style=&quot;btn-default btn-block&quot; &gt;
-    &lt;option value=&quot;id&quot;&gt;Bahasa Indonesia&lt;/option&gt;
-    &lt;option value=&quot;ms&quot;&gt;Bahasa Melayu&lt;/option&gt;
-...
-&lt;/select&gt;
-
-&lt;!-- multiple select --&gt;
-&lt;select multiple data-title=&quot;Multiple Select&quot; name=&quot;currency&quot; class=&quot;selectpicker&quot; data-style=&quot;btn-info btn-fill btn-block&quot; &gt;
-    &lt;option value=&quot;ARS&quot;&gt;ARS&lt;/option&gt;
-    &lt;option value=&quot;AUD&quot;&gt;AUD&lt;/option&gt;
-...
-&lt;/select&gt;
-
-&lt;!-- Bootstrap Select Picker --&gt;
-if($(&quot;.selectpicker&quot;).length != 0){
-    $(&quot;.selectpicker&quot;).selectpicker();
-}
-</pre>
-</div>
-    </div>
-</div>
-<!-- end row -->
-
-<!-- tags row    -->
-<div class="tim-row" id="tags-row">
-    <h2>Tags
-        <small><a href="../examples/forms/extended.html">Live Demo</a></small>
-    </h2>
-    <legend></legend>
-    <p>
-    If you want to use tags, we now offer you 2 possibilities: simple tags and coloured tags, that you can use by adding the necessary colour class.
-    </p>
-    <input name="tagsinput" class="tagsinput" value="Minimal, Light, New, Friends" />
-    <input name="tagsinput" class="tagsinput tag-info" value="Minimal, Light, New, Friends" />
-    <div class="area-line">
-        <a data-target="#tags" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-<div id="tags" class="collapse">
-<pre class="prettyprint">
-&lt;input name=&quot;tagsinput&quot; class=&quot;tagsinput&quot; value=&quot;Minimal, Light, New, Friends&quot; /&gt;
-&lt;input name=&quot;tagsinput&quot; class=&quot;tagsinput tag-info&quot; value=&quot;Minimal, Light, New, Friends&quot; /&gt;
-</pre>
-</div>
-    </div>
-</div>
 <!-- end row -->
 
 <!-- textarea row -->
 <div class="tim-row" id="textarea-row">
-    <h2>Textarea
-        <small><a href="../examples/forms/regular.html" target="_blank">Live Demo</a></small>
-    </h2>
+    <h2>Textarea</h2>
     <legend></legend>
     <p>We added custom style for the textarea, so it looks similar to all other inputs.</p>
 
     <textarea class="form-control" placeholder="Here can be your nice text" rows="3"></textarea>
 
-    <div class="area-line">
-        <a data-target="#textarea" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-<div id="textarea" class="collapse">
 <pre class="prettyprint">
 &lt;textarea class=&quot;form-control&quot; placeholder=&quot;Here can be your nice text&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
 </pre>
-</div>
-    </div>
 </div>
 <!-- end row -->
 
@@ -1152,9 +869,6 @@ if($(&quot;.selectpicker&quot;).length != 0){
                 </div>
             </nav>
 
-        <div class="area-line">
-        <a data-target="#navbarCode" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-<div id="navbarCode" class="collapse">
 <pre class="prettyprint">
 &lt;nav class=&quot;navbar navbar-default&quot;&gt;
         &lt;div class=&quot;container-fluid&quot;&gt;
@@ -1255,8 +969,6 @@ if($(&quot;.selectpicker&quot;).length != 0){
         &lt;/div&gt;
     &lt;/nav&gt;
 </pre>
-</div>
-        </div>
 
 
 		<p class="space-top">
@@ -1265,9 +977,6 @@ if($(&quot;.selectpicker&quot;).length != 0){
 
         <div id="navbar">
 
-        <div class="area-line">
-        <a data-target="#navbarCodeFixed" href="javascript: void(0);" data-toggle="collapse">Example implementation</a>
-<div id="navbarCodeFixed" class="collapse">
 <pre class="prettyprint">
 	&lt;div class=&quot;sidebar&quot; data-color=&quot;orange&quot; data-image=&quot;../assets/img/full-screen-image-3.jpg&quot;&gt;
 	    ....
@@ -1284,8 +993,6 @@ if($(&quot;.selectpicker&quot;).length != 0){
 		....
 	&lt;/div&gt;
 </pre>
-</div>
-        </div>
 
 
 
@@ -1477,9 +1184,7 @@ if($(&quot;.selectpicker&quot;).length != 0){
 
 <!-- footers row -->
 <div class="tim-row" id="footers-row">
-    <h2>Footers
-        <small><a href="../examples/dashboard/stats.html" target="_blank">Live Demo</a></small>
-    </h2>
+    <h2>Footers</h2>
     <legend></legend>
     <p>
         There are 3 classes for footers: <code>footer</code> for the default pale colour, <code>footer-black</code> for black and <code>footer-transparent</code> for transparent.<br />
@@ -1487,232 +1192,9 @@ if($(&quot;.selectpicker&quot;).length != 0){
 </div>
 <!-- end row -->
 
-<!-- pagination row -->
-<div class="tim-row" id="pagination-row">
-        <h2> Pagination
-            <small><a href="../examples/components/buttons.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>
-        We took the Bootstrap pagination elements and customised them to fit the overall theme.
-    </p>
-        <ul class="pagination pagination-blue pagination-no-border">
-     <!--   color-classes: "primary", "info", "warning", "danger", "success" -->
-      <li><a href="#">&laquo;</a></li>
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
-
-
-        <p class="space-top">
-        Besides the classic look, we also added the colour classes to offer more customisation. To use them add the class <code>pagination-[primary/info/success/warning/danger]</code>.
-    </p>
-    <ul class="pagination pagination-primary">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li class="active"><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
-
-        <ul class="pagination pagination-info">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li class="active"><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
-        <ul class="pagination pagination-success">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li class="active"><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
-        <ul class="pagination pagination-warning">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li class="active"><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
-        <ul class="pagination pagination-danger">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li class="active"><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
-        <div class="area-line">
-        <a data-target="#pagination" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-<div id="pagination" class="collapse">
-<pre class="prettyprint">
-&lt;ul class=&quot;pagination pagination-info&quot;&gt;
-
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
-
-  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
-
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;raquo;&lt;/a&gt;&lt;/li&gt;
-
-&lt;/ul&gt
-</pre>
-</div>
-        </div>
-</div>
-<!-- end row -->
-
-<!-- progressbar row -->
-<div class="tim-row" id="progressbar-row">
-        <h2> Progress Bars
-            <small><a href="../examples/forms/extended.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-
-        <p>The progress bars from Bootstrap hold the same classes and functionality. Adding this kit over your existing project will only make it look more clean and minimal.</p>
-         <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-            <span class="sr-only">60% Complete</span>
-          </div>
-        </div>
-         <div class="progress">
-          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-            <span class="sr-only">60% Complete</span>
-          </div>
-        </div>
-         <div class="progress">
-          <div class="progress-bar progress-bar-success" style="width: 35%">
-            <span class="sr-only">35% Complete (success)</span>
-          </div>
-          <div class="progress-bar progress-bar-warning" style="width: 20%">
-            <span class="sr-only">20% Complete (warning)</span>
-          </div>
-          <div class="progress-bar progress-bar-danger" style="width: 10%">
-            <span class="sr-only">10% Complete (danger)</span>
-          </div>
-        </div>
-         <div class="area-line">
-         <a data-target="#progressBars" href="javascript: void(0);" data-toggle="collapse">See full implementation</a>
-<div id="progressBars" class="collapse">
-<pre class="prettyprint">
-&lt;div class=&quot;progress&quot;&gt;
-
-  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 30%;&quot;&gt;
-
-    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
-
-  &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;progress&quot;&gt;
-
-  &lt;div class=&quot;progress-bar progress-bar-info&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
-
-    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
-
-  &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;progress&quot;&gt;
-
-  &lt;div class=&quot;progress-bar progress-bar-success&quot; style=&quot;width: 35%&quot;&gt;
-
-    &lt;span class=&quot;sr-only&quot;&gt;35% Complete (success)&lt;/span&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;progress-bar progress-bar-warning&quot; style=&quot;width: 20%&quot;&gt;
-
-    &lt;span class=&quot;sr-only&quot;&gt;20% Complete (warning)&lt;/span&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;progress-bar progress-bar-danger&quot; style=&quot;width: 10%&quot;&gt;
-
-    &lt;span class=&quot;sr-only&quot;&gt;10% Complete (danger)&lt;/span&gt;
-
-  &lt;/div&gt;
-
-&lt;/div&gt;
-</pre>
-</div>
-         </div>
-</div>
-<!-- end row -->
-
-<!-- sliders row -->
-<div class="tim-row" id="sliders-row">
-        <h2> Sliders
-            <small><a href="../examples/forms/extended.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>We restyled jQuery UI slider, while keeping the design consistent.</p>
-
-        <div id="slider-default" class="slider-info"></div>
-        <br>
-        <div id="slider-range" class="slider-success"></div>
-        <div class="area-line">
-        <a data-target="#sliderMarkup" href="javascript: void(0);" data-toggle="collapse"> See Markup and Javascript</a>
-<div id="sliderMarkup" class="collapse">
-<pre class="prettyprint">
-&lt;!-- Markup --&gt;
-&lt;div id=&quot;slider-default&quot; class=&quot;slider-info&quot;&gt;&lt;/div&gt;
-
-&lt;div id=&quot;slider-range&quot; class=&quot;slider-success&quot;&gt;&lt;/div&gt;
-
-&lt;!-- Javascript --&gt;
-$( &quot;#slider-range&quot; ).slider({
-
-	range: true,
-	min: 0,
-	max: 500,
-	values: [ 75, 300 ],
-
-});
-
-$( &quot;#slider-default&quot; ).slider({
-
-		value: 70,
-		orientation: &quot;horizontal&quot;,
-		range: &quot;min&quot;,
-		animate: true
-
-});
-</pre>
-</div>
-        </div>
-</div>
-<!-- end row -->
-
 <!-- panel row -->
 <div class="tim-row" id="panels-row">
-    <h2>Panels
-        <small><a href="../examples/components/panels.html" target="_blank">Live Demo</a></small>
-    </h2>
+    <h2>Panels</h2>
     <legend></legend>
     <p>
         If you have information that you don't need to show at once, we suggest you use tabs. You can use them horizontally or vertically.
@@ -1801,9 +1283,6 @@ $( &quot;#slider-default&quot; ).slider({
 			</div>
         </div>
     </div>
-    <div class="area-line">
-        <a data-target="#tabsCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="tabsCode" class="collapse">
 <pre class="prettyprint">
 &lt;!-- horizontal tabs --&gt;
 &lt;div class=&quot;nav-tabs-navigation&quot;&gt;
@@ -1882,17 +1361,13 @@ $( &quot;#slider-default&quot; ).slider({
 &lt;/div&gt;
 
 </pre>
-</div>
-    </div>
 
 </div>
 <!-- end row -->
 
 <!-- tables row -->
 <div class="tim-row" id="tables-row">
-    <h2>Tables
-        <small><a href="../examples/tables/extended.html" target="_blank">Live Demo</a></small>
-    </h2>
+    <h2>Tables</h2>
     <legend></legend>
     <p>
    All Boostrap classes for tables are supported and improved. Besides the simple and striped tables, we added tables that have actions and tables with switches. <br />
@@ -2006,9 +1481,6 @@ $( &quot;#slider-default&quot; ).slider({
             </tbody>
         </table>
         </div>
-    <div class="area-line">
-            <a data-target="#simpleTableWithActions" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="simpleTableWithActions" class="collapse">
 <pre class="prettyprint">
 &lt;div class=&quot;table-responsive&quot;&gt;
 
@@ -2224,240 +1696,6 @@ $( &quot;#slider-default&quot; ).slider({
 
 &lt;/div&gt;
 </pre>
-</div>
-    </div>
-    <h4>Striped Table with Switches</h4>
-    <div class="table-responsive">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th class="text-center">#</th>
-                <th>Name</th>
-                <th>Job Position</th>
-                <th class="text-right">Salary</th>
-                <th class="text-right">Active</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="text-center">1</td>
-                <td>Andrew Mike</td>
-                <td>Develop</td>
-                <td class="text-right">&euro; 99,225</td>
-                 <td class="text-right">
-                    <div class="switch"
-                         data-on-label=""
-                         data-off-label="">
-                         <input type="checkbox"/>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-
-                <td class="text-center">2</td>
-                <td>John Doe</td>
-                <td>Design</td>
-                <td class="text-right">&euro; 89,241</td>
-                 <td class="text-right">
-                    <div class="switch"
-                         data-on-label=""
-                         data-off-label="">
-                         <input type="checkbox"/>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-center">3</td>
-                <td>Alex Mike</td>
-                <td>Design</td>
-                <td class="text-right">&euro; 92,144</td>
-                 <td class="text-right">
-                    <div class="switch"
-                         data-on-label=""
-                         data-off-label="">
-                         <input type="checkbox" checked/>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-center">4</td>
-                <td>Mike Monday</td>
-                <td>Marketing</td>
-                <td class="text-right">&euro; 49,990</td>
-                 <td class="text-right">
-                    <div class="switch"
-                         data-on-label=""
-                         data-off-label="">
-                         <input type="checkbox" checked/>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-    <div class="area-line">
-            <a data-target="#stripedTableWithCheckboxes" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="stripedTableWithCheckboxes" class="collapse">
-<pre class="prettyprint">
-&lt;table class=&quot;table table-striped&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th class=&quot;text-center&quot;&gt;#&lt;/th&gt;
-            &lt;th&gt;Name&lt;/th&gt;
-            &lt;th&gt;Job Position&lt;/th&gt;
-            &lt;th class=&quot;text-right&quot;&gt;Salary&lt;/th&gt;
-            &lt;th class=&quot;text-right&quot;&gt;Active&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td class=&quot;text-center&quot;&gt;1&lt;/td&gt;
-            &lt;td&gt;Andrew Mike&lt;/td&gt;
-            &lt;td&gt;Develop&lt;/td&gt;
-            &lt;td class=&quot;text-right&quot;&gt;&amp;euro; 99,225&lt;/td&gt;
-             &lt;td class=&quot;text-right&quot;&gt;
-                &lt;div class=&quot;switch&quot;
-                     data-on-label=&quot;&quot;
-                     data-off-label=&quot;&quot;&gt;
-                     &lt;input type=&quot;checkbox&quot;/&gt;
-                &lt;/div&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-
-            &lt;td class=&quot;text-center&quot;&gt;2&lt;/td&gt;
-            &lt;td&gt;John Doe&lt;/td&gt;
-            &lt;td&gt;Design&lt;/td&gt;
-            &lt;td class=&quot;text-right&quot;&gt;&amp;euro; 89,241&lt;/td&gt;
-             &lt;td class=&quot;text-right&quot;&gt;
-                &lt;div class=&quot;switch&quot;
-                     data-on-label=&quot;&quot;
-                     data-off-label=&quot;&quot;&gt;
-                     &lt;input type=&quot;checkbox&quot;/&gt;
-                &lt;/div&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td class=&quot;text-center&quot;&gt;3&lt;/td&gt;
-            &lt;td&gt;Alex Mike&lt;/td&gt;
-            &lt;td&gt;Design&lt;/td&gt;
-            &lt;td class=&quot;text-right&quot;&gt;&amp;euro; 92,144&lt;/td&gt;
-             &lt;td class=&quot;text-right&quot;&gt;
-                &lt;div class=&quot;switch&quot;
-                     data-on-label=&quot;&quot;
-                     data-off-label=&quot;&quot;&gt;
-                     &lt;input type=&quot;checkbox&quot; checked/&gt;
-                &lt;/div&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td class=&quot;text-center&quot;&gt;4&lt;/td&gt;
-            &lt;td&gt;Mike Monday&lt;/td&gt;
-            &lt;td&gt;Marketing&lt;/td&gt;
-            &lt;td class=&quot;text-right&quot;&gt;&amp;euro; 49,990&lt;/td&gt;
-             &lt;td class=&quot;text-right&quot;&gt;
-                &lt;div class=&quot;switch&quot;
-                     data-on-label=&quot;&quot;
-                     data-off-label=&quot;&quot;&gt;
-                     &lt;input type=&quot;checkbox&quot; checked/&gt;
-                &lt;/div&gt;
-            &lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-
-</pre>
-</div>
-    </div>
-    <h4>Big Boy Table</h4>
-    <p>We have also created the Big Boy table, that can be used for content management systems or in the checkout process of an e-commerce. It offers extended functionality, like adding pictures, descriptions and actions.</p>
-    <div class="table-responsive">
-    <table class="table table-shopping">
-        <thead>
-            <tr>
-                <th class="text-center"></th>
-                <th></th>
-                <th class="text-right">Price</th>
-                <th class="text-right">Quantity</th>
-                <th class="text-right">Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="img-container">
-                        <img src="../assets/img/tables/agenda.png" alt="Agenda">
-                    </div>
-                </td>
-                <td class="td-product">
-                    <strong>Get Shit Done Notebook</strong>
-                    <p>
-                    Most beautiful agenda for the office.</p>
-                </td>
-                <td class="td-price">
-                    <small>&euro;</small>49
-                </td>
-                <td class="td-number td-quantity">
-                    1
-                    <div class="btn-group">
-                        <button class="btn btn-sm"><i class="ti-minus"></i></button>
-                        <button class="btn btn-sm"><i class="ti-plus"></i></button>
-                    </div>
-                </td>
-                <td class="td-number">
-                    <small>&euro;</small>49
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-    <div class="area-line">
-        <a data-target="#bigBoyTable" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="bigBoyTable" class="collapse">
-<pre class="prettyprint">
-&lt;div class=&quot;table-responsive&quot;&gt;
-    &lt;table class=&quot;table table-shopping&quot;&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th class=&quot;text-center&quot;&gt;&lt;/th&gt;
-                &lt;th&gt;&lt;/th&gt;
-                &lt;th class=&quot;text-right&quot;&gt;Price&lt;/th&gt;
-                &lt;th class=&quot;text-right&quot;&gt;Quantity&lt;/th&gt;
-                &lt;th class=&quot;text-right&quot;&gt;Total&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;
-                    &lt;div class=&quot;img-container&quot;&gt;
-                        &lt;img src=&quot;../assets/img/tables/agenda.png&quot; alt=&quot;Agenda&quot;&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td class=&quot;td-product&quot;&gt;
-                    &lt;strong&gt;Get Shit Done Notebook&lt;/strong&gt;
-                    &lt;p&gt;
-                    Most beautiful agenda for the office.&lt;/p&gt;
-                &lt;/td&gt;
-                &lt;td class=&quot;td-price&quot;&gt;
-                    &lt;small&gt;&amp;euro;&lt;/small&gt;49
-                &lt;/td&gt;
-                &lt;td class=&quot;td-number td-quantity&quot;&gt;
-                    1
-                    &lt;div class=&quot;btn-group&quot;&gt;
-                        &lt;button class=&quot;btn btn-sm&quot;&gt;&lt;i class=&quot;ti-minus&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                        &lt;button class=&quot;btn btn-sm&quot;&gt;&lt;i class=&quot;ti-plus&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;td class=&quot;td-number&quot;&gt;
-                    &lt;small&gt;&amp;euro;&lt;/small&gt;49
-                &lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-</pre>
-</div>
-    </div>
 
     <h4>DataTables</h4>
         <p>
@@ -2510,9 +1748,7 @@ $( &quot;#slider-default&quot; ).slider({
             </tr>
         </tbody>
     </table>
-    <div class="area-line">
-        <a data-target="#dataTableExample" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="dataTableExample" class="collapse">
+
 <pre class="prettyprint">
 &lt;div class=&quot;toolbar&quot;&gt;
     &lt;!--Here you can write extra buttons/actions for the toolbar--&gt;
@@ -2638,135 +1874,14 @@ $( &quot;#slider-default&quot; ).slider({
 
 &lt;/script&gt;
 </pre>
-</div>
-    </div>
 
 
-</div>
-<!-- end row -->
-
-<!-- collapsable groups row -->
-<div class="tim-row" id="collapsable-row">
-        <h2> Collapsible Groups
-            <small><a href="../examples/components/panels.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-            <p>
-We restyled the classic collapsable group, to make it look more like the other elements in paper dashboard. If you want to add a border for the panel, you can add the class <code>panel-border</code>.
-            </p>
-            <div id="acordeon">
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-border panel-default">
-                        <a data-toggle="collapse" href="#collapseOne">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                	Default Collapsible Item 1
-                                	<i class="ti-angle-down"></i>
-                                </h4>
-                            </div>
-                        </a>
-                        <div id="collapseOne" class="panel-collapse collapse">
-                        	<div class="panel-body">
-                            	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-border panel-default">
-                        <a data-toggle="collapse" href="#collapseTwo">
-                            <div class="panel-heading">
-                            	<h4 class="panel-title">
-                                	Default Collapsible Item 1
-                                	<i class="ti-angle-down"></i>
-                                </h4>
-                            </div>
-                        </a>
-                        <div id="collapseTwo" class="panel-collapse collapse">
-                        	<div class="panel-body">
-                            	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-border panel-default">
-                        <a data-toggle="collapse" href="#collapseThree">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                	Default Collapsible Item 1
-                                	<i class="ti-angle-down"></i>
-                                </h4>
-                            </div>
-                        </a>
-                        <div id="collapseThree" class="panel-collapse collapse">
-                        	<div class="panel-body">
-                            	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="area-line">
-            <a data-target="#acordeonCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="acordeonCode" class="collapse">
-<pre class="prettyprint">
-&lt;div id=&quot;acordeon&quot;&gt;
-    &lt;div class=&quot;panel-group&quot; id=&quot;accordion&quot;&gt;
-        &lt;div class=&quot;panel panel-border panel-default&quot;&gt;
-            &lt;a data-toggle=&quot;collapse&quot; href=&quot;#collapseOne&quot;&gt;
-                &lt;div class=&quot;panel-heading&quot;&gt;
-                    &lt;h4 class=&quot;panel-title&quot;&gt;
-                    	Default Collapsible Item 1
-                    	&lt;i class=&quot;ti-angle-down&quot;&gt;&lt;/i&gt;
-                    &lt;/h4&gt;
-                &lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div id=&quot;collapseOne&quot; class=&quot;panel-collapse collapse&quot;&gt;
-            	&lt;div class=&quot;panel-body&quot;&gt;
-                	Anim pariatur...
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;panel panel-border panel-default&quot;&gt;
-            &lt;a data-toggle=&quot;collapse&quot; href=&quot;#collapseTwo&quot;&gt;
-                &lt;div class=&quot;panel-heading&quot;&gt;
-                	&lt;h4 class=&quot;panel-title&quot;&gt;
-                    	Default Collapsible Item 1
-                    	&lt;i class=&quot;ti-angle-down&quot;&gt;&lt;/i&gt;
-                    &lt;/h4&gt;
-                &lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div id=&quot;collapseTwo&quot; class=&quot;panel-collapse collapse&quot;&gt;
-            	&lt;div class=&quot;panel-body&quot;&gt;
-                	Anim pariatur...
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;panel panel-border panel-default&quot;&gt;
-            &lt;a data-toggle=&quot;collapse&quot; href=&quot;#collapseThree&quot;&gt;
-                &lt;div class=&quot;panel-heading&quot;&gt;
-                    &lt;h4 class=&quot;panel-title&quot;&gt;
-                    	Default Collapsible Item 1
-                    	&lt;i class=&quot;ti-angle-down&quot;&gt;&lt;/i&gt;
-                    &lt;/h4&gt;
-                &lt;/div&gt;
-            &lt;/a&gt;
-            &lt;div id=&quot;collapseThree&quot; class=&quot;panel-collapse collapse&quot;&gt;
-            	&lt;div class=&quot;panel-body&quot;&gt;
-                	Anim pariatur...
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-</div>
-            </div>
 </div>
 <!-- end row -->
 
 <!-- notification row -->
 <div class="tim-row" id="notification-row">
-        <h2> Notifications
-            <small><a href="../examples/components/notifications.html" target="_blank">Live Demo</a></small>
-        </h2>
+        <h2> Notifications</h2>
         <legend></legend>
         <p>
         The notifications for Paper Dashboard PRO are looking fresh and clean. They go great with the navbar. They come with 4 classes, each for a different color: <code>.alert-info</code>, <code>.alert-success</code>, <code>.alert-warning</code>, <code>.alert-danger</code>.
@@ -2775,9 +1890,6 @@ We restyled the classic collapsable group, to make it look more like the other e
         </p>
         <button class="btn btn-default" onclick="showNotification('top','right')">Top Right Notification</button>
 
-        <div class="area-line">
-            <a data-target="#notificationCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="notificationCode" class="collapse">
 <pre class="prettyprint">
 &lt;!-- button to trigger the action --&gt;
 &lt;button class=&quot;btn btn-default&quot; onclick=&quot;showNotification(&#39;top&#39;,&#39;right&#39;)&quot;&gt;Top Right Notification&lt;/button&gt;
@@ -2801,244 +1913,11 @@ function showNotification(from, align){
 }
 </pre>
 </div>
-        </div>
-</div>
-<!-- end row -->
-
-<!-- sidebar row -->
-<div class="tim-row" id="sidebar-row">
-        <h2> Sidebar
-            <small><a href="../examples/dashboard/stats.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>
-            We have created the class <code>.sidebar</code> for navigation. It contains the company title, a photo of the logged in user with options inside a dropdown, and a list of all the pages. Every element in the list of pages can have a sublist of pages.
-        </p>
-        <p>
-            You have two options for the background colour <code>data-background-color="white/brown"</code>.<br />
-            If you want to change the colour of the links inside the sidebar, you can do so by modifying the following attribute <code>data-active-color="primary/info/success/warning/danger"</code>.
-        </p>
-        <p>If you want to have more space for the main panel, you can shrink the sidebar by adding the class <code>sidebar-mini</code> on the body of the page.</p>
-            <div class="area-line">
-            <a data-target="#sidebarCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="sidebarCode" class="collapse">
-<pre class="prettyprint">
-&lt;div class=&quot;sidebar&quot; data-background-color=&quot;white&quot; data-active-color=&quot;danger&quot;&gt;
-	&lt;div class=&quot;sidebar-wrapper&quot;&gt;
-        &lt;div class=&quot;logo&quot;&gt;
-            &lt;a href=&quot;http://www.creative-tim.com&quot; class=&quot;simple-text&quot;&gt;
-                Creative Tim
-            &lt;/a&gt;
-        &lt;/div&gt;
-		&lt;div class=&quot;mini-logo&quot;&gt;
-			&lt;a href=&quot;http://www.creative-tim.com&quot; class=&quot;simple-text&quot;&gt;
-                Ct
-            &lt;/a&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;user&quot;&gt;
-            &lt;div class=&quot;photo&quot;&gt;
-                &lt;img src=&quot;assets/img/faces/face-2.jpg&quot; /&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;info&quot;&gt;
-                &lt;a data-toggle=&quot;collapse&quot; href=&quot;#collapseExample&quot; class=&quot;collapsed&quot;&gt;
-                    Chet Faker
-                    &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
-                &lt;/a&gt;
-                &lt;div class=&quot;collapse&quot; id=&quot;collapseExample&quot;&gt;
-                    &lt;ul class=&quot;nav&quot;&gt;
-                        &lt;li&gt;&lt;a href=&quot;#profile&quot;&gt;My Profile&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#editprofile&quot;&gt;Edit Profile&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;#settings&quot;&gt;Settings&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;ul class=&quot;nav&quot;&gt;
-            &lt;li class=&quot;active&quot;&gt;
-                &lt;a href=&quot;dashboard.html&quot;&gt;
-                    &lt;i class=&quot;ti-panel&quot;&gt;&lt;/i&gt;
-                    &lt;p&gt;Dashboard&lt;/p&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-			&lt;li&gt;
-				&lt;a data-toggle=&quot;collapse&quot; href=&quot;#componentsExamples&quot; aria-expanded=&quot;true&quot;&gt;
-					&lt;i class=&quot;ti-package&quot;&gt;&lt;/i&gt;
-					&lt;p&gt;Components
-					   &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
-					&lt;/p&gt;
-				&lt;/a&gt;
-				&lt;div class=&quot;collapse&quot; id=&quot;componentsExamples&quot;&gt;
-					&lt;ul class=&quot;nav&quot;&gt;
-						&lt;li&gt;&lt;a href=&quot;components/buttons.html&quot;&gt;Buttons&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;components/grid.html&quot;&gt;Grid System&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;components/panels.html&quot;&gt;Panels&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;components/sweet-alert.html&quot;&gt;Sweet Alert&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;components/notifications.html&quot;&gt;Notifications&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;components/icons.html&quot;&gt;Icons&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;components/typography.html&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/div&gt;
-			&lt;/li&gt;
-			&lt;li&gt;
-				&lt;a data-toggle=&quot;collapse&quot; href=&quot;#formsExamples&quot;&gt;
-                    &lt;i class=&quot;ti-clipboard&quot;&gt;&lt;/i&gt;
-                    &lt;p&gt;
-						Forms
-                       &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
-                    &lt;/p&gt;
-                &lt;/a&gt;
-                &lt;div class=&quot;collapse&quot; id=&quot;formsExamples&quot;&gt;
-                    &lt;ul class=&quot;nav&quot;&gt;
-						&lt;li&gt;&lt;a href=&quot;forms/regular.html&quot;&gt;Regular Forms&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;forms/extended.html&quot;&gt;Extended Forms&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;forms/validation.html&quot;&gt;Validation Forms&lt;/a&gt;&lt;/li&gt;
-                        &lt;li&gt;&lt;a href=&quot;forms/wizard.html&quot;&gt;Wizard&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-				&lt;a data-toggle=&quot;collapse&quot; href=&quot;#tablesExamples&quot;&gt;
-                    &lt;i class=&quot;ti-view-list-alt&quot;&gt;&lt;/i&gt;
-                    &lt;p&gt;
-						Table list
-                       &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
-                    &lt;/p&gt;
-                &lt;/a&gt;
-                &lt;div class=&quot;collapse&quot; id=&quot;tablesExamples&quot;&gt;
-                    &lt;ul class=&quot;nav&quot;&gt;
-						&lt;li&gt;&lt;a href=&quot;tables/regular.html&quot;&gt;Regular Tables&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;tables/extended.html&quot;&gt;Extended Tables&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;tables/bootstrap-table.html&quot;&gt;Bootstrap-Table&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-			&lt;li&gt;
-				&lt;a data-toggle=&quot;collapse&quot; href=&quot;#mapsExamples&quot;&gt;
-                    &lt;i class=&quot;ti-map&quot;&gt;&lt;/i&gt;
-                    &lt;p&gt;
-						Maps
-                       &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
-                    &lt;/p&gt;
-                &lt;/a&gt;
-                &lt;div class=&quot;collapse&quot; id=&quot;mapsExamples&quot;&gt;
-                    &lt;ul class=&quot;nav-second-level nav&quot;&gt;
-						&lt;li&gt;&lt;a href=&quot;maps/google.html&quot;&gt;Google Maps&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;maps/vector.html&quot;&gt;Vector Maps&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;maps/fullscreen.html&quot;&gt;Full Screen Map&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-			&lt;li&gt;
-                &lt;a href=&quot;charts.html&quot;&gt;
-                    &lt;i class=&quot;ti-bar-chart-alt&quot;&gt;&lt;/i&gt;
-                    &lt;p&gt;Charts&lt;/p&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-			&lt;li&gt;
-                &lt;a href=&quot;calendar.html&quot;&gt;
-                    &lt;i class=&quot;ti-calendar&quot;&gt;&lt;/i&gt;
-                    &lt;p&gt;Calendar&lt;/p&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-			&lt;li&gt;
-				&lt;a data-toggle=&quot;collapse&quot; href=&quot;#pagesExamples&quot;&gt;
-                    &lt;i class=&quot;ti-gift&quot;&gt;&lt;/i&gt;
-                    &lt;p&gt;
-						Pages
-                       &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
-                    &lt;/p&gt;
-                &lt;/a&gt;
-                &lt;div class=&quot;collapse&quot; id=&quot;pagesExamples&quot;&gt;
-                    &lt;ul class=&quot;nav-second-level nav&quot;&gt;
-						&lt;li&gt;&lt;a href=&quot;pages/timeline.html&quot;&gt;Timeline Page&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;pages/user.html&quot;&gt;User Page&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;pages/login.html&quot;&gt;Login Page&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;pages/register.html&quot;&gt;Register Page&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;pages/lock.html&quot;&gt;Lock Screen Page&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-</div>
-            </div>
-</div>
-<!-- end row -->
-
-<!-- sweetalert row -->
-<div class="tim-row" id="sweetalert-row">
-        <h2> Sweet Alert
-            <small><a href="../examples/components/sweet-alert.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>
-            If you want to replace the classic alert box with something that looks amazing, you can use the Sweet Alert 2 Plugin. We have changed the typography and colours for the plugin provided by <a href="https://twitter.com/t4t5">Tristan Edwards</a>. If you want to see the full documentation, please check <a href="http://limonte.github.io/sweetalert2/">out this page</a>.
-            <br /><br />
-            If you want to see a basic coded example, here is one below.
-        </p>
-
-        <button class="btn btn-default btn-fill" onclick='swal("Good job!", "You clicked the button!", "success")'>Try me!</button>
-
-            <div class="area-line">
-            <a data-target="#sweetAlertCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="sweetAlertCode" class="collapse">
-<pre class="prettyprint">
-&lt;button class=&quot;btn btn-default btn-fill&quot; onclick=&#39;swal(&quot;Good job!&quot;, &quot;You clicked the button!&quot;, &quot;success&quot;)&#39;&gt;Try me!&lt;/button&gt;
-&lt;!-- for more actions that you can use onclick, please check out demo.js --&gt;
-</pre>
-</div>
-            </div>
-</div>
-<!-- end row -->
-
-<!-- datetimepicker row -->
-<div class="tim-row" id="datetimepicker-row">
-    <h2>DateTimePicker
-            <small><a href="../examples/forms/extended.html" target="_blank">Live Demo</a></small>
-    </h2>
-    <legend></legend>
-    <p>We have created a date-time picker starting from <a href="https://eonasdan.github.io/bootstrap-datetimepicker/">this wonderful plugin</a> created by <a href="https://github.com/Eonasdan">Eonasdan</a>. We have changed the colours, typography and buttons, so it can look like the rest of the dashboard.<br /><br />
-        Here is a coded example:
-    </p>
-    <div class="row">
-        <div class="col-md-4">
-            <input type="text" class="form-control datetimepicker" placeholder="Datetime Picker Here"/>
-        </div>
-    </div>
-    <div class="area-line">
-        <a data-target="#datepicker" href="javascript: void(0);" data-toggle="collapse"> See Markup and Javascript</a>
-<div id="datepicker" class="collapse">
-<pre class="prettyprint">
-&lt;!-- input with datetimepicker --&gt;
-&lt;input type=&quot;text&quot; class=&quot;form-control datetimepicker&quot; placeholder=&quot;Datetime Picker Here&quot;/&gt;
-
-&lt;!-- javascript for init --&gt;
-$(&#39;.datetimepicker&#39;).datetimepicker({
-    icons: {
-        time: &quot;fa fa-clock-o&quot;,
-        date: &quot;fa fa-calendar&quot;,
-        up: &quot;fa fa-chevron-up&quot;,
-        down: &quot;fa fa-chevron-down&quot;,
-        previous: &#39;fa fa-chevron-left&#39;,
-        next: &#39;fa fa-chevron-right&#39;,
-        today: &#39;fa fa-screenshot&#39;,
-        clear: &#39;fa fa-trash&#39;,
-        close: &#39;fa fa-remove&#39;
-    }
-});
-</pre>
-</div>
-    </div>
-</div>
 <!-- end row -->
 
 <!-- charts row -->
 <div class="tim-row" id="charts-row">
-    <h2>Charts
-        <small><a href="../examples/charts.html" target="_blank">Live Demo</a></small>
-    </h2>
+    <h2>Charts</h2>
     <legend></legend>
     <p>For the implementation of graphic charts, we used the Chartist plugin and added our custom styles. The plugin is free to download and use <a href="https://gionkunz.github.io/chartist-js/examples.html">here</a>. <a href="https://github.com/gionkunz">Gion Kunz</a> is the guy behind the project; he did an awesome job and we recommend using his stuff. Besides all the great options for customisation that you have using it, it is also fully responsive. We changed the colours, background and typography.</p>
     <h4>Line Chart</h4>
@@ -3049,9 +1928,6 @@ $(&#39;.datetimepicker&#39;).datetimepicker({
         <div id="chartPerformance" class="ct-chart"></div>
         </div>
     </div>
-    <div class="area-line">
-        <a data-target="#lineChart" href="javascript: void(0);" data-toggle="collapse">See Full Implementation</a>
-<div id="lineChart" class="collapse">
 <pre class="prettyprint">
 &lt;!-- graphic area in html --&gt;
 
@@ -3089,8 +1965,6 @@ var optionsPerformance = {
 
 Chartist.Line('#chartPerformance', dataPerformance, optionsPerformance);
 </pre>
-</div>
-    </div>
 
     <h4>Line Chart with Points</h4>
     <p>This graphic is best used when you have multiple results for different points and you want to show a correlation (growth, down-side, etc).</p>
@@ -3100,10 +1974,6 @@ Chartist.Line('#chartPerformance', dataPerformance, optionsPerformance);
             <div id="chartStock" class="ct-chart"></div>
         </div>
     </div>
-    <div class="area-line">
-            <a data-target="#lineChartPoints" href="javascript: void(0);" data-toggle="collapse">See Full Implementation</a>
-
-<div id="lineChartPoints" class="collapse">
 <pre class="prettyprint">
 
 &lt;!-- graphic area in html --&gt;
@@ -3144,8 +2014,6 @@ var optionsStock = {
 
 Chartist.Line('#chartStock', dataStock, optionsStock);
 </pre>
-</div>
-        </div>
 
     <h4>Multiple Lines Chart</h4>
     <p>We recommend you use this graphic when you need to show multiple functions in the same visual element. For example, you can see a correlation between the registered versus active users. Always try to use a legend when you have multiple elements in the graphic.</p>
@@ -3160,10 +2028,6 @@ Chartist.Line('#chartStock', dataStock, optionsStock);
                  <i class="fa fa-circle text-danger"></i> Login 2nd Time
             </div>
     </div>
-    <div class="area-line">
-        <a data-target="#multipleLinesChart" href="javascript: void(0);" data-toggle="collapse">See Full Implementation</a>
-
-<div id="multipleLinesChart" class="collapse">
 <pre class="prettyprint">
 &lt;!-- graphic area in html --&gt;
 
@@ -3217,8 +2081,6 @@ var responsiveSales = [
 
 Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
 </pre>
-</div>
-    </div>
 
     <h4>Pie Chart</h4>
     <p>A pie chart is the easiest way to represent an information. Use it whenever you want to show something understandable at once.</p>
@@ -3242,10 +2104,6 @@ Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
              </div>
         </div>
     </div>
-    <div class="area-line">
-            <a data-target="#pieChart" href="javascript: void(0);" data-toggle="collapse">See Full Implementation</a>
-
-<div id="pieChart" class="collapse">
 <pre class="prettyprint">
 &lt;!-- graphic area in html --&gt;
 
@@ -3284,8 +2142,6 @@ Chartist.Pie('#chartPreferences', {
   series: [62, 32, 6]
 });
 </pre>
-</div>
-    </div>
 
     <h4>Bar Chart</h4>
     <p>We recommend using the bar chart whenever you want to show progress over periods of time. Here is an example.</p>
@@ -3295,9 +2151,6 @@ Chartist.Pie('#chartPreferences', {
             <div id="chartViews" class="ct-chart"></div>
         </div>
     </div>
-    <div class="area-line">
-            <a data-target="#barChart" href="javascript: void(0);" data-toggle="collapse">See Full Implementation</a>
-<div id="barChart" class="collapse">
 <pre class="prettyprint">
 &lt;!-- graphic area in html --&gt;
 
@@ -3342,8 +2195,6 @@ var responsiveOptionsViews = [
 
 Chartist.Bar('#chartViews', dataViews, optionsViews, responsiveOptionsViews);
 </pre>
-</div>
-    </div>
 
     <h4>Multiple Bars Chart</h4>
     <p>Go for multiple bars charts if you want to show two indicators side by side.</p>
@@ -3356,10 +2207,6 @@ Chartist.Bar('#chartViews', dataViews, optionsViews, responsiveOptionsViews);
             <span class="label label-warning">BMW</span>
         </div>
     </div>
-    <div class="area-line">
-            <a data-target="#multipleBarsChart" href="javascript: void(0);" data-toggle="collapse">See Full Implementation</a>
-
-<div id="multipleBarsChart" class="collapse">
 <pre class="prettyprint">
 &lt;!-- graphic area in html --&gt;
 
@@ -3408,42 +2255,33 @@ Chartist.Line('#chartActivity', data, options, responsiveOptions);
 
 </pre>
 </div>
-    </div>
-</div>
 <!-- end row -->
 
 <!-- google maps row -->
 <div class="tim-row" id="google-row">
-        <h2> Google Maps
-            <small><a href="../examples/maps/google.html" target="_blank">Live Demo</a></small>
-        </h2>
+        <h2> Google Maps</h2>
         <legend></legend>
         <p>
             We changed the classic Google Maps by adding special skins and putting them in cards. If you want to see the full documentation from Google, you can see the docs <a href="https://developers.google.com/maps/documentation/javascript/">here</a>.<br /><br />
             Below, you will find a coded example:
         </p>
-        <div class="card">
+        <div class="card card-map">
             <div class="header">
                 <p class="category">Regular Map</p>
             </div>
-            <div class="content">
-                <div id="regularMap" class="map"></div>
-            </div>
+			<div class="map">
+				<div id="regularMap" class="map"></div>
+			</div>
         </div>
-
-            <div class="area-line">
-            <a data-target="#googleMapsCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="googleMapsCode" class="collapse">
 <pre class="prettyprint">
-&lt;!-- card for the map --&gt;
-&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;header&quot;&gt;
-        &lt;p class=&quot;category&quot;&gt;Regular Map&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;content&quot;&gt;
-        &lt;div id=&quot;regularMap&quot; class=&quot;map&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+&#x3C;div class=&#x22;card card-map&#x22;&#x3E;
+    &#x3C;div class=&#x22;header&#x22;&#x3E;
+        &#x3C;p class=&#x22;category&#x22;&#x3E;Regular Map&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x9;&#x3C;div class=&#x22;map&#x22;&#x3E;
+&#x9;&#x9;&#x3C;div id=&#x22;regularMap&#x22; class=&#x22;map&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x9;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
 
 &lt;!-- javascript for init --&gt;
 var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
@@ -3465,192 +2303,8 @@ marker.setMap(map);
 });
 </pre>
 </div>
-            </div>
-</div>
 <!-- end row -->
 
-<!-- jvector maps row -->
-<div class="tim-row" id="jvector-row">
-        <h2> jVector Maps
-            <small><a href="../examples/maps/vector.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>
-            We have integrated and changed the look for the jVector Maps. We recommend using them for statistics for countries. To see the original documentation from Kirill Lebedev, you can go <a href="http://jvectormap.com/tutorials/getting-started/">here</a>.<br /><br />
-            If you want to see how it looks and how you can use this map, here is an example.
-        </p>
-        <div class="card card-plain">
-            <div class="content">
-                <div id="worldMap" class="map map-big"></div>
-            </div>
-        </div>
-
-            <div class="area-line">
-            <a data-target="#jVectorMapsCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="jVectorMapsCode" class="collapse">
-<pre class="prettyprint">
-&lt;!-- card for the map --&gt;
-&lt;div class=&quot;card card-plain&quot;&gt;
-    &lt;div class=&quot;content&quot;&gt;
-        &lt;div id=&quot;worldMap&quot; class=&quot;map map-big&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- javascript for init --&gt;
- var mapData = {
-        &quot;AU&quot;: 760,
-        &quot;BR&quot;: 550,
-        &quot;CA&quot;: 120,
-        &quot;DE&quot;: 1300,
-        &quot;FR&quot;: 540,
-        &quot;GB&quot;: 690,
-        &quot;GE&quot;: 200,
-        &quot;IN&quot;: 200,
-        &quot;RO&quot;: 600,
-        &quot;RU&quot;: 300,
-        &quot;US&quot;: 2920,
-    };
-
-    $(&#39;#worldMap&#39;).vectorMap({
-        map: &#39;world_mill_en&#39;,
-        backgroundColor: &quot;transparent&quot;,
-        regionStyle: {
-            initial: {
-                fill: &#39;#e4e4e4&#39;,
-                &quot;fill-opacity&quot;: 0.9,
-                stroke: &#39;none&#39;,
-                &quot;stroke-width&quot;: 0,
-                &quot;stroke-opacity&quot;: 0
-            }
-        },
-
-        series: {
-            regions: [{
-                values: mapData,
-                scale: [&quot;#AAAAAA&quot;,&quot;#444444&quot;],
-                normalizeFunction: &#39;polynomial&#39;
-            }]
-        },
-    });
-
-});
-
-</pre>
-</div>
-            </div>
-</div>
-<!-- end row -->
-
-<!-- wizard row -->
-<div class="tim-row" id="wizard-row">
-        <h2> Wizard
-            <small><a href="../examples/forms/wizard.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>
-            If you have lengthy forms to complete, you can use the Bootstrap Wizard. This plugin allows you to cut the form into steps and let the user complete it gradually. We have worked over the original repository from <a href="https://twitter.com/gabrielva">Vincent Gabriel</a>, which you can find <a href="http://vadimg.com/twitter-bootstrap-wizard-example/#demo">here</a>.<br /><br />
-            We have changed the typography, inputs, buttons and we have added validation for inputs. You can see how it looks and feels in the live demo.
-        </p>
-</div>
-<!-- end row -->
-
-<!-- validation row -->
-<div class="tim-row" id="validation-row">
-        <h2> jQuery Validate for Forms
-            <small><a href="../examples/forms/validation.html" target="_blank">Live Demo</a></small>
-        </h2>
-        <legend></legend>
-        <p>
-            If you have required fields in forms, the best way to add validation for them is through the jQuery Validation tool. We have imported it into the Paper Dashboard PRO library and changed its colours. To see the original and full documentation from jQueryValidation, you can go <a href="http://jqueryvalidation.org/">here</a>.<br /><br />
-            If you want to see a basic login example and the code behind it, check out the example below:
-        </p>
-        <div class="row">
-            <div class="col-md-5">
-                <div class="card">
-                    <form id="loginFormValidation" action="" method="" novalidate="">
-                        <div class="content">
-                        <div class="header text-center"><h5>Login Form</h5></div>
-
-                            <div class="form-group">
-                                <label class="control-label">Email Address <star>*</star></label>
-                                <input class="form-control"
-                                       name="email"
-                                       type="text"
-                                       email="true"
-                                       required="true"
-                                />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Password <star>*</star></label>
-                                <input class="form-control"
-                                       name="password"
-                                       id="registerPassword"
-                                       type="password"
-                                       required="true"
-                                />
-                            </div>
-
-                            <div class="category"><star>*</star> Required fields</div>
-                            <br />
-                            <div class="footer text-center">
-                                <button type="submit" class="btn btn-info btn-fill btn-wd">Register</button>
-                            </div>
-                        </div>
-
-
-                    </form>
-                </div>
-            </div>
-        </div>
-            <div class="area-line">
-            <a data-target="#validationCode" href="javascript: void(0);" data-toggle="collapse"> See Full Implementation</a>
-<div id="validationCode" class="collapse">
-<pre class="prettyprint">
-&lt;!-- html for login --&gt;
-&lt;div class=&quot;card&quot;&gt;
-    &lt;form id=&quot;loginFormValidation&quot; action=&quot;&quot; method=&quot;&quot; novalidate=&quot;&quot;&gt;
-        &lt;div class=&quot;content&quot;&gt;
-        &lt;div class=&quot;header text-center&quot;&gt;&lt;h5&gt;Login Form&lt;/h5&gt;&lt;/div&gt;
-
-            &lt;div class=&quot;form-group&quot;&gt;
-                &lt;label class=&quot;control-label&quot;&gt;Email Address &lt;star&gt;*&lt;/star&gt;&lt;/label&gt;
-                &lt;input class=&quot;form-control&quot;
-                       name=&quot;email&quot;
-                       type=&quot;text&quot;
-                       email=&quot;true&quot;
-                       required=&quot;true&quot;
-                /&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;form-group&quot;&gt;
-                &lt;label class=&quot;control-label&quot;&gt;Password &lt;star&gt;*&lt;/star&gt;&lt;/label&gt;
-                &lt;input class=&quot;form-control&quot;
-                       name=&quot;password&quot;
-                       id=&quot;registerPassword&quot;
-                       type=&quot;password&quot;
-                       required=&quot;true&quot;
-                /&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;category&quot;&gt;&lt;star&gt;*&lt;/star&gt; Required fields&lt;/div&gt;
-            &lt;br /&gt;
-            &lt;div class=&quot;footer text-center&quot;&gt;
-                &lt;button type=&quot;submit&quot; class=&quot;btn btn-info btn-fill btn-wd&quot;&gt;Register&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-
-    &lt;/form&gt;
-&lt;/div&gt;
-
-&lt;!-- javascript for validation --&gt;
-$(&#39;#loginFormValidation&#39;).validate();
-
-</pre>
-</div>
-            </div>
-<!-- end row -->
 
 </div>
 <!-- end row -->
@@ -3692,27 +2346,11 @@ $(&#39;#loginFormValidation&#39;).validate();
 </footer>
 </body>
 	<!--   Core JS Files. Extra: PerfectScrollbar + TouchPunch libraries inside jquery-ui.min.js   -->
-	<script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="../assets/js/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="../assets/js/jquery-3.1.1.js" type="text/javascript"></script>
 	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-	<!--  Forms Validations Plugin -->
-	<script src="../assets/js/jquery.validate.min.js"></script>
-
-	<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-	<script src="../assets/js/moment.min.js"></script>
-
-	<!--  Date Time Picker Plugin is included in this js file -->
-	<script src="../assets/js/bootstrap-datetimepicker.js"></script>
-
-	<!--  Select Picker Plugin -->
-	<script src="../assets/js/bootstrap-selectpicker.js"></script>
-
 	<!--  Checkbox, Radio, Switch and Tags Input Plugins -->
-	<script src="../assets/js/bootstrap-checkbox-radio-switch-tags.js"></script>
-
-	<!-- Circle Percentage-chart -->
-	<script src="../assets/js/jquery.easypiechart.min.js"></script>
+	<script src="../assets/js/bootstrap-checkbox-radio.js"></script>
 
 	<!--  Charts Plugin -->
 	<script src="../assets/js/chartist.min.js"></script>
@@ -3720,26 +2358,9 @@ $(&#39;#loginFormValidation&#39;).validate();
 	<!--  Notifications Plugin    -->
 	<script src="../assets/js/bootstrap-notify.js"></script>
 
-	<!-- Sweet Alert 2 plugin -->
-	<script src="../assets/js/sweetalert2.js"></script>
-
-	<!-- Vector Map plugin -->
-	<script src="../assets/js/jquery-jvectormap.js"></script>
-
 	<!--  Google Maps Plugin    -->
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBYfAYUc7kARllaeGfKNThtEP5xbrt6bv4"></script>
 
-	<!-- Wizard Plugin    -->
-	<script src="../assets/js/jquery.bootstrap.wizard.min.js"></script>
-
-	<!--  Bootstrap Table Plugin    -->
-	<script src="../assets/js/bootstrap-table.js"></script>
-
-	<!--  Plugin for DataTables.net  -->
-	<script src="../assets/js/jquery.datatables.js"></script>
-
-	<!--  Full Calendar Plugin    -->
-	<script src="../assets/js/fullcalendar.min.js"></script>
 
 	<!-- Paper Dashboard PRO Core javascript and methods for Demo purpose -->
 	<script src="../assets/js/paper-dashboard.js"></script>
@@ -3748,99 +2369,12 @@ $(&#39;#loginFormValidation&#39;).validate();
 	<script src="../assets/js/demo.js"></script>
 
     <script>
-        var $table = $('#bootstrap-table');
+		$(window).on('scroll', pd.checkScrollForTransparentNavbar);
 
         $().ready(function(){
 
-//             for tables
-            $( "#slider-range" ).slider({
-            	range: true,
-            	min: 0,
-            	max: 500,
-            	values: [ 75, 300 ],
-
-            });
-
-            $( "#slider-default" ).slider({
-            		value: 70,
-            		orientation: "horizontal",
-            		range: "min",
-            		animate: true
-
-            });
-
-//             for datatables
-            $table.bootstrapTable({
-                toolbar: ".toolbar",
-                clickToSelect: true,
-                showRefresh: true,
-                search: true,
-                showToggle: true,
-                showColumns: true,
-                pagination: true,
-                searchAlign: 'left',
-                pageSize: 8,
-                clickToSelect: false,
-                pageList: [8,10,25,50,100],
-
-                formatShowingRows: function(pageFrom, pageTo, totalRows){
-                    //do nothing here, we don't want to show the text "showing x of y from..."
-                },
-                formatRecordsPerPage: function(pageNumber){
-                    return pageNumber + " rows visible";
-                },
-                icons: {
-                    refresh: 'fa fa-refresh',
-                    toggle: 'fa fa-th-list',
-                    columns: 'fa fa-columns',
-                    detailOpen: 'fa fa-plus-circle',
-                    detailClose: 'fa fa-minus-circle'
-                }
-            });
-
             //activate the tooltips after the data table is initialized
             $('[rel="tooltip"]').tooltip();
-
-            $(window).resize(function () {
-                $table.bootstrapTable('resetView');
-            });
-
-            window.operateEvents = {
-                'click .view': function (e, value, row, index) {
-                    info = JSON.stringify(row);
-
-                    swal('You click view icon, row: ', info);
-                    console.log(info);
-                },
-                'click .edit': function (e, value, row, index) {
-                    info = JSON.stringify(row);
-
-                    swal('You click edit icon, row: ', info);
-                    console.log(info);
-                },
-                'click .remove': function (e, value, row, index) {
-                    console.log(row);
-                    $table.bootstrapTable('remove', {
-                        field: 'id',
-                        values: [row.id]
-                    });
-                }
-            };
-
-            //for datetimepickers
-            $('.datetimepicker').datetimepicker({
-                icons: {
-                    time: "fa fa-clock-o",
-                    date: "fa fa-calendar",
-                    up: "fa fa-chevron-up",
-                    down: "fa fa-chevron-down",
-                    previous: 'fa fa-chevron-left',
-                    next: 'fa fa-chevron-right',
-                    today: 'fa fa-screenshot',
-                    clear: 'fa fa-trash',
-                    close: 'fa fa-remove'
-                }
-            });
 
             //for chartist
             demo.initDocumentationCharts();
@@ -3865,63 +2399,8 @@ $(&#39;#loginFormValidation&#39;).validate();
             marker.setMap(map);
 
 
-            //for jVector map
-             var mapData = {
-                    "AU": 760,
-                    "BR": 550,
-                    "CA": 120,
-                    "DE": 1300,
-                    "FR": 540,
-                    "GB": 690,
-                    "GE": 200,
-                    "IN": 200,
-                    "RO": 600,
-                    "RU": 300,
-                    "US": 2920,
-                };
-
-                $('#worldMap').vectorMap({
-                    map: 'world_mill_en',
-                    backgroundColor: "transparent",
-                    regionStyle: {
-                        initial: {
-                            fill: '#e4e4e4',
-                            "fill-opacity": 0.9,
-                            stroke: 'none',
-                            "stroke-width": 0,
-                            "stroke-opacity": 0
-                        }
-                    },
-
-                    series: {
-                        regions: [{
-                            values: mapData,
-                            scale: ["#AAAAAA","#444444"],
-                            normalizeFunction: 'polynomial'
-                        }]
-                    },
-                });
-
-            //for validation
-            $('#loginFormValidation').validate();
 
             });
-
-
-
-        function operateFormatter(value, row, index) {
-            return [
-                '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">',
-                    '<i class="fa fa-image"></i>',
-                '</a>',
-                '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
-                    '<i class="fa fa-edit"></i>',
-                '</a>',
-                '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
-                    '<i class="fa fa-remove"></i>',
-                '</a>'
-            ].join('');
-        }
 
         function showNotification(from, align){
         	color = Math.floor((Math.random() * 4) + 1);
@@ -3931,7 +2410,7 @@ $(&#39;#loginFormValidation&#39;).validate();
             	message: "Welcome to <b>Paper Dashboard PRO</b> - a beautiful dashboard for your next project."
 
             },{
-                type: type[color],
+                type: type[1],
                 timer: 4000,
                 placement: {
                     from: from,
@@ -3941,7 +2420,7 @@ $(&#39;#loginFormValidation&#39;).validate();
         }
     </script>
 
-    <script>
+    <!-- <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -3950,6 +2429,6 @@ $(&#39;#loginFormValidation&#39;).validate();
       ga('create', 'UA-46172202-1', 'auto');
       ga('send', 'pageview');
 
-    </script>
+    </script> -->
 
 </html>
