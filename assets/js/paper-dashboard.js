@@ -10,7 +10,7 @@ var mobile_menu_initialized = false,
 
 $(document).ready(function(){
     window_width = $(window).width();
-    
+
     $('#menuresize a').click(function(){
         var href = $(this).attr('href');
         $('html,body').animate({
@@ -75,7 +75,7 @@ pd = {
 
             nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
 
-            $sidebar_nav = $sidebar_wrapper.find(' > .nav');
+            $sidebar_nav = $sidebar_wrapper.find('.nav');
 
             // insert the navbar form before the sidebar list
             $nav_content = $(nav_content);
