@@ -265,7 +265,7 @@
          -o-transform: translateY(-15%);
          -ms-transform: translateY(-15%);
          transform: translateY(-15%);
-         top: 46px;
+         top: 27px;
          opacity: 0;
 
          transform-origin: 0 0;
@@ -287,7 +287,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        top: 33px;
+        top: 52px;
         width: 16px;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
