@@ -2984,10 +2984,6 @@ textarea.form-control {
     transform: translate3d(0px, 0, 0);
   }
 
-  .nav-open .navbar .container {
-    left: -250px;
-  }
-
   .nav-open .main-panel {
     left: 0;
     -webkit-transform: translate3d(-260px, 0, 0);
