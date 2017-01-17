@@ -176,6 +176,7 @@ body {
   color: #66615b;
   font-size: 14px;
   font-family: 'Muli', Arial, sans-serif;
+  min-height: 100vh;
 }
 body .wrapper {
   min-height: 100vh;

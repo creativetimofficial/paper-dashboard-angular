@@ -15,6 +15,7 @@ body{
     color: $font-color;
     font-size: $font-size-base;
     font-family: 'Muli', Arial, sans-serif;
+    min-height: 100vh;
     .wrapper{
         min-height: 100vh;
         position: relative;
