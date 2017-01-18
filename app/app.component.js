@@ -15,14 +15,14 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         initFixedPlugin();
-        $.getScript('../assets/js/paper-dashboard.js');
+        $.getScript('../assets/js/initMenu.js');
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             moduleId: module.id,
             templateUrl: 'app.component.html'
-        }), 
+        }),
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;

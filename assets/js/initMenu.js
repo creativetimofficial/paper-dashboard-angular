@@ -1,24 +1,15 @@
-var fixedTop = false;
-var transparent = true;
 
-var navbar_initialized = false;
 
 var mobile_menu_initialized = false,
     toggle_initialized = false,
     bootstrap_nav_initialized = false,
     mobile_menu_visible = 0;
-// console.log(mobile_menu_visible);
+console.log(mobile_menu_visible);
 $(document).ready(function(){
     window_width = $(window).width();
-    $('#menuresize a').click(function(){
-        var href = $(this).attr('href');
-        $('html,body').animate({
-            'scrollTop': $($(this).attr('href')).offset().top - 100
-        }, 200);
-    })
 
-    // pd.initSidebarCheck();
-    // console.log('document is ready');
+    pd.initSidebarCheck();
+    console.log('document is ready');
     //  Activate the tooltips
     $('[rel="tooltip"]').tooltip();
 
@@ -26,29 +17,12 @@ $(document).ready(function(){
 
 // activate collapse right menu when the windows is resized
 $(window).resize(function(){
-    // console.log('resized');
-    // pd.initSidebarCheck();
+    console.log('resized');
+    pd.initSidebarCheck();
 });
 
 pd = {
-    // misc:{
-    //     navbar_menu_visible: 0
-    // },
-    checkScrollForTransparentNavbar: debounce(function() {
-            if($(document).scrollTop() > 381 ) {
-                if(transparent) {
-                    transparent = false;
-                    $('.navbar-color-on-scroll').removeClass('navbar-transparent');
-                    $('.navbar-title').removeClass('hidden');
-                }
-            } else {
-                if( !transparent ) {
-                    transparent = true;
-                    $('.navbar-color-on-scroll').addClass('navbar-transparent');
-                    $('.navbar-title').addClass('hidden');
-                }
-            }
-    }, 17),
+
     initSidebarCheck: function(){
         if($(window).width() <= 991){
             if(($(".sidebar").length) != 0){

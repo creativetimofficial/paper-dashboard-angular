@@ -13,6 +13,6 @@ import initFixedPlugin = require('../assets/js/initFixedPlugin.js');
 export class AppComponent implements OnInit{
     ngOnInit(){
         initFixedPlugin();
-        $.getScript('../assets/js/paper-dashboard.js');
+        $.getScript('../assets/js/initMenu.js');
     }
 }

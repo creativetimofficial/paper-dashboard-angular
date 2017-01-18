@@ -176,6 +176,7 @@ body {
   color: #66615b;
   font-size: 14px;
   font-family: 'Muli', Arial, sans-serif;
+  min-height: 100vh;
 }
 body .wrapper {
   min-height: 100vh;
@@ -2981,10 +2982,6 @@ textarea.form-control {
     -o-transform: translate3d(0px, 0, 0);
     -ms-transform: translate3d(0px, 0, 0);
     transform: translate3d(0px, 0, 0);
-  }
-
-  .nav-open .navbar .container {
-    left: -250px;
   }
 
   .nav-open .main-panel {
