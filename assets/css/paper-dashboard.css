@@ -339,8 +339,8 @@ hr {
 }
 .sidebar .logo-img img,
 .off-canvas-sidebar .logo-img img {
-  width: 40px;
-  top: 14px;
+  width: 35px;
+  top: 17px;
   position: absolute;
 }
 .sidebar .nav,
@@ -2970,6 +2970,9 @@ textarea.form-control {
     z-index: 4;
     padding-top: 11px;
     padding-bottom: 11px;
+  }
+  .sidebar .logo .logo-img img, .bootstrap-navbar .logo .logo-img img {
+    top: 10px;
   }
   .sidebar .divider, .bootstrap-navbar .divider {
     height: 1px;

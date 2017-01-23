@@ -284,6 +284,11 @@
             z-index: 4;
             padding-top: 11px;
             padding-bottom: 11px;
+            .logo-img{
+                img{
+                    top: 10px;
+                }
+            }
         }
 
         .divider{
