@@ -131,34 +131,6 @@ paper-dashboard-angular
 │   │   └── paper-dashboard.js
 │   └── sass
 │       ├── paper
-│       │   ├── _alerts.scss
-│       │   ├── _buttons.scss
-│       │   ├── _cards.scss
-│       │   ├── _chartist.scss
-│       │   ├── _checkbox-radio.scss
-│       │   ├── _dropdown.scss
-│       │   ├── _footers.scss
-│       │   ├── _inputs.scss
-│       │   ├── _misc.scss
-│       │   ├── _mixins.scss
-│       │   ├── _navbars.scss
-│       │   ├── _responsive.scss
-│       │   ├── _sidebar-and-main-panel.scss
-│       │   ├── _tables.scss
-│       │   ├── _typography.scss
-│       │   ├── _variables.scss
-│       │   └── mixins
-│       │       ├── _buttons.scss
-│       │       ├── _cards.scss
-│       │       ├── _chartist.scss
-│       │       ├── _icons.scss
-│       │       ├── _inputs.scss
-│       │       ├── _labels.scss
-│       │       ├── _navbars.scss
-│       │       ├── _sidebar.scss
-│       │       ├── _tabs.scss
-│       │       ├── _transparency.scss
-│       │       └── _vendor-prefixes.scss
 │       └── paper-dashboard.scss
 ├── bin
 │   └── bundler.js
