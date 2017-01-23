@@ -30,7 +30,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        right: 12px;
+        right: 9px;
         top: -11px;
     }
     .navbar-nav > li > .dropdown-menu:after {
@@ -40,7 +40,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        right: 12px;
+        right: 9px;
         top: -10px;
     }
 
@@ -452,15 +452,20 @@
     .navbar-header {
         float:none;
     }
-    .navbar-nav .open .dropdown-menu {
-        position: static;
-        float: none;
-        width: auto;
-        margin-top: 0;
-        background-color: transparent;
-        border: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none;
+    .nav-mobile-menu {
+        .dropdown.open .dropdown-menu {
+            position: static;
+            float: none;
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            li > a{
+                padding-left: 40px;
+            }
+        }
     }
 
     .main-panel > .content{

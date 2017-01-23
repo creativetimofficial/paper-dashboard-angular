@@ -33,7 +33,7 @@
     }
     .logo{
         position: relative;
-        padding: 15px 15px;
+        padding: 18px 15px;
         z-index: 4;
     }
 
@@ -45,9 +45,6 @@
     font-weight: 200;
 
     .logo{
-        padding: 18px 0px;
-        margin: 0 20px;
-
         p{
             float: left;
             font-size: 20px;
@@ -70,10 +67,11 @@
         display: inline-block;
         max-height: 30px;
         margin-right: 15px;
+        margin-left: 10px;
 
         img{
             width: 35px;
-            top: 17px;
+            top: 15px;
             position: absolute;
         }
     }
