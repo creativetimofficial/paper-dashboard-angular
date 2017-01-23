@@ -1,8 +1,8 @@
-# [Paper Dashboard Angular 2](https://paper-dashboard-angular2.herokuapp.com/)
+# [Paper Dashboard Angular 2](https://paper-dashboard-angular.herokuapp.com/)
 
 ![alt text](http://s3.amazonaws.com/creativetim_bucket/products/51/original/opt_pd_angular_thumbnail.jpg "Paper Dashboard Free")
 
-**[Paper-Dashboard-Angular2](https://paper-dashboard-angular2.herokuapp.com/)** is an admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 3, using [Paper Dashboard](link catre produsul din tim). If you are a developer or a website owner that needs to work within a dashboard and want to have a pretty sight while doing so, Paper Dashboard is for you. Paper Dashboard is a Bootstrap Admin Panel which combines soft colors with beautiful typography and spacious cards and graphics. It is a powerful tool, but it is light and easy to use. It has enough features to allow you to get the job done, but it is not crowded to the point where you can't find the files for a specific plugin.
+**[Paper-Dashboard-Angular2](https://paper-dashboard-angular.herokuapp.com/)** is an admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 3, using [Paper Dashboard](http://www.creative-tim.com/product/paper-dashboard). If you are a developer or a website owner that needs to work within a dashboard and want to have a pretty sight while doing so, Paper Dashboard is for you. Paper Dashboard is a Bootstrap Admin Panel which combines soft colors with beautiful typography and spacious cards and graphics. It is a powerful tool, but it is light and easy to use. It has enough features to allow you to get the job done, but it is not crowded to the point where you can't find the files for a specific plugin.
 
 We like consistency and design that blends into its purpose. Paper Dashboard is a perfect example of our most thoughtful work. It combines over a dozen components and plugins, while looking like everything fits together. For an easy start or inspiration for you project, we have also create a set of example pages, like the user settings or usage graphics.
 
@@ -14,7 +14,7 @@ Let us know what you think and what we can improve below. And good luck with dev
 
 ## Links:
 
-+ [Live Preview](https://paper-dashboard-angular2.herokuapp.com/)
++ [Live Preview](https://paper-dashboard-angular.herokuapp.com/)
 
 ## Quick Start:
 
