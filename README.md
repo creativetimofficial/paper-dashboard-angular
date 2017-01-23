@@ -1,23 +1,28 @@
-# [Paper Dashboard Angular 2](link catre paper)[Work in Progress] Angular Version for Paper Dashboard http://demos.creative-tim.com/paper-dashboard/dashboard.html
+# [Paper Dashboard Angular 2](https://paper-dashboard-angular2.herokuapp.com/)
 
-![alt text](pus imagine pentru paper github din assets)
+![alt text](http://s3.amazonaws.com/creativetim_bucket/products/51/original/opt_pd_angular_thumbnail.jpg "Paper Dashboard Free")
 
-**[Paper-Dashboard-Angular2](link catre paper)** is an admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 3, using [Paper Dashboard](link catre produsul din tim) aici text despre paper
+**[Paper-Dashboard-Angular2](https://paper-dashboard-angular2.herokuapp.com/)** is an admin dashboard template designed to be beautiful and simple. It is built on top of Bootstrap 3, using [Paper Dashboard](link catre produsul din tim). If you are a developer or a website owner that needs to work within a dashboard and want to have a pretty sight while doing so, Paper Dashboard is for you. Paper Dashboard is a Bootstrap Admin Panel which combines soft colors with beautiful typography and spacious cards and graphics. It is a powerful tool, but it is light and easy to use. It has enough features to allow you to get the job done, but it is not crowded to the point where you can't find the files for a specific plugin.
+
+We like consistency and design that blends into its purpose. Paper Dashboard is a perfect example of our most thoughtful work. It combines over a dozen components and plugins, while looking like everything fits together. For an easy start or inspiration for you project, we have also create a set of example pages, like the user settings or usage graphics.
+
+Paper Dashboard is built using the same design language as [Paper Kit](http://www.creative-tim.com/product/paper-kit). You can easily use them together, or pick between them depending on the project you have.
+
+Let us know what you think and what we can improve below. And good luck with development!
 
 
 
 ## Links:
 
-+ [Live Preview](link catre paper )
-+ Paper Dashboard Angular2 Pro (coming soon from $59)
++ [Live Preview](https://paper-dashboard-angular2.herokuapp.com/)
 
 ## Quick Start:
 
 Quick start options:
 
-+ [Download from Github](link catre download github).
-+ [Download from Creative Tim](link catre produs in tim).
-+ Clone the repo: `git clone path pentru github`.
++ [Download from Github](https://github.com/creativetimofficial/paper-dashboard-angular/archive/master.zip).
++ [Download from Creative Tim](http://www.creative-tim.com/product/paper-dashboard-angular2).
++ Clone the repo: `git clone https://github.com/creativetimofficial/paper-dashboard-angular.git`.
 
 ## Terminal Commands
 
@@ -32,7 +37,142 @@ Quick start options:
 Within the download you'll find the following directories and files:
 
 ```
-structura fisierelor
+paper-dashboard-angular
+├── README.md
+├── app
+│   ├── app.component.html
+│   ├── app.component.js
+│   ├── app.component.ts
+│   ├── app.module.js
+│   ├── app.module.ts
+│   ├── dashboard
+│   │   ├── dashboard.component.html
+│   │   ├── dashboard.component.js
+│   │   ├── dashboard.component.ts
+│   │   ├── dashboard.module.js
+│   │   ├── dashboard.module.ts
+│   │   ├── dashboard.routes.js
+│   │   ├── dashboard.routes.ts
+│   │   ├── home
+│   │   │   ├── home.component.html
+│   │   │   ├── home.component.js
+│   │   │   └── home.component.ts
+│   │   ├── icons
+│   │   │   ├── icons.component.html
+│   │   │   ├── icons.component.js
+│   │   │   └── icons.component.ts
+│   │   ├── maps
+│   │   │   ├── maps.component.html
+│   │   │   ├── maps.component.js
+│   │   │   └── maps.component.ts
+│   │   ├── notifications
+│   │   │   ├── notifications.component.html
+│   │   │   ├── notifications.component.js
+│   │   │   └── notifications.component.ts
+│   │   ├── table
+│   │   │   ├── table.component.html
+│   │   │   ├── table.component.js
+│   │   │   └── table.component.ts
+│   │   ├── typography
+│   │   │   ├── typography.component.html
+│   │   │   ├── typography.component.js
+│   │   │   └── typography.component.ts
+│   │   └── user
+│   │       ├── user.component.html
+│   │       ├── user.component.js
+│   │       └── user.component.ts
+│   ├── main.js
+│   ├── main.ts
+│   ├── shared
+│   │   ├── footer
+│   │   │   ├── footer.component.html
+│   │   │   ├── footer.component.js
+│   │   │   ├── footer.component.ts
+│   │   │   ├── footer.module.js
+│   │   │   └── footer.module.ts
+│   │   └── navbar
+│   │       ├── navbar.component.html
+│   │       ├── navbar.component.js
+│   │       ├── navbar.component.ts
+│   │       ├── navbar.module.js
+│   │       └── navbar.module.ts
+│   └── sidebar
+│       ├── sidebar-routes.config.js
+│       ├── sidebar-routes.config.ts
+│       ├── sidebar.component.html
+│       ├── sidebar.component.js
+│       ├── sidebar.component.ts
+│       ├── sidebar.metadata.js
+│       ├── sidebar.metadata.ts
+│       ├── sidebar.module.js
+│       └── sidebar.module.ts
+├── app.js
+├── assets
+│   ├── css
+│   ├── fonts
+│   ├── img
+│   │   └── faces
+│   ├── js
+│   │   ├── bootstrap-checkbox-radio.js
+│   │   ├── bootstrap-notify.js
+│   │   ├── bootstrap.min.js
+│   │   ├── chartist.min.js
+│   │   ├── demo.js
+│   │   ├── initCharts.d.ts
+│   │   ├── initCharts.js
+│   │   ├── initFixedPlugin.d.ts
+│   │   ├── initFixedPlugin.js
+│   │   ├── initMenu.js
+│   │   ├── initNotify.d.ts
+│   │   ├── initNotify.js
+│   │   ├── jquery-1.10.2.js
+│   │   ├── jquery-3.1.1.js
+│   │   ├── jquery.sharrre.js
+│   │   └── paper-dashboard.js
+│   └── sass
+│       ├── paper
+│       │   ├── _alerts.scss
+│       │   ├── _buttons.scss
+│       │   ├── _cards.scss
+│       │   ├── _chartist.scss
+│       │   ├── _checkbox-radio.scss
+│       │   ├── _dropdown.scss
+│       │   ├── _footers.scss
+│       │   ├── _inputs.scss
+│       │   ├── _misc.scss
+│       │   ├── _mixins.scss
+│       │   ├── _navbars.scss
+│       │   ├── _responsive.scss
+│       │   ├── _sidebar-and-main-panel.scss
+│       │   ├── _tables.scss
+│       │   ├── _typography.scss
+│       │   ├── _variables.scss
+│       │   └── mixins
+│       │       ├── _buttons.scss
+│       │       ├── _cards.scss
+│       │       ├── _chartist.scss
+│       │       ├── _icons.scss
+│       │       ├── _inputs.scss
+│       │       ├── _labels.scss
+│       │       ├── _navbars.scss
+│       │       ├── _sidebar.scss
+│       │       ├── _tabs.scss
+│       │       ├── _transparency.scss
+│       │       └── _vendor-prefixes.scss
+│       └── paper-dashboard.scss
+├── bin
+│   └── bundler.js
+├── documentation
+│   ├── css
+│   ├── documentation.html
+│   └── html-tutorial.html
+├── index.html
+├── package.json
+├── public
+│   └── js
+│       └── bundle.min.js
+├── systemjs.config.js
+└── tsconfig.json
 
 ```
 
