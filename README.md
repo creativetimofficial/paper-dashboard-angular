@@ -148,6 +148,10 @@ paper-dashboard-angular
 
 ```
 
+### Version logs
+
+V1.0.0 - 21 March 2017 [initial Release]
+
 ## Useful Links
 
 More products from Creative Tim: <http://www.creative-tim.com/bootstrap-themes>
