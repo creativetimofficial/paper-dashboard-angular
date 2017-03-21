@@ -139,6 +139,7 @@ paper-dashboard-angular
 │   ├── documentation.html
 │   └── html-tutorial.html
 ├── index.html
+├── changelog.txt
 ├── package.json
 ├── public
 │   └── js
