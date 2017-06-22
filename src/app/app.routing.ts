@@ -39,7 +39,7 @@ export const AppRoutes: Routes = [
         component: MapsComponent
     },
     {
-        path: 'notification',
+        path: 'notifications',
         component: NotificationsComponent
     }
     // {
