@@ -135,6 +135,7 @@
         height: 100%;
         width: 230px;
         right: 0;
+        left: auto;
         z-index: 1032;
         visibility: visible;
         background-color: #999;
@@ -247,6 +248,10 @@
             z-index: 4;
             padding-top: 11px;
             padding-bottom: 11px;
+            .logo-img img{
+                top: 7px;
+                left: 0px;
+            }
         }
 
         .divider{
