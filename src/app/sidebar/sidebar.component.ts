@@ -1,8 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTES } from './sidebar-routes.config';
-import { MenuType } from './sidebar.metadata';
 
 declare var $:any;
+
+export interface RouteInfo {
+    path: string;
+    title: string;
+    icon: string;
+    class: string;
+}
+
+export const ROUTES: RouteInfo[] = [
+    { path: 'dashboard', title: 'Dashboard',  icon: 'ti-panel', class: '' },
+    { path: 'user', title: 'User Profile',  icon:'ti-user', class: '' },
+    { path: 'table', title: 'Table List',  icon:'ti-view-list-alt', class: '' },
+    { path: 'typography', title: 'Typography',  icon:'ti-text', class: '' },
+    { path: 'icons', title: 'Icons',  icon:'ti-pencil-alt2', class: '' },
+    { path: 'maps', title: 'Maps',  icon:'ti-map', class: '' },
+    { path: 'notifications', title: 'Notifications',  icon:'ti-bell', class: '' },
+    { path: 'upgrade', title: 'Upgrade to PRO',  icon:'ti-export', class: 'active-pro' },
+];
+
 @Component({
     moduleId: module.id,
     selector: 'sidebar-cmp',
@@ -11,10 +28,14 @@ declare var $:any;
 
 export class SidebarComponent implements OnInit {
     public menuItems: any[];
-    isCollapsed = true;
-    constructor() {}
     ngOnInit() {
-        // $.getScript('../../assets/js/material-dashboard-angular.js');
-        this.menuItems = ROUTES.filter(menuItem => menuItem.menuType !== MenuType.BRAND);
+        this.menuItems = ROUTES.filter(menuItem => menuItem);
     }
+    isNotMobileMenu(){
+        if($(window).width() > 991){
+            return false;
+        }
+        return true;
+    }
+
 }

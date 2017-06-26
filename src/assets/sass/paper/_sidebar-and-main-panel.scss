@@ -27,13 +27,24 @@
         background-position: center center;
     }
 
+
 }
 .sidebar,
 .off-canvas-sidebar{
     width: 260px;
     display: block;
     font-weight: 200;
+    .logo-img{
+        width: 42px;
+        max-height: 42px;
 
+        img{
+            width: 42px;
+            top: 16px;
+            left: 18px;
+            position: absolute;
+        }
+    }
     .logo{
         padding: 18px 0px;
         margin: 0 20px;
