@@ -553,9 +553,6 @@ paper-dashboard-angular
             </h2>
             <legend></legend>
             <p>
-                To use the custom checkboxes, you need to import a separate Javascript file called 'bootstrap-checkbox-radio-switch-tags.js'.
-            </p>
-            <p>
 				<div class="checkbox">
 					<input id="checkbox1" type="checkbox">
 					<label for="checkbox1">
@@ -1453,7 +1450,6 @@ paper-dashboard-angular
                     <th>Job Position</th>
                     <th>Since</th>
                     <th class="text-right">Salary</th>
-                    <th class="text-right">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -1463,17 +1459,7 @@ paper-dashboard-angular
                     <td>Develop</td>
                     <td>2013</td>
                     <td class="text-right">&euro; 99,225</td>
-                    <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                            <i class="fa fa-user"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                            <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </td>
+
                 </tr>
                 <tr>
 
@@ -1482,17 +1468,7 @@ paper-dashboard-angular
                     <td>Design</td>
                     <td>2012</td>
                     <td class="text-right">&euro; 89,241</td>
-                    <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                            <i class="fa fa-user"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                            <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </td>
+
                 </tr>
                 <tr>
                     <td class="text-center">3</td>
@@ -1500,17 +1476,7 @@ paper-dashboard-angular
                     <td>Design</td>
                     <td>2010</td>
                     <td class="text-right">&euro; 92,144</td>
-                    <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                            <i class="fa fa-user"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                            <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </td>
+
                 </tr>
                 <tr>
                     <td class="text-center">4</td>
@@ -1518,17 +1484,7 @@ paper-dashboard-angular
                     <td>Marketing</td>
                     <td>2013</td>
                     <td class="text-right">&euro; 49,990</td>
-                    <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                            <i class="fa fa-user"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                            <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </td>
+
                 </tr>
                 <tr>
                     <td class="text-center">5</td>
@@ -1536,17 +1492,7 @@ paper-dashboard-angular
                     <td>Communication</td>
                     <td>2014</td>
                     <td class="text-right">&euro; 69,201</td>
-                    <td class="td-actions text-right">
-                        <button type="button" rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
-                            <i class="fa fa-user"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
-                            <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </td>
+
                 </tr>
             </tbody>
         </table>
@@ -1562,7 +1508,6 @@ HTML:
                   &#x3C;th&#x3E;{{ tableData1.headerRow[2] }}&#x3C;/th&#x3E;
                   &#x3C;th&#x3E;{{ tableData1.headerRow[3] }}&#x3C;/th&#x3E;
                   &#x3C;th class=&#x22;text-right&#x22;&#x3E;{{ tableData1.headerRow[4] }}&#x3C;/th&#x3E;
-                  &#x3C;th class=&#x22;text-right&#x22;&#x3E;{{ tableData1.headerRow[5] }}&#x3C;/th&#x3E;
                 &#x3C;/tr&#x3E;
             &#x3C;/thead&#x3E;
           &#x3C;tbody&#x3E;
@@ -1572,17 +1517,6 @@ HTML:
                   &#x3C;td&#x3E;{{row[2]}}&#x3C;/td&#x3E;
                   &#x3C;td&#x3E;{{row[3]}}&#x3C;/td&#x3E;
                   &#x3C;td class=&#x22;text-right&#x22;&#x3E;&#x26;euro; {{row[4]}}&#x3C;/td&#x3E;
-                  &#x3C;td class=&#x22;td-actions text-right&#x22;&#x3E;
-                      &#x3C;button type=&#x22;button&#x22; rel=&#x22;tooltip&#x22; class=&#x22;btn btn-info btn-simple btn-xs&#x22;&#x3E;
-                          &#x3C;i class=&#x22;material-icons&#x22;&#x3E;person&#x3C;/i&#x3E;
-                      &#x3C;/button&#x3E;
-                      &#x3C;button type=&#x22;button&#x22; rel=&#x22;tooltip&#x22; class=&#x22;btn btn-success btn-simple btn-xs&#x22;&#x3E;
-                          &#x3C;i class=&#x22;material-icons&#x22;&#x3E;edit&#x3C;/i&#x3E;
-                      &#x3C;/button&#x3E;
-                      &#x3C;button type=&#x22;button&#x22; rel=&#x22;tooltip&#x22; class=&#x22;btn btn-danger btn-simple btn-xs&#x22;&#x3E;
-                          &#x3C;i class=&#x22;material-icons&#x22;&#x3E;close&#x3C;/i&#x3E;
-                      &#x3C;/button&#x3E;
-                  &#x3C;/td&#x3E;
               &#x3C;/tr&#x3E;
           &#x3C;/tbody&#x3E;
     &#x3C;/table&#x3E;
@@ -1597,13 +1531,13 @@ declare interface TableData {
 public tableData1: TableData;
 
 this.tableData1 = {
-    headerRow: [ &#x27;#&#x27;, &#x27;Name&#x27;, &#x27;Job Position&#x27;, &#x27;Since&#x27;, &#x27;Salary&#x27;, &#x27;Actions&#x27;],
+    headerRow: [ &#x27;#&#x27;, &#x27;Name&#x27;, &#x27;Job Position&#x27;, &#x27;Since&#x27;, &#x27;Salary&#x27;],
     dataRows: [
-        [&#x27;1&#x27;, &#x27;Andrew Mike&#x27;, &#x27;Develop&#x27;, &#x27;2013&#x27;, &#x27;99,225&#x27;,&#x27;&#x27;],
-        [&#x27;2&#x27;, &#x27;John Doe&#x27;, &#x27;Design&#x27;, &#x27;2012&#x27;, &#x27;89,241&#x27;, &#x27;btn-round&#x27;],
-        [&#x27;3&#x27;, &#x27;Alex Mike&#x27;, &#x27;Design&#x27;, &#x27;2010&#x27;, &#x27;92,144&#x27;, &#x27;btn-simple&#x27;],
-        [&#x27;4&#x27;,&#x27;Mike Monday&#x27;, &#x27;Marketing&#x27;, &#x27;2013&#x27;, &#x27;49,990&#x27;, &#x27;btn-round&#x27;],
-        [&#x27;5&#x27;, &#x27;Paul Dickens&#x27;, &#x27;Communication&#x27;, &#x27;2015&#x27;, &#x27;69,201&#x27;, &#x27;&#x27;]
+        [&#x27;1&#x27;, &#x27;Andrew Mike&#x27;, &#x27;Develop&#x27;, &#x27;2013&#x27;, &#x27;99,225&#x27;],
+        [&#x27;2&#x27;, &#x27;John Doe&#x27;, &#x27;Design&#x27;, &#x27;2012&#x27;, &#x27;89,241&#x27;],
+        [&#x27;3&#x27;, &#x27;Alex Mike&#x27;, &#x27;Design&#x27;, &#x27;2010&#x27;, &#x27;92,144&#x27;],
+        [&#x27;4&#x27;,&#x27;Mike Monday&#x27;, &#x27;Marketing&#x27;, &#x27;2013&#x27;, &#x27;49,990&#x27;],
+        [&#x27;5&#x27;, &#x27;Paul Dickens&#x27;, &#x27;Communication&#x27;, &#x27;2015&#x27;, &#x27;69,201&#x27;]
     ]
  };
 </pre>
@@ -1998,11 +1932,11 @@ Chartist.Line('#chartActivity', data, options, responsiveOptions);
             We changed the classic Google Maps by adding special skins and putting them in cards. If you want to see the full documentation from Google, you can see the docs <a href="https://developers.google.com/maps/documentation/javascript/">here</a>.<br /><br />
             Below, you will find a coded example:
         </p>
-        <div class="card">
+        <div class="card card-map">
             <div class="header">
                 <p class="category">Regular Map</p>
             </div>
-            <div class="content">
+            <div class="map">
                 <div id="regularMap" class="map"></div>
             </div>
         </div>
@@ -2138,7 +2072,7 @@ marker.setMap(map);
 
             //for google map
             // Regular Map
-            var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+			var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
             var mapOptions = {
                 zoom: 8,
                 center: myLatlng,
