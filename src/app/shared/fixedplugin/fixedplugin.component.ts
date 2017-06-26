@@ -62,5 +62,33 @@ export class FixedPluginComponent implements OnInit{
                 $off_canvas_sidebar.attr('data-active-color',new_color);
             }
         });
+        $('#twitter').sharrre({
+          share: {
+            twitter: true
+          },
+          enableHover: false,
+          enableTracking: true,
+          buttons: { twitter: {via: 'CreativeTim'}},
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('twitter');
+          },
+          template: '<i class="fa fa-twitter"></i>',
+          url: 'http://demos.creative-tim.com/paper-dashboard/dashboard.html'
+        });
+
+        $('#facebook').sharrre({
+          share: {
+            facebook: true
+          },
+          enableHover: false,
+          enableTracking: true,
+          click: function(api, options){
+            api.simulateClick();
+            api.openPopup('facebook');
+          },
+          template: '<i class="fa fa-facebook-square"></i>',
+          url: 'http://demos.creative-tim.com/paper-dashboard/dashboard.html'
+        });
     }
 }
