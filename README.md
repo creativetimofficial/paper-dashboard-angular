@@ -38,7 +38,87 @@ Quick start options:
 Within the download you'll find the following directories and files:
 
 ```
-
+paper-dashboard-angular
+├── CHANGELOG.md
+├── README.md
+├── documentation
+│   ├── css
+│   │   └── documentation.css
+│   └── elements.html
+├── e2e
+├── karma.conf.js
+├── package.json
+├── protractor.conf.js
+├── src
+│   ├── app
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── app.routing.ts
+│   │   ├── dashboard
+│   │   │   ├── dashboard.component.html
+│   │   │   └── dashboard.component.ts
+│   │   ├── icons
+│   │   │   ├── icons.component.html
+│   │   │   └── icons.component.ts
+│   │   ├── maps
+│   │   │   ├── maps.component.html
+│   │   │   └── maps.component.ts
+│   │   ├── notifications
+│   │   │   ├── notifications.component.html
+│   │   │   └── notifications.component.ts
+│   │   ├── shared
+│   │   │   ├── fixedplugin
+│   │   │   │   ├── fixedplugin.component.html
+│   │   │   │   ├── fixedplugin.component.ts
+│   │   │   │   └── fixedplugin.module.ts
+│   │   │   ├── footer
+│   │   │   │   ├── footer.component.html
+│   │   │   │   ├── footer.component.ts
+│   │   │   │   └── footer.module.ts
+│   │   │   └── navbar
+│   │   │       ├── navbar.component.html
+│   │   │       ├── navbar.component.ts
+│   │   │       └── navbar.module.ts
+│   │   ├── sidebar
+│   │   │   ├── sidebar.component.html
+│   │   │   ├── sidebar.component.ts
+│   │   │   └── sidebar.module.ts
+│   │   ├── table
+│   │   │   ├── table.component.html
+│   │   │   └── table.component.ts
+│   │   ├── typography
+│   │   │   ├── typography.component.html
+│   │   │   └── typography.component.ts
+│   │   ├── upgrade
+│   │   │   ├── upgrade.component.html
+│   │   │   └── upgrade.component.ts
+│   │   └── user
+│   │       ├── user.component.html
+│   │       └── user.component.ts
+│   ├── assets
+│   │   ├── css
+│   │   ├── fonts
+│   │   ├── img
+│   │   └── sass
+│   │       ├── paper
+│   │       └── paper-dashboard.scss
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── styles.css
+│   ├── test.ts
+│   ├── tsconfig.app.json
+│   ├── tsconfig.spec.json
+│   └── typings.d.ts
+├── tsconfig.json
+└── tslint.json
 ```
 
 ## Useful Links

@@ -135,6 +135,114 @@
 					<li><p>And: <pre>ng serve</pre></p></li>
 					<li><p>Navigate to: <a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a></p></li>
 				</ul>
+				<h4 class="title">
+					<b>Live Production on Heroku</b>
+				</h4>
+				<p>Replace package.json with this code.</p>
+				<pre>
+{
+  "name": "pd-angular",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "ng build --aot -prod",
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "engines": {
+    "node": "6.9.2",
+    "npm": "3.10.9"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^4.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@ngui/map": "^0.18.3",
+    "@types/googlemaps": "^3.26.14",
+    "arrive": "^2.3.1",
+    "bootstrap": "^3.3.5",
+    "bootstrap-notify": "^3.1.3",
+    "chartist": "^0.9.4",
+    "core-js": "^2.4.1",
+    "express": "^4.15.3",
+    "jquery": "^1.12.4",
+    "moment": "^2.18.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4",
+    "@angular/cli": "1.1.1",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/language-service": "^4.0.0",
+    "@types/jasmine": "2.5.45",
+    "@types/node": "~6.0.60"
+  },
+  "devDependencies": {
+    "codelyzer": "~3.0.1",
+    "jasmine-core": "~2.6.2",
+    "jasmine-spec-reporter": "~4.1.0",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-cli": "~1.0.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "protractor": "~5.1.2",
+    "ts-node": "~3.0.4",
+    "tslint": "~5.3.2",
+    "typescript": "~2.3.3"
+  }
+}
+				</pre>
+				<p>And add server.js in your app:</p>
+				<pre>
+const path = require('path');
+const express = require('express');
+const app = express();
+
+// If an incoming request uses
+// a protocol other than HTTPS,
+// redirect that request to the
+// same url but with HTTPS
+const forceSSL = function() {
+  return function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(['https://', req.get('Host'), req.url].join(''));
+    }
+    next();
+  }
+}
+
+// Instruct the app
+// to use the forceSSL
+// middleware
+app.use(forceSSL());
+
+// Run the app by serving the static files
+// in the dist directory
+app.use(express.static(__dirname + '/dist'));
+
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
+
+// Start the app by listening on the default
+// Heroku port
+app.listen(process.env.PORT || 8080);
+				</pre>
+				<p>Also check this tutorial: <a href="https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352">Angular CLI Deployment: Host Your Angular 2 App on Heroku</a>.</p>
+
 			</div>
 
 			<div class="tim-row">
@@ -147,9 +255,9 @@
 						Let's take it one by one:
 					</p>
 					<pre>
-pd-pro-angular
+paper-dashboard-angular
+├── CHANGELOG.md
 ├── README.md
-├── angular-cli.json
 ├── documentation
 │   ├── css
 │   │   └── documentation.css
@@ -166,97 +274,18 @@ pd-pro-angular
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
 │   │   ├── app.routing.ts
-│   │   ├── calendar
-│   │   │   ├── calendar.component.html
-│   │   │   ├── calendar.component.ts
-│   │   │   ├── calendar.module.ts
-│   │   │   └── calendar.routing.ts
-│   │   ├── charts
-│   │   │   ├── charts.component.html
-│   │   │   ├── charts.component.ts
-│   │   │   ├── charts.module.ts
-│   │   │   └── charts.routing.ts
-│   │   ├── components
-│   │   │   ├── buttons
-│   │   │   │   ├── buttons.component.html
-│   │   │   │   └── buttons.component.ts
-│   │   │   ├── components.module.ts
-│   │   │   ├── components.routing.ts
-│   │   │   ├── grid
-│   │   │   │   ├── grid.component.html
-│   │   │   │   └── grid.component.ts
-│   │   │   ├── icons
-│   │   │   │   ├── icons.component.html
-│   │   │   │   └── icons.component.ts
-│   │   │   ├── notifications
-│   │   │   │   ├── notifications.component.html
-│   │   │   │   └── notifications.component.ts
-│   │   │   ├── panels
-│   │   │   │   ├── panels.component.html
-│   │   │   │   └── panels.component.ts
-│   │   │   ├── sweetalert
-│   │   │   │   ├── sweetalert.component.html
-│   │   │   │   └── sweetalert.component.ts
-│   │   │   └── typography
-│   │   │       ├── typography.component.html
-│   │   │       └── typography.component.ts
 │   │   ├── dashboard
-│   │   │   ├── dashboard.module.ts
-│   │   │   ├── dashboard.routing.ts
-│   │   │   ├── overview
-│   │   │   │   ├── overview.component.html
-│   │   │   │   └── overview.component.ts
-│   │   │   └── stats
-│   │   │       ├── stats.component.html
-│   │   │       └── stats.component.ts
-│   │   ├── forms
-│   │   │   ├── equal-validator.directive.ts
-│   │   │   ├── extendedforms
-│   │   │   │   ├── extendedforms.component.html
-│   │   │   │   └── extendedforms.component.ts
-│   │   │   ├── forms.module.ts
-│   │   │   ├── forms.routing.ts
-│   │   │   ├── regularforms
-│   │   │   │   ├── regularforms.component.html
-│   │   │   │   └── regularforms.component.ts
-│   │   │   ├── validationforms
-│   │   │   │   ├── password-validator.component.ts
-│   │   │   │   ├── validationforms.component.html
-│   │   │   │   └── validationforms.component.ts
-│   │   │   └── wizard
-│   │   │       ├── wizard.component.html
-│   │   │       └── wizard.component.ts
-│   │   ├── layouts
-│   │   │   ├── admin
-│   │   │   │   ├── admin-layout.component.html
-│   │   │   │   └── admin-layout.component.ts
-│   │   │   └── auth
-│   │   │       ├── auth-layout.component.html
-│   │   │       └── auth-layout.component.ts
+│   │   │   ├── dashboard.component.html
+│   │   │   └── dashboard.component.ts
+│   │   ├── icons
+│   │   │   ├── icons.component.html
+│   │   │   └── icons.component.ts
 │   │   ├── maps
-│   │   │   ├── fullscreenmap
-│   │   │   │   ├── fullscreenmap.component.html
-│   │   │   │   └── fullscreenmap.component.ts
-│   │   │   ├── googlemaps
-│   │   │   │   ├── googlemaps.component.html
-│   │   │   │   └── googlemaps.component.ts
-│   │   │   ├── maps.module.ts
-│   │   │   ├── maps.routing.ts
-│   │   │   └── vectormaps
-│   │   │       ├── vectormaps.component.html
-│   │   │       └── vectormaps.component.ts
-│   │   ├── pages
-│   │   │   ├── lock
-│   │   │   │   ├── lock.component.html
-│   │   │   │   └── lock.component.ts
-│   │   │   ├── login
-│   │   │   │   ├── login.component.html
-│   │   │   │   └── login.component.ts
-│   │   │   ├── pages.module.ts
-│   │   │   ├── pages.routing.ts
-│   │   │   └── register
-│   │   │       ├── register.component.html
-│   │   │       └── register.component.ts
+│   │   │   ├── maps.component.html
+│   │   │   └── maps.component.ts
+│   │   ├── notifications
+│   │   │   ├── notifications.component.html
+│   │   │   └── notifications.component.ts
 │   │   ├── shared
 │   │   │   ├── fixedplugin
 │   │   │   │   ├── fixedplugin.component.html
@@ -274,40 +303,22 @@ pd-pro-angular
 │   │   │   ├── sidebar.component.html
 │   │   │   ├── sidebar.component.ts
 │   │   │   └── sidebar.module.ts
-│   │   ├── tables
-│   │   │   ├── bootstraptable
-│   │   │   │   ├── bootstrap.component.html
-│   │   │   │   └── bootstrap.component.ts
-│   │   │   ├── datatable.net
-│   │   │   │   ├── datatable.component.html
-│   │   │   │   └── datatable.component.ts
-│   │   │   ├── extendedtable
-│   │   │   │   ├── extendedtable.component.html
-│   │   │   │   └── extendedtable.component.ts
-│   │   │   ├── regulartable
-│   │   │   │   ├── regulartable.component.html
-│   │   │   │   └── regulartable.component.ts
-│   │   │   ├── tables.module.ts
-│   │   │   └── tables.routing.ts
-│   │   ├── timeline
-│   │   │   ├── timeline.component.html
-│   │   │   ├── timeline.component.ts
-│   │   │   ├── timeline.module.ts
-│   │   │   └── timeline.routing.ts
-│   │   └── userpage
+│   │   ├── table
+│   │   │   ├── table.component.html
+│   │   │   └── table.component.ts
+│   │   ├── typography
+│   │   │   ├── typography.component.html
+│   │   │   └── typography.component.ts
+│   │   ├── upgrade
+│   │   │   ├── upgrade.component.html
+│   │   │   └── upgrade.component.ts
+│   │   └── user
 │   │       ├── user.component.html
-│   │       ├── user.component.ts
-│   │       ├── user.module.ts
-│   │       └── user.routing.ts
+│   │       └── user.component.ts
 │   ├── assets
 │   │   ├── css
 │   │   ├── fonts
 │   │   ├── img
-│   │   ├── js
-│   │   │   ├── jquery-jvectormap.js
-│   │   │   ├── jquery.validate.min.js
-│   │   │   ├── perfect-scrollbar.min.js
-│   │   │   └── sweetalert2.js
 │   │   └── sass
 │   │       ├── paper
 │   │       └── paper-dashboard.scss
@@ -324,9 +335,7 @@ pd-pro-angular
 │   ├── tsconfig.spec.json
 │   └── typings.d.ts
 ├── tsconfig.json
-├── tslint.json
-├── typings
-└── typings.json
+└── tslint.json
 					</pre>
 			</div>
 
