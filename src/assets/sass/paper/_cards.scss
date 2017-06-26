@@ -129,10 +129,6 @@
     .alert{
         border-radius: $border-radius-base;
         position: relative;
-
-        &.alert-with-icon{
-            padding-left: 65px;
-        }
     }
     .icon-big{
         font-size: 3em;

@@ -1485,8 +1485,8 @@ textarea.form-control {
   padding: 10px 10px 10px 20px;
   border-radius: 4px;
 }
-.alert.alert-with-icon {
-  padding-left: 65px;
+.alert [data-notify="icon"][class*="ti-"] ~ [data-notify="message"] {
+  padding-left: 50px;
 }
 
 .alert-info {
@@ -2140,9 +2140,6 @@ textarea.form-control {
 .card .alert {
   border-radius: 4px;
   position: relative;
-}
-.card .alert.alert-with-icon {
-  padding-left: 65px;
 }
 .card .icon-big {
   font-size: 3em;
