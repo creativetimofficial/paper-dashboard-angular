@@ -1,6 +1,32 @@
 .tim-row{
     margin-bottom: 40px;
 }
+.title-container img {
+    width: 80px;
+    height: 80px;
+}
+.navbar-center {
+    float: none;
+    display: inline-block;
+}
+.navbar-title .image-container {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    top: -3px;
+    position: relative;
+}
+.navbar-title img {
+    width: 100%;
+}
+.navbar-title h4 {
+    line-height: 12px;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+.navbar-transparent .collapse .navbar-right > li a{
+    color: #fff!important;
+}
 pre.prettyprint{
     background-color: #eee;
     border: 0px;
