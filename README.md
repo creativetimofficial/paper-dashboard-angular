@@ -7,7 +7,7 @@ If you are a developer or a website owner that needs to work within a dashboard 
 
 We like consistency and design that blends into its purpose. Paper Dashboard is a perfect example of our most thoughtful work. It combines over a dozen components and plugins, while looking like everything fits together. For an easy start or inspiration for you project, we have also create a set of example pages, like the user settings or usage graphics.
 
-Paper Dashboard is built using the same design language as [Paper Kit](http://www.creative-tim.com/product/paper-kit). You can easily use them together, or pick between them depending on the project you have.
+Paper Dashboard is built using the same design language as [Paper Kit](https://www.creative-tim.com/product/paper-kit). You can easily use them together, or pick between them depending on the project you have.
 
 Let us know what you think and what we can improve below. And good luck with development!
 
@@ -15,13 +15,13 @@ Let us know what you think and what we can improve below. And good luck with dev
 ## Links:
 
 + [Live Preview](https://www.creative-tim.com/product/paper-dashboard-angular)
-+ [Paper Kit - For Front End Development](http://www.creative-tim.com/product/paper-kit?ref=github-pd-angular)
++ [Paper Kit - For Front End Development](https://www.creative-tim.com/product/paper-kit?ref=github-pd-angular)
 
 ## Quick start
 
 Quick start options:
 
-- [Download from Creative Tim](http://www.creative-tim.com/product/paper-dashboard-pro-angular).
+- [Download from Creative Tim](https://www.creative-tim.com/product/paper-dashboard-pro-angular).
 
 ## Terminal Commands
 
@@ -123,13 +123,13 @@ paper-dashboard-angular
 
 ## Useful Links
 
-More products from Creative Tim: <http://www.creative-tim.com/bootstrap-themes>
+More products from Creative Tim: <https://www.creative-tim.com/bootstrap-themes>
 
 Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
 
-Freebies: <http://www.creative-tim.com/products>
+Freebies: <https://www.creative-tim.com/products>
 
-Affiliate Program (earn money): <http://www.creative-tim.com/affiliates/new>
+Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new>
 
 Social Media:
 
