@@ -119,9 +119,10 @@ pre.prettyprint{
     color: #333333;
 }
 .fixed-section{
-    top: 90px;
+    top: 57px;
     max-height: 80vh;
     overflow: scroll;
+    padding-top: 90px;
 }
 .fixed-section ul li{
     list-style: none;
