@@ -22,7 +22,7 @@ export class FixedPluginComponent implements OnInit{
         }
 
         $('.fixed-plugin a').click(function(event){
-          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          // if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
             if($(this).hasClass('switch-trigger')){
                 if(event.stopPropagation){
                     event.stopPropagation();
@@ -74,7 +74,7 @@ export class FixedPluginComponent implements OnInit{
             api.openPopup('twitter');
           },
           template: '<i class="fa fa-twitter"></i>',
-          url: 'http://demos.creative-tim.com/paper-dashboard/dashboard.html'
+          url: 'http://pd-angular.creative-tim.com'
         });
 
         $('#facebook').sharrre({
@@ -88,7 +88,7 @@ export class FixedPluginComponent implements OnInit{
             api.openPopup('facebook');
           },
           template: '<i class="fa fa-facebook-square"></i>',
-          url: 'http://demos.creative-tim.com/paper-dashboard/dashboard.html'
+          url: 'http://pd-angular.creative-tim.com'
         });
     }
 }
