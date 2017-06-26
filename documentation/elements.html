@@ -140,89 +140,108 @@
 				</h4>
 				<p>Replace package.json with this code.</p>
 				<pre>
-					{
-"name": "md-pro-angular-cli",
-"version": "1.2.1",
-"license": "SEE LICENSE IN LICENSE.pdf",
-"repository": {
-"type": "git",
-"url": "https://github.com/creativetimofficial/material-dashboard-pro-angular.git"
-},
-"scripts": {
-"preinstall": "npm install -g http-server",
-"postinstall": "ng build --prod",
-"start": "http-server dist/",
-"lint": "tslint \"src/**/*.ts\"",
-"test": "ng test",
-"pree2e": "webdriver-manager update",
-"e2e": "protractor"
-},
-"engines": {
-"node": "6.9.2",
-"npm": "3.10.9"
-},
-"private": true,
-"dependencies": {
-"@agm/core": "^1.0.0-beta.0",
-"@angular/cli": "1.0.0-rc.2",
-"@angular/compiler-cli": "^2.4.0",
-"@angular/common": "^2.4.0",
-"@angular/compiler": "^2.4.0",
-"@angular/core": "^2.4.0",
-"@angular/forms": "^2.4.0",
-"@angular/http": "^2.4.0",
-"@angular/platform-browser": "^2.4.0",
-"@angular/platform-browser-dynamic": "^2.4.0",
-"@angular/router": "^3.4.0",
-"animate.css": "^3.5.2",
-"arrive": "^2.3.1",
-"bootstrap": "^3.3.5",
-"bootstrap-notify": "^3.1.3",
-"bootstrap-select": "^1.12.2",
-"bootstrap-tagsinput": "^0.7.1",
-"chartist": "^0.9.4",
-"chartist-plugin-zoom": "^0.4.0",
-"core-js": "^2.4.1",
-"datatables": "1.10.12",
-"datatables.net-bs": "1.10.12",
-"datatables.net-responsive": "^2.1.1",
-"domready": "^1.0.8",
-"eonasdan-bootstrap-datetimepicker": "4.17.47",
-"express": "^4.15.3",
-"fullcalendar": "^3.4.0",
-"googleapis": "^19.0.0",
-"jasny-bootstrap": "^3.1.3",
-"jquery": "^1.12.4",
-"nouislider": "^9.2.0",
-"rxjs": "^5.1.0",
-"twitter-bootstrap-wizard": "^1.2.0",
-"validate": "^3.0.1",
-"web-animations-js": "^2.2.2",
-"zone.js": "^0.7.6",
-"@types/bootstrap": "^3.3.32",
-"@types/chartist": "^0.9.34",
-"@types/jasmine": "2.5.38",
-"@types/jquery": "^1.10.31",
-"@types/node": "^6.0.73"
-},
-"devDependencies": {
-"codelyzer": "~2.0.0",
-"jasmine-core": "~2.5.2",
-"jasmine-spec-reporter": "~3.2.0",
-"karma": "~1.4.1",
-"karma-chrome-launcher": "~2.0.0",
-"karma-cli": "~1.0.1",
-"karma-coverage-istanbul-reporter": "^0.2.0",
-"karma-jasmine": "~1.1.0",
-"karma-jasmine-html-reporter": "^0.2.2",
-"protractor": "~5.1.0",
-"ts-node": "~2.0.0",
-"tslint": "~4.5.0",
-"typescript": "~2.0.0"
-}
+{
+  "name": "pd-angular",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "ng build --aot -prod",
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "engines": {
+    "node": "6.9.2",
+    "npm": "3.10.9"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^4.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@ngui/map": "^0.18.3",
+    "@types/googlemaps": "^3.26.14",
+    "arrive": "^2.3.1",
+    "bootstrap": "^3.3.5",
+    "bootstrap-notify": "^3.1.3",
+    "chartist": "^0.9.4",
+    "core-js": "^2.4.1",
+    "express": "^4.15.3",
+    "jquery": "^1.12.4",
+    "moment": "^2.18.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4",
+    "@angular/cli": "1.1.1",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/language-service": "^4.0.0",
+    "@types/jasmine": "2.5.45",
+    "@types/node": "~6.0.60"
+  },
+  "devDependencies": {
+    "codelyzer": "~3.0.1",
+    "jasmine-core": "~2.6.2",
+    "jasmine-spec-reporter": "~4.1.0",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-cli": "~1.0.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "protractor": "~5.1.2",
+    "ts-node": "~3.0.4",
+    "tslint": "~5.3.2",
+    "typescript": "~2.3.3"
+  }
 }
 				</pre>
-				<p>Also check this tutorial: <a href="https://paucls.wordpress.com/2016/11/25/deploy-angular-2-cli-app-to-heroku/">Deploy Angular 2 CLI app to Heroku</a>.</p>
+				<p>And add server.js in your app:</p>
+				<pre>
+const path = require('path');
+const express = require('express');
+const app = express();
+
+// If an incoming request uses
+// a protocol other than HTTPS,
+// redirect that request to the
+// same url but with HTTPS
+const forceSSL = function() {
+  return function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(['https://', req.get('Host'), req.url].join(''));
+    }
+    next();
+  }
+}
+
+// Instruct the app
+// to use the forceSSL
+// middleware
+app.use(forceSSL());
+
+// Run the app by serving the static files
+// in the dist directory
+app.use(express.static(__dirname + '/dist'));
+
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
+
+// Start the app by listening on the default
+// Heroku port
+app.listen(process.env.PORT || 8080);
+				</pre>
+				<p>Also check this tutorial: <a href="https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352">Angular CLI Deployment: Host Your Angular 2 App on Heroku</a>.</p>
 
 			</div>
 
