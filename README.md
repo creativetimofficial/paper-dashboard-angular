@@ -1,27 +1,28 @@
-# [Paper Dashboard Angular](pus link)
+# [Paper Dashboard Angular](https://www.creative-tim.com/product/paper-dashboard-angular)
 [![version][version-badge]][CHANGELOG]
- <!-- [![license][license-badge]][LICENSE] -->
+[![license][license-badge]][LICENSE]
+
 ![alt text](https://s3.amazonaws.com/creativetim_bucket/products/58/original/opt_pd_angular_thumbnail.jpg "Paper Dashboard Free")
 
-If you are a developer or a website owner that needs to work within a dashboard and want to have a pretty sight while doing so, Paper Dashboard is for you. Paper Dashboard is a Bootstrap Admin Panel which combines soft colours with beautiful typography and spacious cards and graphics. It is a powerful tool, but it is light and easy to use. It has enough features to allow you to get the job done, but it is not crowded to the point where you can't find the files for a specific plugin.
+Paper Dashboard Angular is a Bootstrap Admin Template which combines soft colors with beautiful typography and spacious cards and graphics. It was built on top of Google's [Angular Framework](https://angular.io/) and the HTML version of [Paper Dashboard](https://www.creative-tim.com/product/paper-dashboard). It is a powerful dashboard but it is light and easy to be used. It has enough features to allow you to get the job done, but it is not crowded to the point where you can't find the files for a specific component.
 
-We like consistency and design that blends into its purpose. Paper Dashboard is a perfect example of our most thoughtful work. It combines over a dozen components and plugins, while looking like everything fits together. For an easy start or inspiration for you project, we have also create a set of example pages, like the user settings or usage graphics.
+ We like consistency and design that blends into its purpose. Paper Dashboard Angular is a perfect example of our most thoughtful work. It combines over a dozen components and plugins, while looking like everything fits together. For an easy start or inspiration for you project, we have also create a set of example pages, like the user settings or usage graphics.
 
-Paper Dashboard is built using the same design language as [Paper Kit](https://www.creative-tim.com/product/paper-kit). You can easily use them together, or pick between them depending on the project you have.
-
-Let us know what you think and what we can improve below. And good luck with development!
+ Paper Dashboard Angular is built using the same design language as [Paper Kit](http://www.creative-tim.com/product/paper-kit), which you can use for the presentation pages of your website. You can easily use them together, or pick between them depending on the project you have.
 
 
 ## Links:
 
-+ [Live Preview](https://www.creative-tim.com/product/paper-dashboard-angular)
++ [Live Preview](http://pd-angular.creative-tim.com/dashboard)
++ [Paper Dashboard PRO Angular](https://www.creative-tim.com/product/paper-dashboard-pro-angular)
 + [Paper Kit - For Front End Development](https://www.creative-tim.com/product/paper-kit?ref=github-pd-angular)
+
 
 ## Quick start
 
 Quick start options:
 
-- [Download from Creative Tim](https://www.creative-tim.com/product/paper-dashboard-pro-angular).
+- [Download from Creative Tim](https://www.creative-tim.com/product/paper-dashboard-angular).
 
 ## Terminal Commands
 
@@ -41,6 +42,7 @@ Within the download you'll find the following directories and files:
 paper-dashboard-angular
 ├── CHANGELOG.md
 ├── README.md
+├── LICENSE.md
 ├── documentation
 │   ├── css
 │   │   └── documentation.css
@@ -145,8 +147,8 @@ Instagram: <https://instagram.com/creativetimofficial>
 
 [CHANGELOG]: ./CHANGELOG.md
 
-[LICENSE]: ./LICENSE
+[LICENSE]: ./LICENSE.md
 
 [version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
 
-<!-- [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg -->
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
