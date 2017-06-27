@@ -2,8 +2,8 @@
     margin-bottom: 40px;
 }
 .title-container img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 .navbar-center {
     float: none;
@@ -145,9 +145,10 @@ pre.prettyprint{
     color: #333333;
 }
 .fixed-section{
-    top: 90px;
+    top: 57px;
     max-height: 80vh;
     overflow: scroll;
+    padding-top: 90px;
 }
 .fixed-section ul li{
     list-style: none;

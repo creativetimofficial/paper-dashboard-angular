@@ -8,9 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<meta name="viewport" content="width=device-width" />
-	<title>Paper Dashboard Pro by Creative Tim</title>
-
-
+	<title>Tutorial Components - Paper Dashboard Angular by Creative Tim</title>
 
     <link href="../src/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../src/assets/css/paper-dashboard.css" rel="stylesheet"/>
@@ -21,6 +19,55 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="../src/assets/css/themify-icons.css" rel="stylesheet">
+
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+	<style>
+		pre.prettyprint{
+		    background-color: #eee;
+		    border: 0px;
+		    margin-bottom: 60px;
+		    margin-top: 30px;
+		    padding: 20px;
+		    text-align: left;
+		}
+		.atv, .str{
+		    color: #05AE0E;
+		}
+		.tag, .pln, .kwd{
+		    color: #3472F7;
+		}
+		.atn{
+		    color: #2C93FF;
+		}
+		.pln{
+		    color: #333;
+		}
+		.com{
+		    color: #999;
+		}
+		.space-top{
+		    margin-top: 50px;
+		}
+		.area-line{
+		    border: 1px solid #999;
+		    border-left: 0;
+		    border-right: 0;
+		    color: #666;
+		    display: block;
+		    margin-top: 20px;
+		    padding: 8px 0;
+		    text-align: center;
+		}
+		.area-line a{
+		    color: #666;
+		}
+		.container-fluid{
+		    padding-right: 15px;
+		    padding-left: 15px;
+		}
+
+	</style>
 </head>
 
 <body class="nude">
@@ -61,7 +108,7 @@
 			</ul>
 		  <ul  class="nav navbar-nav navbar-right">
 				<li>
-					<a href="https://github.com/creativetimofficial/paper-dashboard-angular/issues">Have an issue?</a>
+					<a href="https://github.com/creativetimofficial/paper-dashboard-angular/issues" class="btn btn-neutral btn-fill">Have an issue?</a>
 
 				</li>
 		   </ul>
@@ -79,6 +126,7 @@
             <div class="title-container text-center">
 				<img src="../src/assets/img/angular.png">
                 <h1>Paper Dashboard Angular</h1>
+                <h3>Documentation - v1.0.0</h3>
             </div>
         </div>
 </div>
@@ -91,8 +139,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-			<div class="fixed-section" data-spy="affix" data-offset-top="340">
+			<div class="fixed-section" data-spy="affix" data-offset-top="390">
                 <ul id="menuresize">
+					<li><a href="#license">License</a></li>
+					<li><a href="#tutorial">Tutorial</a></li>
+					<li><a href="#pablo">&nbsp;</a></li>
+					<li><a href="#components"><b>Components</b></a></li>
                     <li><a href="#buttons-row">Buttons</a></li>
                     <li><a href="#checkbox-row">Checkbox/Radio</a></li>
                     <li><a href="#dropdown-row">Dropdown</a></li>
@@ -105,35 +157,55 @@
                     <li><a href="#notification-row">Notification</a></li>
                     <li><a href="#charts-row">Charts</a></li>
                     <li><a href="#google-row">Google Maps</a></li>
-					<li><a href="#api-row">How to setup Google API Keys</a></li>
+					<li><a href="#api-row">Google API Keys</a></li>
                 </ul>
             </div>
         </div>
         <div class="col-md-8">
             <div class="space-top"></div>
             <div class="tim-container" style="min-height: 2000px;">
-			<div class="tim-row">
+
+			<!-- License Row -->
+			<div class="tim-row tim-row-first" id="license">
+				<h2 class="text-center">MIT License</h2>
+				<legend></legend>
+				<p>
+					Copyright (c) 2017 <a href="https://www.creative-tim.com?ref=paper-dashboard-angular" target="_blank">Creative Tim</a>
+					<br><br>
+					Permission is hereby granted, free of charge, to any person obtaining a copy
+					of this software and associated documentation files (the "Software"), to deal
+					in the Software without restriction, including without limitation the rights
+					to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+					copies of the Software, and to permit persons to whom the Software is
+					furnished to do so, subject to the following conditions:
+					<br><br>
+					The above copyright notice and this permission notice shall be included in all
+					copies or substantial portions of the Software.
+					<br><br>
+					THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+					IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+					FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+					AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+					LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+					OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+					SOFTWARE.
+				</p>
+			</div>
+
+			<div class="tim-row" id="tutorial">
 				<h2 class="text-center">Short Description and Usage</h2>
 				<legend></legend>
 				<p>
-				Paper Dashboard is a beautiful resource built over Bootstrap to allow you to create powerful and beautiful dashboards. We have redesigned all the usual components in Bootstrap to make it look flat, minimalist and easy to use.
+				<b>Paper Dashboard Angular</b> is a beautiful admin template for Angular 4. It was built over Bootstrap to allow you to create powerful and beautiful dashboards. We have redesigned all the usual components in Bootstrap to make it look flat, minimalist and easy to use.
 				<br /><br />
-					Using the dashboard is very simple, but it does require you to understand basic JavaScript functions. To get the desired effect you will need to integrate JS plugins that take a little bit more effort. Down below we list all the files you need to include inside the application to get going. In the <a href="elements.html">elements page</a>, you can see how each element if called and used.
+				Using the dashboard is very simple, but it does require you to understand Angular functions.
 				</p>
 			</div>
 
 			<div class="tim-row">
 				<h2 class="text-center">Getting Started</h2>
 				<legend></legend>
-				<p>
-				The Paper Dashboard is built on top of Bootstrap 3, so you can safely use it on your existing or new Bootstrap project. No line of code from Bootstrap 3 was changed, so you don't have to worry about undesired effects in your work.
-				</p>
-				<p>
-					We provide all the necessary CSS resources. So, to immediately change or get started with our design, include the "css/paper-dashboard.css" in your HTML template. Your project will get the new look.
-				</p>
-				<p>
-					To jump start your project, you can use our start-up template where all the files are already included and ready to use. If you do however, want to start from scratch, you can see the file structure below. The core JavaScript is contained in "js/paper-dashboard.js". Some functions are called from "js/demo.js" because they are presented only for demo purpose, you can check there how they are working and duplicate their effect on your projct. For the other files, you should add them if you use the specific element inside your page.
-				</p>
+
 				<h4 class="title">
 					<b>Local Development</b>
 				</h4>
@@ -234,7 +306,7 @@ app.get('/*', function(req, res) {
 // Heroku port
 app.listen(process.env.PORT || 8080);
 				</pre>
-				<p>Also check this tutorial: <a href="https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352">Angular CLI Deployment: Host Your Angular 2 App on Heroku</a>.</p>
+				<p>Also check this tutorial: <a href="https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352">Angular CLI Deployment: Host Your Angular App on Heroku</a>.</p>
 
 			</div>
 
@@ -332,7 +404,7 @@ paper-dashboard-angular
 					</pre>
 			</div>
 
-			<div class="tim-row">
+			<div class="tim-row" id="components">
 				<h2 class="text-center">Restyled Components</h2>
 				<legend></legend>
 					<p>
@@ -373,9 +445,6 @@ paper-dashboard-angular
 						<li> Panels</li>
 						<li> Radio Buttons</li>
 					</ul>
-					</p>
-					<p>
-						For more details regarding the components, go to our <a href="elements.html">elements page</a>.
 					</p>
 			</div>
 <!-- buttons row -->
@@ -456,94 +525,12 @@ paper-dashboard-angular
                     Button groups, toolbars, and disabled states all work like they are supposed to.
                 </p>
 
-            <h4>Social Buttons</h4>
-                <p>
-                    An extra category of buttons that are necessary for any project is the social buttons. We have added classes that provide the default colour for every social network. <br />
-                    To use them, you have to add to your button the general class <code>btn-social</code> and the specific network, for example <code>btn-twitter</code>. All styles described above can be applied to social buttons (default, filled, simple). <br />
-                   We used the Themify social icons which you can find <a href="../examples/components/icons.html">here</a>.
-                <br />
-                Here are examples for all the social buttons:
-                </p>
-                <div class="social-buttons">
-                    <button class="btn btn-icon btn-twitter">
-                        <i class="ti-twitter"></i>
-                    </button>
-                    <button class="btn btn-icon btn-facebook">
-                        <i class="ti-facebook"> </i>
-                    </button>
-                    <button class="btn btn-icon btn-google">
-                        <i class="ti-google"> </i>
-                    </button>
-                    <button class="btn btn-icon btn-linkedin">
-                        <i class="ti-linkedin"></i>
-                    </button>
-                    <button class="btn btn-icon btn-pinterest">
-                        <i class="ti-pinterest"></i>
-                    </button>
-                    <button class="btn btn-icon btn-youtube">
-                        <i class="ti-youtube"> </i>
-                    </button>
-                    <button class="btn btn-icon btn-tumblr">
-                        <i class="ti-tumblr"> </i>
-                    </button>
-                    <button class="btn btn-icon btn-github">
-                        <i class="ti-github"></i>
-                    </button>
-                    <button class="btn btn-icon btn-dribbble">
-                        <i class="ti-dribbble"></i>
-                    </button>
-                    <button class="btn btn-icon btn-reddit">
-                        <i class="ti-reddit"></i>
-                    </button>
-                    <button class="btn btn-icon btn-instagram">
-                        <i class="ti-instagram"></i>
-                    </button>
-                </div>
-
-<pre class="prettyprint">
-&lt;button class=&quot;btn btn-icon btn-twitter&quot;&gt;
-    &lt;i class=&quot;ti-twitter&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-facebook&quot;&gt;
-    &lt;i class=&quot;ti-facebook&quot;&gt; &lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-google&quot;&gt;
-    &lt;i class=&quot;ti-google&quot;&gt; &lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-linkedin&quot;&gt;
-    &lt;i class=&quot;ti-linkedin&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-pinterest&quot;&gt;
-    &lt;i class=&quot;ti-pinterest&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-youtube&quot;&gt;
-    &lt;i class=&quot;ti-youtube&quot;&gt; &lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-tumblr&quot;&gt;
-    &lt;i class=&quot;ti-tumblr&quot;&gt; &lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-github&quot;&gt;
-    &lt;i class=&quot;ti-github&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-dribbble&quot;&gt;
-    &lt;i class=&quot;ti-dribbble&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-reddit&quot;&gt;
-    &lt;i class=&quot;ti-reddit&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;btn btn-icon btn-instagram&quot;&gt;
-    &lt;i class=&quot;ti-instagram&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-
-</pre>
-
     </div>
 <!--     end row -->
 
 <!-- checkbox row -->
     <div class="tim-row" id="checkbox-row">
-            <h2> Checkboxes
-            </h2>
+            <h2> Checkboxes</h2>
             <legend></legend>
             <p>
 				<div class="checkbox">
@@ -606,12 +593,8 @@ paper-dashboard-angular
 
 <!-- radio row -->
     <div class="tim-row" id="radio-row">
-        <h2> Radio Buttons
-        </h2>
+        <h2> Radio Buttons</h2>
         <legend></legend>
-            <p>
-                To use the custom radio buttons, you need to import a separate Javascript file called 'bootstrap-checkbox-radio-switch-tags.js'.
-            </p>
             <p>
 				<div class="radio">
 				   <input type="radio" name="radio1" id="radio1" value="option1">
@@ -676,13 +659,8 @@ paper-dashboard-angular
 <!-- end row -->
 <!-- dropdown row -->
 <div class="tim-row" id="dropdown-row">
-        <h2> Dropdown
-        </h2>
+        <h2> Dropdown</h2>
         <legend></legend>
-        <p>
-        We are very proud to present the dropdown, we added a subtle animation for this classic widget.  <br />
-        Here is an example and the code:
-        </p>
 
         <div class="row">
             <div class="col-md-3">
@@ -727,10 +705,8 @@ paper-dashboard-angular
 
 <!-- inputs row -->
     <div class="tim-row" id="inputs-row">
-            <h2>Inputs
-            </h2>
+            <h2>Inputs</h2>
             <legend></legend>
-
             <p>
             We restyled the Bootstrap input to give it a flat, minimal look. You can use the classic look, different colours and states or input groups.
             </p>
@@ -750,7 +726,7 @@ paper-dashboard-angular
             <div class="col-md-6">
                   <div class="form-group has-error has-feedback">
                     <input type="text" value="Error" class="form-control" />
-                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    <span class="fa fa-remove form-control-feedback"></span>
                   </div>
         	</div>
         	<div class="col-md-6">
@@ -781,7 +757,7 @@ paper-dashboard-angular
 
     &lt;input type=&quot;text&quot; value=&quot;Error&quot; class=&quot;form-control&quot; /&gt;
 
-    &lt;span class=&quot;glyphicon glyphicon-remove form-control-feedback&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;fa fa-remove form-control-feedback&quot;&gt;&lt;/span&gt;
 
 &lt;/div&gt;
 
@@ -1030,220 +1006,13 @@ paper-dashboard-angular
 </pre>
 
 
-		<p class="space-top">
-            <b>Fixed Navbar: </b> If you want to have a "Fixed Navbar" on Desktop and Mobile please add the class <code>navbar-fixed</code> on the tag <code>nav</code> and move the entire <code>nav</code> structure outside of the div with class <code>main-panel</code>. Check the example implementation for more details:
-        </p>
-
-        <div id="navbar">
-
-<pre class="prettyprint">
-	&lt;div class=&quot;sidebar&quot; data-color=&quot;orange&quot; data-image=&quot;../assets/img/full-screen-image-3.jpg&quot;&gt;
-	    ....
-	&lt;/div&gt;
-
-	&lt;nav class=&quot;navbar navbar-default navbar-fixed&quot;&gt;
-		&lt;div class=&quot;container-fluid&quot;&gt;
-			....
-		&lt;/div&gt;
-	&lt;/nav&gt;
-
-	&lt;div class=&quot;main-panel&quot;&gt;
-		&lt;-- .navbar used to be here, but was moved outside of this div --&gt;
-		....
-	&lt;/div&gt;
-</pre>
-
-
-        <p class="space-top">
-            Besides the default navbar, we added 5 colors for the 5 classes: primary, info, success, warning, danger. If you want to use one of them, you have to replace the <code>navbar-default</code> with the class for the chosen color <code>navbar-ct-{class}</code>.
-        </p>
-
-
-<div id="navbar-blue">
-    <nav class="navbar navbar-ct-primary">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-            <div class="collapse navbar-collapse">
-
-                <form class="navbar-form navbar-left navbar-search-form" role="search">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" value="" class="form-control" placeholder="Search...">
-                    </div>
-                </form>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="charts.html">
-                            <i class="fa fa-line-chart"></i>
-                            <p>Stats</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-</div><!--  end navbar -->
-
-<!-- navbar azure -->
-<div id="navbar-azure">
-       <nav class="navbar navbar-ct-info">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-            <div class="collapse navbar-collapse">
-
-                <form class="navbar-form navbar-left navbar-search-form" role="search">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" value="" class="form-control" placeholder="Search...">
-                    </div>
-                </form>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="charts.html">
-                            <i class="fa fa-line-chart"></i>
-                            <p>Stats</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<!-- navbar green -->
-<div id="navbar-green">
-   <nav class="navbar navbar-ct-success">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-            <div class="collapse navbar-collapse">
-
-                <form class="navbar-form navbar-left navbar-search-form" role="search">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" value="" class="form-control" placeholder="Search...">
-                    </div>
-                </form>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="charts.html">
-                            <i class="fa fa-line-chart"></i>
-                            <p>Stats</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-</div><!--  end navbar -->
-
-<!-- navbar orange -->
-<div id="navbar-orange">
-    <nav class="navbar navbar-ct-warning">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-            <div class="collapse navbar-collapse">
-
-                <form class="navbar-form navbar-left navbar-search-form" role="search">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" value="" class="form-control" placeholder="Search...">
-                    </div>
-                </form>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="charts.html">
-                            <i class="fa fa-line-chart"></i>
-                            <p>Stats</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div><!--  end navbar -->
-
-<!-- navbar red -->
-<div id="navbar-red">
-    <nav class="navbar navbar-ct-danger">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-            <div class="collapse navbar-collapse">
-
-                <form class="navbar-form navbar-left navbar-search-form" role="search">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" value="" class="form-control" placeholder="Search...">
-                    </div>
-                </form>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="charts.html">
-                            <i class="fa fa-line-chart"></i>
-                            <p>Stats</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-</div><!--  end navbar -->
-
 </div>
 <!-- end row -->
 
 
 <!-- footers row -->
 <div class="tim-row" id="footers-row">
-    <h2>Footers
-    </h2>
+    <h2>Footers</h2>
     <legend></legend>
     <p>
         There are 3 classes for footers: <code>footer</code> for the default pale colour, <code>footer-black</code> for black and <code>footer-transparent</code> for transparent.<br />
@@ -1257,12 +1026,11 @@ paper-dashboard-angular
     </h2>
     <legend></legend>
     <p>
-        If you have information that you don't need to show at once, we suggest you use tabs. You can use them horizontally or vertically.
-        Here are the coded examples:
+        If you have information that you don't need to show at once, we suggest you use tabs. Here is the coded example:
     </p>
     <div class="space-top"></div>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-8">
             <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
@@ -1284,67 +1052,9 @@ paper-dashboard-angular
                 </div>
             </div>
         </div>
-        <div class="col-md-7">
-			<div class="row">
-				<div class="col-md-4 col-sm-4 col-xs-6">
-                    <ul class="nav nav-stacked" role="tablist">
-                        <li class="active">
-                            <a href="#info" role="tab" data-toggle="tab">
-                                 Info
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#description" role="tab" data-toggle="tab">
-                                 Description
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#concept" role="tab" data-toggle="tab">
-                                 Concept
-                            </a>
-						</li>
-                        <li>
-                           <a href="#support" role="tab" data-toggle="tab">
-                                Support
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#extra" role="tab" data-toggle="tab">
-                                Extra
-                           </a>
-                        </li>
-                    </ul>
-                </div>
-				<div class="col-md-8 col-sm-8 col-xs-6">
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="info">
-                            <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.</p>
-                            <p>It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
-                        </div>
-                        <div class="tab-pane" id="description">
-                            <p>The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design. </p>
-                            <p>There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.</p>
-                        </div>
-                        <div class="tab-pane" id="concept">
-                            <p>It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
-                            <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display. </p>
-                        </div>
-                        <div class="tab-pane" id="support">
-                            <p>From the seamless transition of glass and metal to the streamlined profile, every detail was carefully considered to enhance your experience. So while its display is larger, the phone feels just right.</p>
-                            <p>It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
-                        </div>
-                        <div class="tab-pane" id="extra">
-                            <p>Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display. </p>
-                            <p>It’s one continuous form where hardware and software function in perfect unison, creating a new generation of phone that’s better by any measure.</p>
-                        </div>
-                    </div>
-                </div>
-			</div>
-        </div>
     </div>
 <pre class="prettyprint">
-&lt;!-- horizontal tabs --&gt;
+
 &lt;div class=&quot;nav-tabs-navigation&quot;&gt;
     &lt;div class=&quot;nav-tabs-wrapper&quot;&gt;
         &lt;ul id=&quot;tabs&quot; class=&quot;nav nav-tabs&quot; data-tabs=&quot;tabs&quot;&gt;
@@ -1363,60 +1073,6 @@ paper-dashboard-angular
     &lt;/div&gt;
     &lt;div class=&quot;tab-pane&quot; id=&quot;messages&quot;&gt;
         &lt;p&gt;Here are your messages.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;!-- vertical tabs --&gt;
-&lt;div class=&quot;row&quot;&gt;
-	&lt;div class=&quot;col-md-4 col-sm-4 col-xs-6&quot;&gt;
-        &lt;ul class=&quot;nav nav-stacked&quot; role=&quot;tablist&quot;&gt;
-            &lt;li class=&quot;active&quot;&gt;
-                &lt;a href=&quot;#info&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
-                     Info
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-                &lt;a href=&quot;#description&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
-                     Description
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-                &lt;a href=&quot;#concept&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
-                     Concept
-                &lt;/a&gt;
-			&lt;/li&gt;
-            &lt;li&gt;
-               &lt;a href=&quot;#support&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
-                    Support
-               &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-               &lt;a href=&quot;#extra&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
-                    Extra
-               &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-	&lt;div class=&quot;col-md-8 col-sm-8 col-xs-6&quot;&gt;
-        &lt;!-- Tab panes --&gt;
-        &lt;div class=&quot;tab-content&quot;&gt;
-            &lt;div class=&quot;tab-pane active&quot; id=&quot;info&quot;&gt;
-                &lt;p&gt;Larger, yet.&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tab-pane&quot; id=&quot;description&quot;&gt;
-                &lt;p&gt;The first thing...&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tab-pane&quot; id=&quot;concept&quot;&gt;
-                &lt;p&gt;It&rsquo;s one...&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tab-pane&quot; id=&quot;support&quot;&gt;
-                &lt;p&gt;From the...&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tab-pane&quot; id=&quot;extra&quot;&gt;
-                &lt;p&gt;Larger, yet...&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1922,7 +1578,7 @@ Chartist.Line('#chartActivity', data, options, responsiveOptions);
         <h2> Google Maps        </h2>
         <legend></legend>
         <p>
-            We changed the classic Google Maps by adding special skins and putting them in cards. If you want to see the full documentation from Google, you can see the docs <a href="https://developers.google.com/maps/documentation/javascript/">here</a>.<br /><br />
+            Please check the full documentation from Google <a href="https://developers.google.com/maps/documentation/javascript/">here</a>.<br /><br />
             Below, you will find a coded example:
         </p>
         <div class="card card-map">
@@ -2032,13 +1688,6 @@ marker.setMap(map);
 
 	<!--  Google Maps Plugin    -->
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
-
-
-	<!-- Paper Dashboard PRO Core javascript and methods for Demo purpose -->
-	<!-- <script src="../assets/js/paper-dashboard.js"></script> -->
-
-	<!-- Paper Dashboard PRO DEMO methods, don't include it in your project! -->
-	<!-- <script src="../assets/js/demo.js"></script> -->
 
     <script>
 		var type = ['','info','success','warning','danger'];
@@ -2251,7 +1900,7 @@ marker.setMap(map);
 
         	$.notify({
             	icon: "ti-gift",
-            	message: "Welcome to <b>Paper Dashboard PRO</b> - a beautiful dashboard for your next project."
+            	message: "Welcome to <b>Paper Dashboard Angular</b> - a beautiful dashboard for your next project."
 
             },{
                 type: type[color],
@@ -2356,7 +2005,7 @@ marker.setMap(map);
 	        }
 		}
     </script>
-    <!-- <script>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -2365,6 +2014,6 @@ marker.setMap(map);
       ga('create', 'UA-46172202-1', 'auto');
       ga('send', 'pageview');
 
-    </script> -->
+    </script>
 
 </html>
