@@ -149,6 +149,6 @@ Instagram: <https://instagram.com/creativetimofficial>
 
 [LICENSE]: ./LICENSE.md
 
-[version-badge]: https://img.shields.io/badge/version-1.0.0-blue.svg
+[version-badge]: https://img.shields.io/badge/version-1.0.1-blue.svg
 
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
