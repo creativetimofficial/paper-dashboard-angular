@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit{
           showPoint: false,
         };
 
-        var responsiveSales = [
+        var responsiveSales: any[] = [
           ['screen and (max-width: 640px)', {
             axisX: {
               labelInterpolationFnc: function (value) {
@@ -45,7 +45,7 @@ export class DashboardComponent implements OnInit{
           }]
         ];
 
-        Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
+        new Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
 
 
         var data = {
@@ -64,7 +64,7 @@ export class DashboardComponent implements OnInit{
             height: "245px"
         };
 
-        var responsiveOptions = [
+        var responsiveOptions: any[] = [
           ['screen and (max-width: 640px)', {
             seriesBarDistance: 5,
             axisX: {
@@ -75,7 +75,7 @@ export class DashboardComponent implements OnInit{
           }]
         ];
 
-        Chartist.Line('#chartActivity', data, options, responsiveOptions);
+        new Chartist.Line('#chartActivity', data, options, responsiveOptions);
 
         var dataPreferences = {
             series: [
@@ -94,9 +94,9 @@ export class DashboardComponent implements OnInit{
             }
         };
 
-        Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
+        new Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
 
-        Chartist.Pie('#chartPreferences', {
+        new Chartist.Pie('#chartPreferences', {
           labels: ['62%','32%','6%'],
           series: [62, 32, 6]
         });
