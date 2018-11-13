@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit{
 
     @ViewChild("navbar-cmp") button;
 
-    constructor(location:Location, private renderer : Renderer, private element : ElementRef) {
+    constructor(location:Location, private renderer : Renderer, private element : ElementRef, private router: Router) {
         this.location = location;
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
@@ -28,6 +28,9 @@ export class NavbarComponent implements OnInit{
         this.listTitles = ROUTES.filter(listTitle => listTitle);
         var navbar : HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggle')[0];
+        this.router.events.subscribe((event) => {
+          this.sidebarClose();
+       });
     }
     getTitle(){
         var titlee = window.location.pathname;
@@ -39,20 +42,30 @@ export class NavbarComponent implements OnInit{
         }
         return 'Dashboard';
     }
-    sidebarToggle(){
-        var toggleButton = this.toggleButton;
-        var body = document.getElementsByTagName('body')[0];
+    sidebarToggle() {
+        var $toggle = document.getElementsByClassName('navbar-toggler')[0];
 
-        if(this.sidebarVisible == false){
-            setTimeout(function(){
-                toggleButton.classList.add('toggled');
-            },500);
-            body.classList.add('nav-open');
-            this.sidebarVisible = true;
+        if (this.sidebarVisible === false) {
+            this.sidebarOpen();
         } else {
-            this.toggleButton.classList.remove('toggled');
-            this.sidebarVisible = false;
-            body.classList.remove('nav-open');
+            this.sidebarClose();
         }
-    }
+      }
+      sidebarOpen() {
+          const toggleButton = this.toggleButton;
+          const body = document.getElementsByTagName('body')[0];
+          setTimeout(function(){
+              toggleButton.classList.add('toggled');
+          }, 500);
+
+          body.classList.add('nav-open');
+
+          this.sidebarVisible = true;
+      };
+      sidebarClose() {
+          const body = document.getElementsByTagName('body')[0];
+          this.toggleButton.classList.remove('toggled');
+          this.sidebarVisible = false;
+          body.classList.remove('nav-open');
+      };
 }
