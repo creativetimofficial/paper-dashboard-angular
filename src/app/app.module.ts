@@ -33,7 +33,9 @@ import { UpgradeComponent }   from './upgrade/upgrade.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(AppRoutes),
+    RouterModule.forRoot(AppRoutes,{
+      useHash: true
+    }),
     SidebarModule,
     NavbarModule,
     FooterModule,
