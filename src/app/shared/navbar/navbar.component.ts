@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit{
     private toggleButton;
     private sidebarVisible: boolean;
 
-    @ViewChild("navbar-cmp") button;
+    @ViewChild("navbar-cmp", {static: false}) button;
 
     constructor(location:Location, private renderer : Renderer, private element : ElementRef, private router: Router) {
         this.location = location;
