@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { ToastrService } from "ngx-toastr";
 
-declare var $:any;
 
 @Component({
     selector: 'notifications-cmp',
@@ -9,21 +9,78 @@ declare var $:any;
 })
 
 export class NotificationsComponent{
-    showNotification(from, align){
-        var type = ['','info','success','warning','danger'];
+  constructor(private toastr: ToastrService) {}
+  showNotification(from, align) {
+    const color = Math.floor(Math.random() * 5 + 1);
 
-        var color = Math.floor((Math.random() * 4) + 1);
-
-    	$.notify({
-        	icon: "ti-gift",
-        	message: "Welcome to <b>Paper Dashboard</b> - a beautiful freebie for every web developer."
-        },{
-            type: type[color],
-            timer: 4000,
-            placement: {
-                from: from,
-                align: align
-            }
-        });
+    switch (color) {
+      case 1:
+        this.toastr.info(
+        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
+          "",
+          {
+            timeOut: 80000,
+            closeButton: true,
+            enableHtml: true,
+            toastClass: "alert alert-info alert-with-icon",
+            positionClass: "toast-" + from + "-" + align
+          }
+        );
+        break;
+      case 2:
+        this.toastr.success(
+          '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
+          "",
+          {
+            timeOut: 80000,
+            closeButton: true,
+            enableHtml: true,
+            toastClass: "alert alert-success alert-with-icon",
+            positionClass: "toast-" + from + "-" + align
+          }
+        );
+        break;
+      case 3:
+        this.toastr.warning(
+        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
+          "",
+          {
+            timeOut: 80000,
+            closeButton: true,
+            enableHtml: true,
+            toastClass: "alert alert-warning alert-with-icon",
+            positionClass: "toast-" + from + "-" + align
+          }
+        );
+        break;
+      case 4:
+        this.toastr.error(
+        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
+          "",
+          {
+            timeOut: 80000,
+            enableHtml: true,
+            closeButton: true,
+            toastClass: "alert alert-danger alert-with-icon",
+            positionClass: "toast-" + from + "-" + align
+          }
+        );
+        break;
+      case 5:
+        this.toastr.show(
+        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
+          "",
+          {
+            timeOut: 80000,
+            closeButton: true,
+            enableHtml: true,
+            toastClass: "alert alert-primary alert-with-icon",
+            positionClass: "toast-" + from + "-" + align
+          }
+        );
+        break;
+      default:
+        break;
     }
+  }
 }

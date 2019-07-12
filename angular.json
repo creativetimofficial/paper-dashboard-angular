@@ -22,7 +22,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "src/assets/scss/paper-dashboard.scss"
+              "src/assets/scss/paper-dashboard.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
             ]
