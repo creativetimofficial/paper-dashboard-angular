@@ -10,14 +10,14 @@ import { NavbarModule} from './shared/navbar/navbar.module';
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 import { NguiMapModule} from '@ngui/map';
 
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { UserComponent }   from './user/user.component';
-import { TableComponent }   from './table/table.component';
-import { TypographyComponent }   from './typography/typography.component';
-import { IconsComponent }   from './icons/icons.component';
-import { MapsComponent }   from './maps/maps.component';
-import { NotificationsComponent }   from './notifications/notifications.component';
-import { UpgradeComponent }   from './upgrade/upgrade.component';
+import { DashboardComponent }       from './pages/dashboard/dashboard.component';
+import { UserComponent }            from './pages/user/user.component';
+import { TableComponent }           from './pages/table/table.component';
+import { TypographyComponent }      from './pages/typography/typography.component';
+import { IconsComponent }           from './pages/icons/icons.component';
+import { MapsComponent }            from './pages/maps/maps.component';
+import { NotificationsComponent }   from './pages/notifications/notifications.component';
+import { UpgradeComponent }         from './pages/upgrade/upgrade.component';
 
 @NgModule({
   declarations: [

@@ -22,7 +22,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/sass/paper-dashboard.scss"
+              "src/assets/scss/paper-dashboard.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
