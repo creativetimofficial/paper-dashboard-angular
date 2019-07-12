@@ -31,11 +31,11 @@
     "jquery": "3.4.1",
     "moment": "2.24.0",
     "rxjs": "6.5.2",
-    "tslib": "^1.9.0",
-    "zone.js": "~0.9.1"
+    "tslib": "1.9.0",
+    "zone.js": "0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.800.0",
+    "@angular-devkit/build-angular": "0.800.0",
     "@angular/cli": "8.0.4",
     "@angular/compiler-cli": "8.0.2",
     "@types/bootstrap": "4.3.0",
@@ -43,7 +43,7 @@
     "@types/jasmine": "3.3.13",
     "@types/jquery": "3.3.30",
     "@types/node": "12.0.10",
-    "codelyzer": "^5.0.1",
+    "codelyzer": "5.0.1",
     "jasmine-core": "3.4.0",
     "jasmine-spec-reporter": "4.2.1",
     "karma": "4.1.0",
