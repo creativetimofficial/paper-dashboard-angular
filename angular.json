@@ -21,16 +21,10 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.css",
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/assets/scss/paper-dashboard.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/arrive/src/arrive.js",
-              "node_modules/moment/moment.js",
-              "node_modules/chartist/dist/chartist.js",
-              "node_modules/bootstrap-notify/bootstrap-notify.js"
             ]
           },
           "configurations": {

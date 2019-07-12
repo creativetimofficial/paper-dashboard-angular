@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as Chartist from 'chartist';
+import Chart from 'chart.js';
 
-declare var $:any;
 
 @Component({
     selector: 'dashboard-cmp',
@@ -10,95 +9,201 @@ declare var $:any;
 })
 
 export class DashboardComponent implements OnInit{
+
+  public canvas : any;
+  public ctx;
+  public chartColor;
+  public chartEmail;
+  public chartHours;
+
     ngOnInit(){
-        var dataSales = {
-          labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
-          series: [
-             [287, 385, 490, 562, 594, 626, 698, 895, 952],
-            [67, 152, 193, 240, 387, 435, 535, 642, 744],
-            [23, 113, 67, 108, 190, 239, 307, 410, 410]
-          ]
-        };
+      this.chartColor = "#FFFFFF";
 
-        var optionsSales = {
-          low: 0,
-          high: 1000,
-          showArea: true,
-          height: "245px",
-          axisX: {
-            showGrid: false,
-          },
-          lineSmooth: Chartist.Interpolation.simple({
-            divisor: 3
-          }),
-          showLine: true,
-          showPoint: false,
-        };
+      this.canvas = document.getElementById("chartHours");
+      this.ctx = this.canvas.getContext("2d");
 
-        var responsiveSales: any[] = [
-          ['screen and (max-width: 640px)', {
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
-              }
-            }
-          }]
-        ];
+      this.chartHours = new Chart(this.ctx, {
+        type: 'line',
 
-        new Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
-
-
-        var data = {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          series: [
-            [542, 543, 520, 680, 653, 753, 326, 434, 568, 610, 756, 895],
-            [230, 293, 380, 480, 503, 553, 600, 664, 698, 710, 736, 795]
-          ]
-        };
-
-        var options = {
-            seriesBarDistance: 10,
-            axisX: {
-                showGrid: false
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+          datasets: [{
+              borderColor: "#6bd098",
+              backgroundColor: "#6bd098",
+              pointRadius: 0,
+              pointHoverRadius: 0,
+              borderWidth: 3,
+              data: [300, 310, 316, 322, 330, 326, 333, 345, 338, 354]
             },
-            height: "245px"
-        };
+            {
+              borderColor: "#f17e5d",
+              backgroundColor: "#f17e5d",
+              pointRadius: 0,
+              pointHoverRadius: 0,
+              borderWidth: 3,
+              data: [320, 340, 365, 360, 370, 385, 390, 384, 408, 420]
+            },
+            {
+              borderColor: "#fcc468",
+              backgroundColor: "#fcc468",
+              pointRadius: 0,
+              pointHoverRadius: 0,
+              borderWidth: 3,
+              data: [370, 394, 415, 409, 425, 445, 460, 450, 478, 484]
+            }
+          ]
+        },
+        options: {
+          legend: {
+            display: false
+          },
 
-        var responsiveOptions: any[] = [
-          ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
+          tooltips: {
+            enabled: false
+          },
+
+          scales: {
+            yAxes: [{
+
+              ticks: {
+                fontColor: "#9f9f9f",
+                beginAtZero: false,
+                maxTicksLimit: 5,
+                //padding: 20
+              },
+              gridLines: {
+                drawBorder: false,
+                zeroLineColor: "#ccc",
+                color: 'rgba(255,255,255,0.05)'
               }
-            }
+
+            }],
+
+            xAxes: [{
+              barPercentage: 1.6,
+              gridLines: {
+                drawBorder: false,
+                color: 'rgba(255,255,255,0.1)',
+                zeroLineColor: "transparent",
+                display: false,
+              },
+              ticks: {
+                padding: 20,
+                fontColor: "#9f9f9f"
+              }
+            }]
+          },
+        }
+      });
+
+
+      this.canvas = document.getElementById("chartEmail");
+      this.ctx = this.canvas.getContext("2d");
+      this.chartEmail = new Chart(this.ctx, {
+        type: 'pie',
+        data: {
+          labels: [1, 2, 3],
+          datasets: [{
+            label: "Emails",
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            backgroundColor: [
+              '#e3e3e3',
+              '#4acccd',
+              '#fcc468',
+              '#ef8157'
+            ],
+            borderWidth: 0,
+            data: [342, 480, 530, 120]
           }]
-        ];
+        },
 
-        new Chartist.Line('#chartActivity', data, options, responsiveOptions);
+        options: {
 
-        var dataPreferences = {
-            series: [
-                [25, 30, 20, 25]
-            ]
-        };
+          legend: {
+            display: false
+          },
 
-        var optionsPreferences = {
-            donut: true,
-            donutWidth: 40,
-            startAngle: 0,
-            total: 100,
-            showLabel: false,
-            axisX: {
-                showGrid: false
-            }
-        };
+          pieceLabel: {
+            render: 'percentage',
+            fontColor: ['white'],
+            precision: 2
+          },
 
-        new Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
+          tooltips: {
+            enabled: false
+          },
 
-        new Chartist.Pie('#chartPreferences', {
-          labels: ['62%','32%','6%'],
-          series: [62, 32, 6]
-        });
+          scales: {
+            yAxes: [{
+
+              ticks: {
+                display: false
+              },
+              gridLines: {
+                drawBorder: false,
+                zeroLineColor: "transparent",
+                color: 'rgba(255,255,255,0.05)'
+              }
+
+            }],
+
+            xAxes: [{
+              barPercentage: 1.6,
+              gridLines: {
+                drawBorder: false,
+                color: 'rgba(255,255,255,0.1)',
+                zeroLineColor: "transparent"
+              },
+              ticks: {
+                display: false,
+              }
+            }]
+          },
+        }
+      });
+
+      var speedCanvas = document.getElementById("speedChart");
+
+      var dataFirst = {
+        data: [0, 19, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
+        fill: false,
+        borderColor: '#fbc658',
+        backgroundColor: 'transparent',
+        pointBorderColor: '#fbc658',
+        pointRadius: 4,
+        pointHoverRadius: 4,
+        pointBorderWidth: 8,
+      };
+
+      var dataSecond = {
+        data: [0, 5, 10, 12, 20, 27, 30, 34, 42, 45, 55, 63],
+        fill: false,
+        borderColor: '#51CACF',
+        backgroundColor: 'transparent',
+        pointBorderColor: '#51CACF',
+        pointRadius: 4,
+        pointHoverRadius: 4,
+        pointBorderWidth: 8
+      };
+
+      var speedData = {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [dataFirst, dataSecond]
+      };
+
+      var chartOptions = {
+        legend: {
+          display: false,
+          position: 'top'
+        }
+      };
+
+      var lineChart = new Chart(speedCanvas, {
+        type: 'line',
+        hover: false,
+        data: speedData,
+        options: chartOptions
+      });
     }
 }
