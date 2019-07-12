@@ -40,7 +40,7 @@ import { UpgradeComponent }         from './pages/upgrade/upgrade.component';
     NavbarModule,
     FooterModule,
     FixedPluginModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
+    // NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
 
   ],
   providers: [],
