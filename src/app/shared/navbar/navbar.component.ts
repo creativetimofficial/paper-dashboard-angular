@@ -55,19 +55,19 @@ export class NavbarComponent implements OnInit{
       }
       sidebarOpen() {
           const toggleButton = this.toggleButton;
-          const body = document.getElementsByTagName('body')[0];
+          const html = document.getElementsByTagName('html')[0];
           setTimeout(function(){
               toggleButton.classList.add('toggled');
           }, 500);
 
-          body.classList.add('nav-open');
+          html.classList.add('nav-open');
 
           this.sidebarVisible = true;
       };
       sidebarClose() {
-          const body = document.getElementsByTagName('body')[0];
+          const html = document.getElementsByTagName('html')[0];
           this.toggleButton.classList.remove('toggled');
           this.sidebarVisible = false;
-          body.classList.remove('nav-open');
+          html.classList.remove('nav-open');
       };
 }
