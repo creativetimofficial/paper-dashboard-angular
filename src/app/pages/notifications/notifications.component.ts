@@ -19,7 +19,7 @@ export class NotificationsComponent{
         '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
           "",
           {
-            timeOut: 80000,
+            timeOut: 4000,
             closeButton: true,
             enableHtml: true,
             toastClass: "alert alert-info alert-with-icon",
@@ -32,7 +32,7 @@ export class NotificationsComponent{
           '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
           "",
           {
-            timeOut: 80000,
+            timeOut: 4000,
             closeButton: true,
             enableHtml: true,
             toastClass: "alert alert-success alert-with-icon",
@@ -45,7 +45,7 @@ export class NotificationsComponent{
         '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
           "",
           {
-            timeOut: 80000,
+            timeOut: 4000,
             closeButton: true,
             enableHtml: true,
             toastClass: "alert alert-warning alert-with-icon",
@@ -58,7 +58,7 @@ export class NotificationsComponent{
         '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
           "",
           {
-            timeOut: 80000,
+            timeOut: 4000,
             enableHtml: true,
             closeButton: true,
             toastClass: "alert alert-danger alert-with-icon",
@@ -71,7 +71,7 @@ export class NotificationsComponent{
         '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Paper Dashboard Angular</b> - a beautiful bootstrap dashboard for every web developer.</span>',
           "",
           {
-            timeOut: 80000,
+            timeOut: 4000,
             closeButton: true,
             enableHtml: true,
             toastClass: "alert alert-primary alert-with-icon",
