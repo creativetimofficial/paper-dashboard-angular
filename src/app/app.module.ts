@@ -2,6 +2,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from "ngx-toastr";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
@@ -39,6 +40,7 @@ import { UpgradeComponent }         from './pages/upgrade/upgrade.component';
     SidebarModule,
     ToastrModule.forRoot(), // ToastrModule added
     NavbarModule,
+    // NgbModule,
     FooterModule,
     FixedPluginModule
   ],

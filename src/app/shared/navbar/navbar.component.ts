@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer, ViewChild, ElementRef } from '@angular/core';
 import { ROUTES } from '../../sidebar/sidebar.component';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Router } from '@angular/router';
+import { Location} from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit{
     private toggleButton;
     private sidebarVisible: boolean;
 
+    public isCollapsed = true;
     @ViewChild("navbar-cmp", {static: false}) button;
 
     constructor(location:Location, private renderer : Renderer, private element : ElementRef, private router: Router) {
@@ -45,8 +46,6 @@ export class NavbarComponent implements OnInit{
       return 'Dashboard';
     }
     sidebarToggle() {
-        var $toggle = document.getElementsByClassName('navbar-toggler')[0];
-
         if (this.sidebarVisible === false) {
             this.sidebarOpen();
         } else {
@@ -79,4 +78,18 @@ export class NavbarComponent implements OnInit{
           this.sidebarVisible = false;
           html.classList.remove('nav-open');
       };
+      collapse(){
+        this.isCollapsed = !this.isCollapsed;
+        const navbar = document.getElementsByTagName('nav')[0];
+        console.log(navbar);
+        if (!this.isCollapsed) {
+          navbar.classList.remove('navbar-transparent');
+          navbar.classList.add('bg-white');
+        }else{
+          navbar.classList.add('navbar-transparent');
+          navbar.classList.remove('bg-white');
+        }
+
+      }
+
 }
