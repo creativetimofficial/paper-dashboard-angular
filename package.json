@@ -1,6 +1,6 @@
 {
-  "name": "pd-free-angularcli",
-  "version": "1.0.1",
+  "name": "paper dashboard angular",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
