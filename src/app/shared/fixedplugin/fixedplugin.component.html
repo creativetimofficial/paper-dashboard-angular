@@ -1,25 +1,25 @@
 <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
+    <div class="show-dropdown" ngbDropdown>
+        <a href="javascript:void(0)" ngbDropdownToggle id="dropdownConfig">
+          <i class="fa fa-cog fa-2x"> </i>
         </a>
-        <ul class="dropdown-menu">
+        <ul class="" ngbDropdownMenu aria-labelledby="dropdownConfig">
             <li class="header-title">Sidebar Background</li>
             <li class="adjustments-line text-center">
                 <a href="javascript:void(0)" class="switch-trigger background-color">
-                        <span class="badge filter badge-white active" data-color="white"></span>
-                        <span class="badge filter badge-black" data-color="black"></span>
+                    <span class="badge filter badge-light active" [ngClass]="{'active':sidebarColor==='white'}" (click)="changeSidebarColor('white')"></span>
+                    <span class="badge filter badge-dark" [ngClass]="{'active':sidebarColor==='black'}" (click)="changeSidebarColor('black')"></span>
                 </a>
             </li>
 
-			<li class="header-title">Sidebar Active Color</li>
+	          <li class="header-title">Sidebar Active Color</li>
             <li class="adjustments-line text-center">
                 <a href="javascript:void(0)" class="switch-trigger active-color">
-                        <span class="badge filter badge-primary" data-color="primary"></span>
-                        <span class="badge filter badge-info" data-color="info"></span>
-                        <span class="badge filter badge-success" data-color="success"></span>
-                        <span class="badge filter badge-warning" data-color="warning"></span>
-                        <span class="badge filter badge-danger active" data-color="danger"></span>
+                    <span class="badge filter badge-primary" [ngClass]="{'active':sidebarActiveColor==='primary'}" (click)="changeSidebarActiveColor('primary')"></span>
+                    <span class="badge filter badge-info" [ngClass]="{'active':sidebarActiveColor==='info'}" (click)="changeSidebarActiveColor('info')"></span>
+                    <span class="badge filter badge-success" [ngClass]="{'active':sidebarActiveColor==='success'}" (click)="changeSidebarActiveColor('success')"></span>
+                    <span class="badge filter badge-warning" [ngClass]="{'active':sidebarActiveColor==='warning'}" (click)="changeSidebarActiveColor('warning')"></span>
+                    <span class="badge filter badge-danger active" [ngClass]="{'active':sidebarActiveColor==='danger'}" (click)="changeSidebarActiveColor('danger')"></span>
                 </a>
             </li>
 

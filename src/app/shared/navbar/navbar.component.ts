@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer, ViewChild, ElementRef } from '@angular/core';
 import { ROUTES } from '../../sidebar/sidebar.component';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Router } from '@angular/router';
+import { Location} from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -16,7 +16,8 @@ export class NavbarComponent implements OnInit{
     private toggleButton;
     private sidebarVisible: boolean;
 
-    @ViewChild("navbar-cmp") button;
+    public isCollapsed = true;
+    @ViewChild("navbar-cmp", {static: false}) button;
 
     constructor(location:Location, private renderer : Renderer, private element : ElementRef, private router: Router) {
         this.location = location;
@@ -45,8 +46,6 @@ export class NavbarComponent implements OnInit{
       return 'Dashboard';
     }
     sidebarToggle() {
-        var $toggle = document.getElementsByClassName('navbar-toggler')[0];
-
         if (this.sidebarVisible === false) {
             this.sidebarOpen();
         } else {
@@ -55,19 +54,42 @@ export class NavbarComponent implements OnInit{
       }
       sidebarOpen() {
           const toggleButton = this.toggleButton;
-          const body = document.getElementsByTagName('body')[0];
+          const html = document.getElementsByTagName('html')[0];
+          const mainPanel =  <HTMLElement>document.getElementsByClassName('main-panel')[0];
           setTimeout(function(){
               toggleButton.classList.add('toggled');
           }, 500);
 
-          body.classList.add('nav-open');
-
+          html.classList.add('nav-open');
+          if (window.innerWidth < 991) {
+            mainPanel.style.position = 'fixed';
+          }
           this.sidebarVisible = true;
       };
       sidebarClose() {
-          const body = document.getElementsByTagName('body')[0];
+          const html = document.getElementsByTagName('html')[0];
+          const mainPanel =  <HTMLElement>document.getElementsByClassName('main-panel')[0];
+          if (window.innerWidth < 991) {
+            setTimeout(function(){
+              mainPanel.style.position = '';
+            }, 500);
+          }
           this.toggleButton.classList.remove('toggled');
           this.sidebarVisible = false;
-          body.classList.remove('nav-open');
+          html.classList.remove('nav-open');
       };
+      collapse(){
+        this.isCollapsed = !this.isCollapsed;
+        const navbar = document.getElementsByTagName('nav')[0];
+        console.log(navbar);
+        if (!this.isCollapsed) {
+          navbar.classList.remove('navbar-transparent');
+          navbar.classList.add('bg-white');
+        }else{
+          navbar.classList.add('navbar-transparent');
+          navbar.classList.remove('bg-white');
+        }
+
+      }
+
 }

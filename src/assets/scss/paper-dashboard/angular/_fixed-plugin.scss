@@ -1,0 +1,11 @@
+.fixed-plugin .dropdown .dropdown-menu::before,
+.fixed-plugin .dropdown .dropdown-menu::after{
+  right: -16px;
+  bottom: 35px;
+}
+.fixed-plugin .dropdown-toggle::after{
+  display: none;
+}
+.fixed-plugin .dropdown .dropdown-menu.show{
+  right: 90px;
+}
