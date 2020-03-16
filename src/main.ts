@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Paper Dashboard Angular - v2.0.0
+* Paper Dashboard Angular - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/paper-dashboard-angular
