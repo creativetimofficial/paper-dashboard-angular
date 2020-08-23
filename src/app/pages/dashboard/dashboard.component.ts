@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js';
+import { Bar } from 'chartist'
+
+import io from 'socket.io-client'
+import { data } from 'jquery';
+
+
+
+const socket = io('http://localhost:4200');
+
 
 
 @Component({
@@ -15,9 +24,110 @@ export class DashboardComponent implements OnInit{
   public chartColor;
   public chartEmail;
   public chartHours;
+  public speedChart;
+  public soilmoisture1;
+  public leaf;
+  public wind_direction;
 
+  data1 = [];
     ngOnInit(){
+
+      socket.on('data1', (res) => {
+        this.updateChartData(this.chartHours,res,0);
+        this.updateChartData(this.speedChart,res,0);
+        this.updateChartData(this.wind_direction,res,0);
+        
+        
+      })
+      socket.on('data2',(res)=>{
+        this.updateChartData(this.chartHours, res, 1);
+        this.updateChartData(this.speedChart, res, 1);
+        this.updateChartData(this.wind_direction,res,1);
+        
+      })
+
+      
+      
+      
+
+
+      this.canvas = document.getElementById("speedChart");
+      this.ctx = this.canvas.getContext("2d");
+
+      this.speedChart = new Chart(this.ctx, {
+        type: 'line',
+        options: {
+          responsive: true,
+          title: {
+            display: false,
+            
+          },
+        },
+        data: {
+          labels: ["2am", "5am", "8am", "11am", "2pm", "5pm", "8pm", "11pm"],
+          datasets: [
+            {
+              type: 'line',
+              
+              data: [30, 31, 24, 28, 30, 31, 26, 28],
+              fill: false,
+              label: "Wind speed in km/hr",
+              borderColor: '#fbc658',
+              backgroundColor: 'transparent',
+              pointBorderColor: '#fbc658',
+              pointRadius: 4,
+              pointHoverRadius: 4,
+              pointBorderWidth: 8,
+            },
+            
+            {
+              type: 'line',
+              
+              data: [30, 31, 24, 28, 30, 31, 26, 28].reverse(),
+              fill: false,
+              label: "Wind gusts in km/hr",
+              borderColor: '#586bfb',
+              backgroundColor: 'transparent',
+              pointBorderColor: '#586bfb',
+              pointRadius: 4,
+              pointHoverRadius: 4,
+              pointBorderWidth: 8,
+            }
+          ]
+        }
+      });
+  
+      let options = {
+        // aspectRatio: 1,
+        // legend: false,
+        tooltips: false,
+  
+        elements: {
+          point: {
+            borderWidth: function (context) {
+              return Math.min(Math.max(1, context.datasetIndex + 1), 8);
+            },
+            hoverBackgroundColor: 'transparent',
+            hoverBorderColor: function (context) {
+              return "red";
+            },
+            hoverBorderWidth: function (context) {
+              var value = context.dataset.data[context.dataIndex];
+              return Math.round(8 * value.v / 1000);
+            },
+            radius: function (context) {
+              var value = context.dataset.data[context.dataIndex];
+              var size = context.chart.width;
+              var base = Math.abs(value.v) / 1000;
+              return (size / 24) * base;
+            }
+          }
+        }
+      };
       this.chartColor = "#FFFFFF";
+
+      
+    
 
       this.canvas = document.getElementById("chartHours");
       this.ctx = this.canvas.getContext("2d");
@@ -26,31 +136,26 @@ export class DashboardComponent implements OnInit{
         type: 'line',
 
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+          labels: [17,18,19,20,21,22,23,24,25,26,27,28,29,30],
           datasets: [{
-              borderColor: "#6bd098",
-              backgroundColor: "#6bd098",
+              borderColor: "#03f8fc",
+              backgroundColor: "#03f8fc",
+              label: 'My First dataset',
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
-              data: [300, 310, 316, 322, 330, 326, 333, 345, 338, 354]
+              data: [55,31,31,55,55,43,41,12,21,14,20,21,12,11]
             },
             {
-              borderColor: "#f17e5d",
-              backgroundColor: "#f17e5d",
-              pointRadius: 0,
-              pointHoverRadius: 0,
-              borderWidth: 3,
-              data: [320, 340, 365, 360, 370, 385, 390, 384, 408, 420]
-            },
-            {
-              borderColor: "#fcc468",
-              backgroundColor: "#fcc468",
-              pointRadius: 0,
-              pointHoverRadius: 0,
-              borderWidth: 3,
-              data: [370, 394, 415, 409, 425, 445, 460, 450, 478, 484]
-            }
+            borderColor: "#03f8fc",
+            backgroundColor: "#03f8fc",
+            label: 'My Second dataset',
+            pointRadius: 0,
+            pointHoverRadius: 0,
+            borderWidth: 3,
+            data: [55,31,31,55,55,43,41,12,21,14,20,21,12,11].reverse()
+          }
+            
           ]
         },
         options: {
@@ -93,41 +198,54 @@ export class DashboardComponent implements OnInit{
               }
             }]
           },
+        },
+        elements: {
+          point: {
+            borderWidth: function (context) {
+              return Math.min(Math.max(1, context.datasetIndex + 1), 8);
+            },
+            hoverBackgroundColor: 'transparent',
+            hoverBorderColor: function (context) {
+              return "red";
+            },
+            hoverBorderWidth: function (context) {
+              var value = context.dataset.data[context.dataIndex];
+              return Math.round(8 * value.v / 1000);
+            },
+            radius: function (context) {
+              var value = context.dataset.data[context.dataIndex];
+              var size = context.chart.width;
+              var base = Math.abs(value.v) / 1000;
+              return (size / 24) * base;
+            }
+          }
         }
       });
 
-
-      this.canvas = document.getElementById("chartEmail");
+      this.canvas = document.getElementById("wind_direction");
       this.ctx = this.canvas.getContext("2d");
-      this.chartEmail = new Chart(this.ctx, {
-        type: 'pie',
+
+      this.wind_direction = new Chart(this.ctx, {
+        type: 'bar',
+
         data: {
-          labels: [1, 2, 3],
+          labels: ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'],
           datasets: [{
-            label: "Emails",
-            pointRadius: 0,
-            pointHoverRadius: 0,
-            backgroundColor: [
-              '#e3e3e3',
-              '#4acccd',
-              '#fcc468',
-              '#ef8157'
-            ],
-            borderWidth: 0,
-            data: [342, 480, 530, 120]
-          }]
+              borderColor: "#71a832",
+              backgroundColor: "#71a832",
+              label: 'My First dataset',
+              pointRadius: 0,
+              pointHoverRadius: 0,
+              borderWidth: 3,
+              data: [12,29, 13, 34, 43, 22, 6, 19]
+            },
+            
+            
+          ]
         },
-
         options: {
-
           legend: {
             display: false
-          },
-
-          pieceLabel: {
-            render: 'percentage',
-            fontColor: ['white'],
-            precision: 2
           },
 
           tooltips: {
@@ -138,72 +256,76 @@ export class DashboardComponent implements OnInit{
             yAxes: [{
 
               ticks: {
-                display: false
+                fontColor: "#9f9f9f",
+                beginAtZero: false,
+                maxTicksLimit: 5,
+                //padding: 20
               },
               gridLines: {
                 drawBorder: false,
-                zeroLineColor: "transparent",
+                zeroLineColor: "#ccc",
                 color: 'rgba(255,255,255,0.05)'
               }
 
             }],
 
-            xAxes: [{
-              barPercentage: 1.6,
-              gridLines: {
-                drawBorder: false,
-                color: 'rgba(255,255,255,0.1)',
-                zeroLineColor: "transparent"
-              },
-              ticks: {
-                display: false,
-              }
-            }]
+           
           },
+        },
+        elements: {
+          point: {
+            borderWidth: function (context) {
+              return Math.min(Math.max(1, context.datasetIndex + 1), 8);
+            },
+            hoverBackgroundColor: 'transparent',
+            hoverBorderColor: function (context) {
+              return "red";
+            },
+            hoverBorderWidth: function (context) {
+              var value = context.dataset.data[context.dataIndex];
+              return Math.round(8 * value.v / 1000);
+            },
+            radius: function (context) {
+              var value = context.dataset.data[context.dataIndex];
+              var size = context.chart.width;
+              var base = Math.abs(value.v) / 1000;
+              return (size / 24) * base;
+            }
+          }
         }
       });
 
-      var speedCanvas = document.getElementById("speedChart");
 
-      var dataFirst = {
-        data: [0, 19, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
-        fill: false,
-        borderColor: '#fbc658',
-        backgroundColor: 'transparent',
-        pointBorderColor: '#fbc658',
-        pointRadius: 4,
-        pointHoverRadius: 4,
-        pointBorderWidth: 8,
-      };
+     
+     
+          
 
-      var dataSecond = {
-        data: [0, 5, 10, 12, 20, 27, 30, 34, 42, 45, 55, 63],
-        fill: false,
-        borderColor: '#51CACF',
-        backgroundColor: 'transparent',
-        pointBorderColor: '#51CACF',
-        pointRadius: 4,
-        pointHoverRadius: 4,
-        pointBorderWidth: 8
-      };
+    
 
-      var speedData = {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [dataFirst, dataSecond]
-      };
 
-      var chartOptions = {
-        legend: {
-          display: false,
-          position: 'top'
-        }
-      };
-
-      var lineChart = new Chart(speedCanvas, {
-        type: 'line',
-        hover: false,
-        data: speedData,
-        options: chartOptions
-      });
+      
     }
+
+
+    
+    addData(chart, label, data) {
+      chart.data.labels.push(label);
+      chart.data.datasets.forEach((dataset) => {
+          dataset.data.push(data);
+      });
+      chart.update();
+  }
+  
+  removeData(chart) {
+      chart.data.labels.pop();
+      chart.data.datasets.forEach((dataset) => {
+          dataset.data.pop();
+      });
+      chart.update();
+  }
+  
+  updateChartData(chart, data, dataSetIndex){
+    chart.data.datasets[dataSetIndex].data = data;
+    chart.update();
+  }
 }
