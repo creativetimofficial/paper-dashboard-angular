@@ -33,9 +33,11 @@
     "core-js": "3.6.4",
     "express": "4.17.1",
     "jquery": "3.4.1",
+    "json-server": "^0.16.1",
     "moment": "2.24.0",
     "ngx-toastr": "10.0.4",
     "rxjs": "6.5.4",
+    "socket.io-client": "^2.3.0",
     "tslib": "1.11.1",
     "zone.js": "0.9.1"
   },
