@@ -1,3 +1,9 @@
+<a href="https://www.creative-tim.com/campaign?utm_medium=social&utm_source=github&utm_campaign=bf-readme-2020">
+<img border="0" alt="Creative Tim Black Friday Offer" src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/bf-github-banner.png" >
+</a>
+
+
+
 # [Paper Dashboard Angular](https://www.creative-tim.com/product/paper-dashboard-angular)
 ![version](https://img.shields.io/badge/version-2.2.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/paper-dashboard-angular.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/paper-dashboard-angular.svg?maxAge=2592000)]()  [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
