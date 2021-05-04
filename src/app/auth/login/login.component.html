@@ -1,0 +1,179 @@
+<div class="container">
+  <div class="row p-5 card">
+    <div class="col-lg-12 col-md-6">
+      <div class="card card-stats">
+        <form [formGroup]="formLogin" (submit)="onSubmit()" class="card-body">
+          <div class="row">
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label><span class="text-danger mr-2">*</span>Correo</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Correo"
+                  id="email"
+                  name="email"
+                  formControlName="email"
+                  value=""
+                />
+                <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                  <ul class="text-sm text-danger">
+                    <li>El correo es obligatorío</li>
+                    <li>El correo debe ser institucional</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 pl-1">
+              <div class="form-group">
+                <label><span class="text-danger mr-2">*</span>Contraseña</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Contraseña"
+                  id="password"
+                  name="password"
+                  formControlName="password"
+                  value=""
+                />
+                <div
+                  *ngIf="
+                    password.invalid && (password.dirty || password.touched)
+                  "
+                >
+                  <ul class="text-sm text-danger">
+                    <li>La longitud mínima es 8</li>
+                    <li>Debe tener al menos 1 número</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-0 row justify-content-center">
+            <div class="col-auto text-center">
+              <button
+                [disabled]="formLogin.invalid"
+                type="submit"
+                class="btn bg-danger"
+              >
+                <span *ngIf="loading">Cargando...</span>
+                <span *ngIf="!loading">Iniciar Sesión</span>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="card-footer">
+          <hr />
+          <div class="text-center">
+            <a routerLink="/register" class="stats">
+              <i class="nc-icon nc-single-02"></i>Ir a crear cuenta
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4>Iniciar sesión para poder visualizar</h4>
+  <hr />
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-globe text-warning"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Registros</p>
+                <p class="card-title">150</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <hr />
+          <div class="stats"><i class="fa fa-refresh"></i> Update Now</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-money-coins text-success"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Ganancia</p>
+                <p class="card-title">$ 1,345</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <hr />
+          <div class="stats"><i class="fa fa-calendar-o"></i> Last day</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-vector text-danger"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Errores</p>
+                <p class="card-title">23</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <hr />
+          <div class="stats">
+            <i class="fa fa-clock-o"></i> In the last hour
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-5 col-md-4">
+              <div class="icon-big text-center icon-warning">
+                <i class="nc-icon nc-favourite-28 text-primary"></i>
+              </div>
+            </div>
+            <div class="col-7 col-md-8">
+              <div class="numbers">
+                <p class="card-category">Seguimiento</p>
+                <p class="card-title">+45K</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <hr />
+          <div class="stats"><i class="fa fa-refresh"></i> Update now</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

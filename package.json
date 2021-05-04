@@ -23,6 +23,8 @@
     "@angular/platform-browser-dynamic": "10.1.5",
     "@angular/router": "10.1.5",
     "@ng-bootstrap/ng-bootstrap": "7.0.0",
+    "@ngrx/store": "^11.1.1",
+    "@ngrx/store-devtools": "^11.1.1",
     "@ngui/map": "0.30.3",
     "@types/googlemaps": "3.39.14",
     "arrive": "2.4.1",

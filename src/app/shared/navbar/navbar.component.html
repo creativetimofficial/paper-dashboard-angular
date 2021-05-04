@@ -1,5 +1,6 @@
-
-<nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+<nav
+  class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent"
+>
   <div class="container-fluid">
     <div class="navbar-wrapper">
       <div class="navbar-toggle">
@@ -9,18 +10,32 @@
           <span class="navbar-toggler-bar bar3"></span>
         </button>
       </div>
-      <a class="navbar-brand" href="javascript:void(0)">{{getTitle()}}</a>
+      <a class="navbar-brand" href="javascript:void(0)">{{ getTitle() }}</a>
     </div>
-    <button class="navbar-toggler" type="button" (click)="collapse()"
-      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="collapse()"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="collapseExample"
+    >
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="collapseExample"
+      [ngbCollapse]="isCollapsed"
+    >
       <form>
         <div class="input-group no-border">
-          <input type="text" value="" class="form-control" placeholder="Search...">
+          <input
+            type="text"
+            value=""
+            class="form-control"
+            placeholder="Search..."
+          />
           <div class="input-group-append">
             <div class="input-group-text">
               <i class="nc-icon nc-zoom-split"></i>
@@ -39,23 +54,31 @@
         </li>
 
         <li class="nav-item btn-rotate" ngbDropdown placement="bottom-left">
-          <a class="nav-link" ngbDropdownToggle id="navbarDropdownMenuLink" >
+          <a class="nav-link" ngbDropdownToggle id="navbarDropdownMenuLink">
             <i class="nc-icon nc-bell-55"></i>
             <p>
               <span class="d-lg-none d-md-block">Some Actions</span>
             </p>
           </a>
-          <div ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+          <div
+            ngbDropdownMenu
+            aria-labelledby="navbarDropdownMenuLink"
+            class="dropdown-menu dropdown-menu-right"
+          >
             <a ngbDropdownItem href="javascript:void(0)">Action</a>
             <a ngbDropdownItem href="javascript:void(0)">Another action</a>
             <a ngbDropdownItem href="javascript:void(0)">Something else here</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn-rotate" href="javascript:void(0)">
-            <i class="nc-icon nc-settings-gear-65"></i>
+          <a
+            (click)="logout()"
+            class="nav-link btn-rotate"
+            href="javascript:void(0)"
+          >
+            <i class="nc-icon nc-button-power"></i>
             <p>
-              <span class="d-lg-none d-md-block">Account</span>
+              <span class="d-lg-none d-md-block">Salir</span>
             </p>
           </a>
         </li>
