@@ -35,9 +35,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -47,6 +45,22 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ]
+            },
+            "development": {
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "buildOptimizer": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": false,
+                  "inlineCritical": true
+                },
+                "fonts": true
+              },
+              "outputHashing": "all"
             }
           }
         },
@@ -58,7 +72,11 @@
           "configurations": {
             "production": {
               "browserTarget": "pd-free-angularcli:build:production"
-            }
+            },
+            "development": {
+              "browserTarget": "pd-free-angularcli:build:development"
+            },
+            "defaultConfiguration": "development"
           }
         },
         "extract-i18n": {
