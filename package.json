@@ -20,7 +20,6 @@
     "@angular/core": "^13.2.6",
     "@angular/elements": "^13.2.6",
     "@angular/forms": "^13.2.6",
-    "@angular/google-maps": "^13.3.3",
     "@angular/localize": "^13.2.6",
     "@angular/material": "^13.2.6",
     "@angular/platform-browser": "^13.2.6",
