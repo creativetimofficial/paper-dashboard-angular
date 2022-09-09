@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-6">
+
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Servicios</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Nombre
+              </th>
+
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of servicios | paginate: { itemsPerPage: tamano, currentPage: p, totalItems:total }">
+
+                <td>
+                  {{s.nombre}}
+                </td>
+              </tr>
+
+              <td class="text-right">
+
+              </td>
+
+
+            </tbody>
+          </table>
+          <pagination-controls previousLabel="Anterior"
+          nextLabel="Siguiente" (pageChange)="p=$event; listarServicios();"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
+  
+  <div class="col-md-6">
+    <app-formulario-servicios (propagar)="listarServicios()"></app-formulario-servicios>
+  </div>
+</div>

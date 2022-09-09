@@ -13,15 +13,18 @@ import { IconsComponent }           from '../../pages/icons/icons.component';
 import { MapsComponent }            from '../../pages/maps/maps.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
-
+import { PacientesComponent }       from 'app/pages/componentes/pacientes/pacientes.component';
+import { ServiciosComponent }       from 'app/pages/componentes/servicios/servicios.component';
+import { FormularioServiciosComponent } from 'app/pages/componentes/servicios/formulario-servicios/formulario-servicios.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    NgbModule
+    NgbModule,NgxPaginationModule
   ],
   declarations: [
     DashboardComponent,
@@ -32,6 +35,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
+    PacientesComponent,
+    ServiciosComponent,
+    FormularioServiciosComponent
   ]
 })
 

@@ -1,0 +1,22 @@
+<div class="card card-user">
+  <div class="card-header">
+    <h2 class="card-title">Guardar Servicio</h2>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="onSumit()">
+      <div class="row">
+        <div class="col-md-12 px-12">
+          <div class="form-group">
+            <label>Nombre Del Servicio</label>
+            <input type="text" class="form-control" placeholder="nombre" [(ngModel)]="servicios.nombre" value="nombre">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="update ml-auto mr-auto">
+          <button type="submit" class="btn btn-primary btn-round">Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
