@@ -14,7 +14,7 @@ export class ServiciosComponent {
   total:number=0;
   tamano:number=8;
   constructor(public serviciosservice: ServiciosService) {
-   this.listarServicios(); 
+   this.listarServicios();
   }
 
   ngOnInit(): void {
@@ -26,19 +26,19 @@ export class ServiciosComponent {
     this.serviciosservice.listarServicios(this.p,this.tamano)
       .subscribe((dato:any) => {
         console.log(dato);
-        
+
         setTimeout(()=>{
           this.servicios = dato.content
           this.total=dato.totalElements
         })
-        
+
       });
   }
 
   /*
       <dw-propagador
     (propagar)="procesaPropagar($event)"
-  > 
+  >
   </dw-propagador>*/
 
 }

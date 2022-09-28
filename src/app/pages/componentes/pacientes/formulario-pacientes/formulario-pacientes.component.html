@@ -1,0 +1,48 @@
+<div class="card card-user">
+  <div class="card-header">
+    <h2 class="card-title">Guardar Paciente</h2>
+  </div>
+  <div class="card-body">
+
+    <form (ngSubmit)="onSubmit()" >
+
+      <div class="row">
+        <div class="col-md-8 px-8">
+
+          <div class="form-group" >
+        <tr >
+
+            <label >Cedula </label>
+             <h3>{{recibo}}</h3>
+
+      <!-- <input type="text" class="form-control" placeholder="Cedula" [(ngModel)]="pacientes.cedula" value="cedula" >
+
+            <label>Nombres</label>
+
+            <input type="text" class="form-control" placeholder="Nombres" [(ngModel)]="pacientes.nombre" value="nombre" >
+
+            <label >Apellidos</label>
+            <input type="text" class="form-control" placeholder="Apellidos" [(ngModel)]="pacientes.apellidos" value="apellidos">
+            <label > Direccion</label>
+            <input type="text" class="form-control" placeholder="Direccion" [(ngModel)]="pacientes.direccion" value="direccion">
+            <label >Telefono</label>
+            <input type="text" class="form-control" placeholder="Telefono" [(ngModel)]="pacientes.telefono" value="telefono">
+            <label >Entidad</label>
+           <input type="text" class="form-control" placeholder="Entidad" [(ngModel)]="pacientes.entidad" valude="entidad">-->
+          </tr>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="update ml-auto mr-auto">
+          <button type="submit" class="btn btn-primary btn-round">Editar y Guardar</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+

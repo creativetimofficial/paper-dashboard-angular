@@ -16,6 +16,7 @@ import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component'
 import { PacientesComponent }       from 'app/pages/componentes/pacientes/pacientes.component';
 import { ServiciosComponent }       from 'app/pages/componentes/servicios/servicios.component';
 import { FormularioServiciosComponent } from 'app/pages/componentes/servicios/formulario-servicios/formulario-servicios.component';
+import { FormularioPacientesComponent } from  'app/pages/componentes/pacientes/formulario-pacientes/formulario-pacientes.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -37,8 +38,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NotificationsComponent,
     PacientesComponent,
     ServiciosComponent,
-    FormularioServiciosComponent
-  ]
+    FormularioServiciosComponent,
+    FormularioPacientesComponent,
+    ]
 })
 
 export class AdminLayoutModule {}
