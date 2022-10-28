@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
 
-    <form (ngSubmit)="onSubmit()" >
+     <form (ngSubmit)="onSubmit()" >
 
       <div class="row">
         <div class="col-md-8 px-8">
@@ -12,23 +12,29 @@
           <div class="form-group" >
         <tr >
 
-            <label >Cedula </label>
-             <h3>{{recibo}}</h3>
 
-      <!-- <input type="text" class="form-control" placeholder="Cedula" [(ngModel)]="pacientes.cedula" value="cedula" >
+          <h1>{{pacirecibo?.cedula}}</h1>
 
-            <label>Nombres</label>
+          <label>id</label>
 
-            <input type="text" class="form-control" placeholder="Nombres" [(ngModel)]="pacientes.nombre" value="nombre" >
+          <input type="text" class="form-control"  placeholder="Id"  [(ngModel)]="pacientes.id"  value="id" >
+<label>
+  <label> Nombres </label>
+          <input type="text" class="form-control"  placeholder="Nombres"  [(ngModel)]="pacientes.nombre"  value="nombres" ></label>
 
-            <label >Apellidos</label>
-            <input type="text" class="form-control" placeholder="Apellidos" [(ngModel)]="pacientes.apellidos" value="apellidos">
+     <label >Apellidos</label>
+     <input type="text" class="form-control" placeholder="Apellidos" [(ngModel)]="pacientes.apellidos" value="apellidos">
+  <label >Cedula </label>
+
+       <input type="text" class="form-control"    placeholder="Cedula"   [(ngModel)]="pacientes.cedula"  value="cedula" >
+
+
             <label > Direccion</label>
             <input type="text" class="form-control" placeholder="Direccion" [(ngModel)]="pacientes.direccion" value="direccion">
             <label >Telefono</label>
             <input type="text" class="form-control" placeholder="Telefono" [(ngModel)]="pacientes.telefono" value="telefono">
             <label >Entidad</label>
-           <input type="text" class="form-control" placeholder="Entidad" [(ngModel)]="pacientes.entidad" valude="entidad">-->
+           <input type="text" class="form-control" placeholder="Entidad" [(ngModel)]="pacientes.entidad" valude="entidad">
           </tr>
         </div>
         </div>

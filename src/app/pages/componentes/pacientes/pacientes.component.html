@@ -22,14 +22,14 @@
                 </th>
               </thead>
               <tbody>
-                <tr  *ngFor="let pa of paciente | paginate: {itemsPerPage: tamano,currentPage:p,totalItems:total}">
+                <tr  *ngFor="let pa of pacientes | paginate: {itemsPerPage: tamano,currentPage:p,totalItems:total}">
 
                   <td >{{pa.cedula}}</td>
-                  <td>{{pa.nombre}} {{pa.apellidos}}</td>
+                  <td >{{pa.nombre}} {{pa.apellidos}}</td>
+                  <td >{{pa.entidad}}</td>
 
-                  <td>{{pa.entidad}}</td>
 
-                    <td><button (click)="buscarIdPaciente(pa.id)"  class="btn btn-primary btn-round"  >Detalle</button>
+                    <td><button (click)="buscarIdPaciente(pa)"  class="btn btn-primary btn-round">Detalle</button>
 
 
                     </td>
@@ -47,8 +47,7 @@
            </div>
     </div>
     <div class="col-md-6">
-      <app-formulario-pacientes (propagar)="listarPacientes()"  ></app-formulario-pacientes>
-        </div>
+      <app-formulario-pacientes (propagar)="listarPacientes()"  [pacirecibo]="pacien"></app-formulario-pacientes>
       </div>
 
 

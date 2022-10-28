@@ -14,7 +14,7 @@ export class FormularioPacientesComponent{
   @Output() propagar= new EventEmitter<Object>() ;
    pacientes :Pacientes= new Pacientes();
   // @Output() mostrar= new EventEmitter<Object>()
-  @Input() recibo:Pacientes[];
+  @Input() pacirecibo:Pacientes;
 
 
 
@@ -28,7 +28,7 @@ export class FormularioPacientesComponent{
       console.log(dato=this.pacientes);
       Swal.fire(`paciente creado ${this.pacientes.nombre} creado con exito`,'success');
       this.pacientes.nombre=null;
-      this.irPaciente();
+     // this.irPaciente();
     }
     )
 
@@ -45,7 +45,18 @@ export class FormularioPacientesComponent{
   }
 
 
+ngOnChanges(): void {
 
+ if(this.pacirecibo){
+ this.pacientes=this.pacirecibo
+ }
+
+
+
+  //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+  //Add '${implements OnChanges}' to the class.
+
+}
 
 
 

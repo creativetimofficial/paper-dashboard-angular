@@ -10,14 +10,15 @@ import { ServiciosService } from 'app/services/servicios.service';
 })
 
 export class PacientesComponent{
+
      id:any;
-  paciente: Pacientes[];
-
-
-      p:number=1;
+  pacientes: Pacientes[];
+  pacirecibo:Pacientes;
+   p:number=1;
     tamano:number=8;
     total:number=0;
     @Output() enviar=new EventEmitter<Object>();
+    pacien:Pacientes;
 
 
     constructor(
@@ -34,21 +35,16 @@ export class PacientesComponent{
         .subscribe((dato:any)=>{
           console.log(dato);
           setTimeout(()=>{
-            this.paciente= dato.content
+            this.pacientes= dato.content
             this.total=dato.totalElements
           })
         } )
 
 }
 
-buscarIdPaciente(id:number,buscar: any){
- buscar=this.serviciosservice.buscarIdPaciente(id).subscribe(
-    dato=>{
-      console.log(dato);
-      (this.paciente,id)
-    }
+buscarIdPaciente(pa:Pacientes){
+console.log(this.pacien=pa);
 
-  )
 }
 
 
