@@ -1,65 +1,74 @@
-import  {Component,OnInit,Output,EventEmitter,Input} from '@angular/core';
-import  {Router} from '@angular/router';
-import  {Pacientes} from 'app/model/pacientes';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Pacientes } from 'app/model/pacientes';
 import { ServiciosService } from 'app/services/servicios.service';
-import Swal  from 'sweetalert2';
+import Swal from 'sweetalert2';
 
-@Component ({
-  selector:'app-formulario-pacientes',
+@Component({
+  selector: 'app-formulario-pacientes',
   templateUrl: 'formulario-pacientes.component.html'
 })
 
-export class FormularioPacientesComponent{
+export class FormularioPacientesComponent {
 
-  @Output() propagar= new EventEmitter<Object>() ;
-   pacientes :Pacientes= new Pacientes();
-  // @Output() mostrar= new EventEmitter<Object>()
-  @Input() pacirecibo:Pacientes;
+  @Output() propagar = new EventEmitter<Object>();
+  
+  public formCamilo:FormGroup;
 
+  pacientes: Pacientes = new Pacientes();
+  @Input() pacirecibo: Pacientes;
 
+  constructor(public servicioservice: ServiciosService, public router: Router, private fb:FormBuilder) { 
 
+    this.formCamilo = this.fb.group({
+      id:'',
+      cedula:'',
+      nombre:'',
+      apellidos: '',
+      direccion: '',
+      telefono: '',
+      entidad: ''
+    })
+  }
 
+  ngOnInit(){
+   
+  }
 
-  constructor(public servicioservice:ServiciosService,public router:Router){}
-
- public guardarPaciente(pacientes:Pacientes){
-  this.servicioservice.guardarPacientes(pacientes).subscribe(
-    dato=>{
-      console.log(dato=this.pacientes);
-      Swal.fire(`paciente creado ${this.pacientes.nombre} creado con exito`,'success');
-      this.pacientes.nombre=null;
-     // this.irPaciente();
-    }
+  public guardarPaciente(paci:any) {
+    
+    this.servicioservice.guardarPacientes(paci.value).subscribe(
+      dato => {
+        console.log("guardarPacienteee",paci);
+       Swal.fire('paciente creado', `pacientes ${(paci.value.nombre) }  ${paci.value.apellidos} creado con exito`, 'success');
+       this.formCamilo.reset();
+      
+       this.pacientes.nombre = null;
+         this.irPaciente();
+      }
     )
+  }
 
-
- }
-
- irPaciente(){
-  this.propagar.emit(this.pacientes); }
-
-
-  onSubmit():void{
-    this.guardarPaciente(this.pacientes);
-
+  irPaciente() {
+    this.propagar.emit(this.pacientes);
   }
 
 
-ngOnChanges(): void {
+  onSubmit(): void {
+    this.guardarPaciente(this.formCamilo);
 
- if(this.pacirecibo){
- this.pacientes=this.pacirecibo
- }
+  }
 
-
-
-  //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-  //Add '${implements OnChanges}' to the class.
-
+  nuevoPaciente(){
+    this.formCamilo.reset();
+  }
+  
+  ngOnChanges(): void {
+    if(this.pacirecibo){
+      this.formCamilo.patchValue(this.pacirecibo);
+    }else{
+      this.pacientes=new Pacientes();
+    }
+  }
 }
-
-
-
-}
-
-

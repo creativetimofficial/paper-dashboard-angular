@@ -20,6 +20,7 @@
                 <td>
                   {{s.nombre}}
                 </td>
+                <td>  <button (click)="buscarServicio(s)" class="btn btn-primary btn-round" > Detalle </button></td>
               </tr>
 
               <td class="text-right">
@@ -39,6 +40,6 @@
 
 
   <div class="col-md-6">
-    <app-formulario-servicios (propagar)="listarServicios()"></app-formulario-servicios>
+    <app-formulario-servicios (propagar)="listarServicios()"  [servirecibo]="servi"></app-formulario-servicios>
   </div>
 </div>

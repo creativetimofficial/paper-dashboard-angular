@@ -11,6 +11,7 @@ import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
 import { PacientesComponent } from 'app/pages/componentes/pacientes/pacientes.component';
 import { Servicios } from 'app/model/servicios';
 import { ServiciosComponent } from 'app/pages/componentes/servicios/servicios.component';
+import { CitasComponent } from 'app/pages/componentes/citas/citas.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -20,7 +21,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'citas/:id',          component: CitasComponent },
     { path: 'pacientes',      component: PacientesComponent },
     { path: 'servicios',      component: ServiciosComponent}
 ];

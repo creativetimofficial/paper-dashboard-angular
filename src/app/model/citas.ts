@@ -1,4 +1,5 @@
 import { Pacientes } from "./pacientes";
+import { Servicios } from "./servicios";
 
 export class Citas  {
 
@@ -6,6 +7,7 @@ export class Citas  {
   estado:String;
   fecha:Date;
   paciente:Pacientes;
+  servicio:Servicios;
 
 
 

@@ -22,7 +22,7 @@ export class PacientesComponent{
 
 
     constructor(
-      public serviciosservice: ServiciosService, public route:ActivatedRoute
+      public serviciosservice: ServiciosService, public route:ActivatedRoute, private router:Router
     ) {}
 
     ngOnInit(): void {
@@ -48,8 +48,14 @@ console.log(this.pacien=pa);
 }
 
 
+citaPaciente(id:number){
+  console.log(id);
+   this.router.navigate([`/citas/${id}`], { relativeTo: this.route });
+}
 
-
-
+/* realiza el filtro falta desde listar
+capturarString(filtro){
+  listarPacientes(filtro)
+}*/
 
 }

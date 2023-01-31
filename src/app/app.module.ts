@@ -40,6 +40,10 @@ import { NgxPaginationModule } from "ngx-pagination";
     NgxPaginationModule
     
   ],
+  exports:[
+    ReactiveFormsModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

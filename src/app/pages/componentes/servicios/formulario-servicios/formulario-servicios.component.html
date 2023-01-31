@@ -3,13 +3,18 @@
     <h2 class="card-title">Guardar Servicio</h2>
   </div>
   <div class="card-body">
-    <form (ngSubmit)="onSumit()">
+    <form [formGroup]="formservicios"    (ngSubmit)="onSumit()">
       <div class="row">
         <div class="col-md-12 px-12">
           <div class="form-group">
+            <label >Id</label>
+            <input type="text" disabled="disabled"  class="form-control" placeholder="eid" formControlName="eid" value="eid">
+
             <label>Nombre Del Servicio</label>
-            <input type="text" class="form-control" placeholder="nombre" [(ngModel)]="servicios.nombre" value="nombre">
+
+            <input type="text" class="form-control" placeholder="nombre" formControlName="nombre" value="nombre">
           </div>
+
         </div>
       </div>
       <div class="row">

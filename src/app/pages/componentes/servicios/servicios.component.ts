@@ -13,6 +13,7 @@ export class ServiciosComponent {
   p:number =1 ;
   total:number=0;
   tamano:number=8;
+  servi:Servicios;
   constructor(public serviciosservice: ServiciosService) {
    this.listarServicios();
   }
@@ -35,10 +36,8 @@ export class ServiciosComponent {
       });
   }
 
-  /*
-      <dw-propagador
-    (propagar)="procesaPropagar($event)"
-  >
-  </dw-propagador>*/
+ buscarServicio(s:Servicios){
+  console.log(this.servi=s);
+ }
 
 }

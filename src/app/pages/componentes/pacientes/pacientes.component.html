@@ -3,6 +3,7 @@
       <div class="card">
         <div class="card-header">
           <h4 class="card-title"> Pacientes</h4>
+          <!--<input #inputstring (keyup)="capturarString(inputstring.value)" type="text" class="form-control" placeholder="Entidad"/>-->
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -30,10 +31,10 @@
 
 
                     <td><button (click)="buscarIdPaciente(pa)"  class="btn btn-primary btn-round">Detalle</button>
-
-
-                    </td>
-                </tr>
+                   </td>
+                 <td> <div class="update ml-auto mr-auto">
+        <button type="submit" class="btn btn-primary btn-round" (click)="citaPaciente(pa.id)">cita</button>
+      </div> 
 
 
                 <td class="text-right">

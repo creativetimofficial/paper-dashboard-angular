@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -15,17 +15,21 @@ import { NotificationsComponent }   from '../../pages/notifications/notification
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
 import { PacientesComponent }       from 'app/pages/componentes/pacientes/pacientes.component';
 import { ServiciosComponent }       from 'app/pages/componentes/servicios/servicios.component';
+import { CitasComponent } from 'app/pages/componentes/citas/citas.component';
 import { FormularioServiciosComponent } from 'app/pages/componentes/servicios/formulario-servicios/formulario-servicios.component';
 import { FormularioPacientesComponent } from  'app/pages/componentes/pacientes/formulario-pacientes/formulario-pacientes.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    NgbModule,NgxPaginationModule
+    NgbModule,NgxPaginationModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
     DashboardComponent,
@@ -38,6 +42,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NotificationsComponent,
     PacientesComponent,
     ServiciosComponent,
+    CitasComponent,
     FormularioServiciosComponent,
     FormularioPacientesComponent,
     ]
