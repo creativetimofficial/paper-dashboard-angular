@@ -20,11 +20,11 @@ nombre:String
 
 
   listarServicios(pagina:number ,size:number){
-    return this.http.get<Servicios[]>(this.URL_BACKEND+`api/servicios/consultar/${(pagina?pagina:1)-1}/${size}`);
+    return this.http.get<Servicios[]>(this.URL_BACKEND+`api/servicios/consultar/${(pagina?pagina:1)-1},${size}`);
   }
 
-  listarPacientes(){
-   return this.http.get<Pacientes[]>(this.URL_BACKEND+`api/pacientes/consultar`);
+  listarPacientes(pagina:number,size:number){
+   return this.http.get<Pacientes[]>(this.URL_BACKEND+`api/pacientes/consultar/${(pagina?pagina:1)-1},${size}`);
   }
 
   guardarServicios(servicios:Servicios) : Observable<Object>{
@@ -35,6 +35,27 @@ nombre:String
         return throwError(e);
       })
     );
+  }
+
+  guardarPacientes(pacientes:Pacientes){
+    return this.http.post(this.URL_BACKEND+'api/pacientes/guardar',pacientes).pipe(
+      catchError(e=>{
+        console.error(e.error.mensaje)
+        Swal.fire('error',e.error.mensaje,'error')
+        return throwError(e)
+      })
+    )
+  }
+
+  buscarIdPaciente(id:number) : Observable<Pacientes>{
+    return this.http.get<Pacientes>(this.URL_BACKEND+ `api/pacientes/consultarid/${id}`).pipe(
+      catchError(e =>{
+       console.error(e.error.mensaje);
+      Swal.fire('error',e.error.mensaje,'error');
+        return throwError(e);
+
+      })
+    )
   }
 
   actualizarServicio(eid:number,servicios:Servicios): Observable<Object>{

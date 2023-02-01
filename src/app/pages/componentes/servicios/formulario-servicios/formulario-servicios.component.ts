@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Servicios } from 'app/model/servicios';
 import { ServiciosService } from 'app/services/servicios.service';
@@ -11,17 +12,24 @@ import Swal from 'sweetalert2';
 
 export class FormularioServiciosComponent {
 
-    //EventEmitter
-    //Output
-    //Input
+     formservicios:FormGroup;
+
     @Output() propagar = new EventEmitter<Object>();
     servicios: Servicios = new Servicios();
-    constructor(public servicioservice: ServiciosService, public route: Router) { }
+    @Input() servirecibo:Servicios;
+    constructor(public servicioservice: ServiciosService, public route: Router,fb:FormBuilder) {
+    this.formservicios=fb.group({
+     eid:'',
+     nombre:''
+
+    })
+
+  }
 
 
-    public guardarServicio() {
+    public guardarServicio(servicios:any) {
 
-        this.servicioservice.guardarServicios(this.servicios).subscribe(dato => {
+        this.servicioservice.guardarServicios(servicios.value).subscribe(dato => {
             console.log(this.servicios)
             Swal.fire('Nuevo servicio',
                 `servicio ${this.servicios.nombre} creado con exito`,
@@ -41,7 +49,16 @@ export class FormularioServiciosComponent {
     }
 
     public onSumit(): void {
-        this.guardarServicio();
+        this.guardarServicio(this.formservicios);
+    }
+
+    public ngOnChanges(): void {
+     if(this.servirecibo){
+      this.formservicios.patchValue(this.servirecibo)
+    }else{
+      this.servicios=new Servicios();
+      }
+
     }
 
 }

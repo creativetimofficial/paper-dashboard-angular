@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title"> Pacientes</h4>
@@ -8,36 +8,46 @@
           <div class="table-responsive">
             <table class="table">
               <thead class=" text-primary">
+
                 <th>
                   Cedula
                 </th>
                 <th>
-                  Nombre
+                 Nombres y Apellidos
+
                 </th>
-                <th>
-                  Apellido
+
+                 <th>
+                  Entidad
                 </th>
-                <th>
-                  Direccion
-                </th>
-                <th>Telefono</th>
-                <th>Entidad</th>
               </thead>
               <tbody>
-                <tr *ngFor="let p of pacientes">
-                  <td>{{p.cedula}}</td>
-                  <td>{{p.nombre}}</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                <tr  *ngFor="let pa of pacientes | paginate: {itemsPerPage: tamano,currentPage:p,totalItems:total}">
+
+                  <td >{{pa.cedula}}</td>
+                  <td >{{pa.nombre}} {{pa.apellidos}}</td>
+                  <td >{{pa.entidad}}</td>
+
+
+                    <td><button (click)="buscarIdPaciente(pa)"  class="btn btn-primary btn-round">Detalle</button>
+
+
+                    </td>
                 </tr>
+
+
+                <td class="text-right">
               </tbody>
-             
+
             </table>
+            <pagination-controls previousLabel="Anterior"
+            nextLabel="Siguiente" (pageChange)="p=$event; listarPacientes();"></pagination-controls>
           </div>
         </div>
-      </div>
+           </div>
     </div>
-  </div>
-  
+    <div class="col-md-6">
+      <app-formulario-pacientes (propagar)="listarPacientes()"  [pacirecibo]="pacien"></app-formulario-pacientes>
+      </div>
+
+
