@@ -1,0 +1,67 @@
+
+
+
+<div class="card card-user">
+  <div class="card-header">
+    <h2 class="card-title">Guardar Citas</h2>
+  </div>
+ 
+ 
+  
+  <div class="card-body">
+  
+    <form [formGroup]="formCitas"   (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-12 px-12">
+          <div class="form-group">
+             <!--<select  (change)="buscarServicio()">
+             <option *ngFor="let s of servicio">{{s?.eid}} {{s?.nombre}}
+             </option></select>
+            <h1>{{pacienr}}</h1>-->
+              <label for="servicio" class="col-form-label col-sm-2"> Servicios </label>
+              <!-- <select formControlName="servicioId"  >
+                  <option  *ngFor="let servicio of servicios" [value]="servicio?.id">
+                    {{servicio?.nombre}}                  
+                  </option>       </select>
+            -->
+            <select
+            class="custom-select mb-3"
+            formControlName="servicio"
+          >
+            <option value="">Servicio</option>
+            <option *ngFor="let servicio of servicios" [ngValue]="servicio">
+              {{ servicio?.nombre }}
+            </option>
+          </select>   
+         
+        
+            <!-- <label > id</label>
+              <input type="text"  class="form-control" [placeholder]="pacienr" formControlName="pacienr" id="pacienr" nommbre="pacienr"> -->
+            <label > id</label>
+            <input type="text" disabled class="form-control"  placeholder="id_cita" formControlName="id_cita"  value="id_cita" >
+           <!-- <label for="Servicio" >Servicios</label>
+            <select type="text"  class="form-control"  placeholder="servicio" formControlName="servicio"  value="servicio" >
+              <option *ngFor="let s of servicio" [ngvalue]="servicio" >{{servi.nombre}}</option>
+            </select>-->
+            <label>estado</label>
+
+          <input type="text"  class="form-control"  placeholder="estado" formControlName="estado"  value="estado" >
+
+
+  <label> fecha </label>
+          <input type="date" class="form-control"  placeholder="fecha"  formControlName="fecha" required="required"  value="fecha"  >
+  
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="update ml-auto mr-auto">
+        <button type="submit" class="btn btn-primary btn-round" >Guardar</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+     

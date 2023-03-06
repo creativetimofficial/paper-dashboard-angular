@@ -49,8 +49,9 @@ console.log(this.pacien=pa);
 
 
 citaPaciente(id:number){
-  console.log(id);
+  console.log('ivan',id);
    this.router.navigate([`/citas/${id}`], { relativeTo: this.route });
+  
 }
 
 /* realiza el filtro falta desde listar

@@ -41,8 +41,6 @@ buscarServicio(s:Servicios){
 
 }
 
- buscarServicio(s:Servicios){
-  console.log(this.servi=s);
- }
+
 
 }

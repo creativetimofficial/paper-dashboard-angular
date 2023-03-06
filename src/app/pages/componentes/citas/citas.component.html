@@ -8,7 +8,14 @@
       <div class="card-body">
         <div class="table-responsive">
           <table class="table">
-            <thead class=" text-primary">
+         
+            
+            
+              
+              <tr *ngFor=" let paciente of pacientes "></tr>
+              <tr *ngFor="let servicio of servicio"></tr>
+              <tr *ngFor="let cita of citas"></tr>
+              <th>id</th>
 
               <th>
                 Cedula
@@ -21,11 +28,37 @@
                <th>
                 Entidad
               </th>
-            </thead>
+
+              <th>
+                Estado
+ 
+               </th>
+ 
+                <th>
+                 Servicio
+               </th>
+
+               <th>
+                Fecha
+              </th>
+    
             <tbody>
-              <tr  *ngFor="let pa of paciente ">
-
-                <td >{{pa.Cedula}</td>
-                <td >{{pa.nombre}} {{pa.apellidos}}</td>
-                <td >{{pa.entidad}}</td>
-
+            
+              <td >{{idPaciente}}</td>
+                <td >{{paciente?.paciente?.cedula}}</td>
+                <td >{{paciente?.paciente?.nombre}} {{paciente?.paciente?.apellidos}}</td>
+                <td >{{paciente?.paciente?.entidad}}</td>
+                <td >{{cita?.estado}}</td>
+                
+                
+                          </tbody>
+                          </table>
+                        </div></div></div></div>
+              
+              
+                
+               
+                <app-formulario-citas (propagarCita)="listarCitas()"  [pacienr]="idPaciente"  > </app-formulario-citas>
+               
+               
+                  

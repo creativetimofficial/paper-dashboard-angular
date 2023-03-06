@@ -36,7 +36,22 @@ nombre:String
       })
     );
   }
+  guardarCita(cita:Citas){
+  
+    return this.http.post(this.URL_BACKEND+'api/citas/guardar',cita).pipe(
+      catchError(e=>{
+        console.error(e.mensaje.error)
+        Swal.fire('error',e.error.mensaje,'error')
+        return throwError(e);
 
+      })
+    )
+    
+  }
+  listserviciosp(){
+return this.http.get<Servicios[]>(this.URL_BACKEND+'api/servicios/consultasp')
+
+  }
   guardarPacientes(pacientes:Pacientes){
     return this.http.post(this.URL_BACKEND+'api/pacientes/guardar',pacientes).pipe(
       catchError(e=>{
@@ -46,6 +61,8 @@ nombre:String
       })
     )
   }
+
+ 
 
   buscarIdPaciente(id:number) : Observable<Pacientes>{
     return this.http.get<Pacientes>(this.URL_BACKEND+ `api/pacientes/consultarid/${id}`).pipe(

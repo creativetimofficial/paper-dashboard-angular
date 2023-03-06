@@ -26,6 +26,7 @@
                 </td>
                 <td>
                   {{s.nombre}}
+                  <button (click)="buscarServicio(s)" class="btn btn-primary btn-round">detalle</button>
                 </td>
               </tr>
 
@@ -36,8 +37,9 @@
 
             </tbody>
           </table>
-          <pagination-controls previousLabel="Anterior"
-          nextLabel="Siguiente" (pageChange)="p=$event; listarServicios();"  ></pagination-controls>
+          
+          <pagination-controls previousLabel="Anterior"  nextLabel="Siguiente" (pageChange)="p=$event; listarServicios();"  ></pagination-controls>
+        
         </div>
       </div>
     </div>

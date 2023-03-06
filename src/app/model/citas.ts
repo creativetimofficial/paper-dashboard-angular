@@ -7,8 +7,9 @@ export class Citas  {
   estado:String;
   fecha:Date;
   paciente:Pacientes;
-  servicio:Servicios;
-
+  servicios:Servicios[];
+  servi:Servicios;
+  
 
 
 }

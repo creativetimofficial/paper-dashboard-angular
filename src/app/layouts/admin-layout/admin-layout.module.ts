@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -18,6 +18,7 @@ import { ServiciosComponent }       from 'app/pages/componentes/servicios/servic
 import { CitasComponent } from 'app/pages/componentes/citas/citas.component';
 import { FormularioServiciosComponent } from 'app/pages/componentes/servicios/formulario-servicios/formulario-servicios.component';
 import { FormularioPacientesComponent } from  'app/pages/componentes/pacientes/formulario-pacientes/formulario-pacientes.component';
+import { FormularioCitasComponent}      from 'app/pages/componentes/citas/formulario-citas/formulario-citas.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -28,6 +29,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RouterModule.forChild(AdminLayoutRoutes),
     ReactiveFormsModule,
     FormsModule,
+
     NgbModule,NgxPaginationModule
   ],
   declarations: [
@@ -44,6 +46,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CitasComponent,
     FormularioServiciosComponent,
     FormularioPacientesComponent,
+    FormularioCitasComponent,
     ]
 })
 

@@ -12,28 +12,12 @@ import Swal from 'sweetalert2';
 
 export class FormularioServiciosComponent {
 
-
-    public formservicios:FormGroup;
      formservicios:FormGroup;
 
- fd9136c5dceadb3a25fa933f684aad0e45a28b38
     @Output() propagar = new EventEmitter<Object>();
     @Input() servirecibo:Servicios;
     servicios: Servicios = new Servicios();
-
-    constructor(public servicioservice: ServiciosService, public route: Router,private fb:FormBuilder) { 
-        this.formservicios=this.fb.group({
-        eid:'',
-        nombre:''
-        })
-    }
-
-    public guardarServicio(servi:any) {
-        console.log(servi)
-        this.servicioservice.guardarServicios(servi.value).subscribe(dato => {
-            console.log("Guardarservicio",servi)
-
-    @Input() servirecibo:Servicios;
+   // @Input() servirecibo:Servicios;
     constructor(public servicioservice: ServiciosService, public route: Router,fb:FormBuilder) {
     this.formservicios=fb.group({
      eid:'',
@@ -48,9 +32,8 @@ export class FormularioServiciosComponent {
 
         this.servicioservice.guardarServicios(servicios.value).subscribe(dato => {
             console.log(this.servicios)
-
             Swal.fire('Nuevo servicio',
-                `servicio ${servi.value.nombre} creado con exito`,
+                `servicio ${servicios.value.nombre} creado con exito`,
                 'success'
             );
             this.formservicios.reset();
@@ -71,17 +54,6 @@ export class FormularioServiciosComponent {
     }
 
     public ngOnChanges(): void {
-
-        if(this.servirecibo){
-         this.formservicios.patchValue(this.servirecibo)
-       }else{
-         this.servicios=new Servicios();
-         }
-   
-       }
-
-}
-
      if(this.servirecibo){
       this.formservicios.patchValue(this.servirecibo)
     }else{

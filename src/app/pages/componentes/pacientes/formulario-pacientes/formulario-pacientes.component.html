@@ -4,40 +4,46 @@
   </div>
   <div class="card-body">
 
-     <form (ngSubmit)="onSubmit()" >
+   <form  [formGroup]="formCamilo"  (ngSubmit)="onSubmit()" >
 
       <div class="row">
         <div class="col-md-8 px-8">
 
-          <div class="form-group" >
+         <div class="form-group" >
         <tr >
 
 
-          <h1>{{pacirecibo?.cedula}}</h1>
+          <h1>{{pacirecibo?.nombre}}</h1>
 
-              <label>id</label>
+          <label>id</label>
 
-          <input type="text" class="form-control"  placeholder="Id"  [(ngModel)]="pacientes.id"  value="id" >
-<label>
+          <input type="text"  class="form-control"  placeholder="Id" formControlName="id"  value="id" >
+
+
   <label> Nombres </label>
-          <input type="text" class="form-control"  placeholder="Nombres"  [(ngModel)]="pacientes.nombre"  value="nombres" ></label>
+          <input type="text" class="form-control"  placeholder="Nombres"  formControlName="nombre" required="required"  value="nombre"  >
 
      <label >Apellidos</label>
-     <input type="text" class="form-control" placeholder="Apellidos" [(ngModel)]="pacientes.apellidos" value="apellidos">
+     <input type="text" class="form-control" placeholder="Apellidos" formControlName="apellidos" value="apellidos">
   <label >Cedula </label>
 
-       <input type="text" class="form-control"    placeholder="Cedula"   [(ngModel)]="pacientes.cedula"  value="cedula" >
+       <input type="text" class="form-control"    placeholder="Cedula" formControlName="cedula"  value="cedula" >
 
 
             <label > Direccion</label>
-            <input type="text" class="form-control" placeholder="Direccion" [(ngModel)]="pacientes.direccion" value="direccion">
+            <input type="text" class="form-control" placeholder="Direccion" formControlName="direccion" value="direccion">
             <label >Telefono</label>
-            <input type="text" class="form-control" placeholder="Telefono" [(ngModel)]="pacientes.telefono" value="telefono">
+            <input type="text" class="form-control" placeholder="Telefono" formControlName="telefono" value="telefono">
             <label >Entidad</label>
-           <input type="text" class="form-control" placeholder="Entidad" [(ngModel)]="pacientes.entidad" valude="entidad">
+           <input type="text" class="form-control" placeholder="Entidad"  formControlName="entidad" valude="entidad">
           </tr>
+
+
         </div>
-        </div>
+
+      <div class="row">
+        <div class="update ml-auto mr-auto">
+        <form ><button (click)="nuevoPaciente()" class="btn btn-primary btn-round">Nuevo</button></form>
       </div>
 
 
@@ -46,10 +52,10 @@
           <button type="submit" class="btn btn-primary btn-round">Editar y Guardar</button></div>
 
         </div>
-      </div>
-    </form>
 
-  </div>
 
-</div>
+
+
+
+
 

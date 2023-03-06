@@ -9,4 +9,5 @@ export class Pacientes {
   direccion: String;
   telefono: String;
   entidad: String;
+  paciente:Pacientes;
   }
