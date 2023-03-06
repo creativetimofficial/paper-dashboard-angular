@@ -10,6 +10,10 @@
           <table class="table">
             <thead class=" text-primary">
               <th>
+               Id
+              </th>
+
+              <th>
                 Nombre
               </th>
 
@@ -18,9 +22,11 @@
               <tr *ngFor="let s of servicios | paginate: { itemsPerPage: tamano, currentPage: p, totalItems:total }">
 
                 <td>
+                  {{s.eid}}
+                </td>
+                <td>
                   {{s.nombre}}
                 </td>
-                <td>  <button (click)="buscarServicio(s)" class="btn btn-primary btn-round" > Detalle </button></td>
               </tr>
 
               <td class="text-right">
@@ -31,7 +37,7 @@
             </tbody>
           </table>
           <pagination-controls previousLabel="Anterior"
-          nextLabel="Siguiente" (pageChange)="p=$event; listarServicios();"></pagination-controls>
+          nextLabel="Siguiente" (pageChange)="p=$event; listarServicios();"  ></pagination-controls>
         </div>
       </div>
     </div>

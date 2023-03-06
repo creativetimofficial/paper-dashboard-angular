@@ -38,7 +38,12 @@ import { NgxPaginationModule } from "ngx-pagination";
     ReactiveFormsModule,
     NgbModule,
     NgxPaginationModule
-    
+
+  ],
+  exports:[
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   exports:[
     ReactiveFormsModule,
