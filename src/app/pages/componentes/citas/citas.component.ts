@@ -74,16 +74,9 @@ export class CitasComponent{
             }
         )
     }
-
-   /* ngOnchanges():void{
-      
-        if(this.idrecibo=this.pa){
-
-        }else{
-          this.paciente=null
-        }
+   ircc(){
     
-    }*/
+   }
     ngOnchanges():void{
       if(this.servicio){
        
@@ -92,6 +85,7 @@ export class CitasComponent{
        this.servicio=null   
       }
     }
+  
 
   
 }

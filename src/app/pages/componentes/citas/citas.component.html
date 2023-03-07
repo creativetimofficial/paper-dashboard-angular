@@ -48,7 +48,7 @@
                 <td >{{paciente?.paciente?.cedula}}</td>
                 <td >{{paciente?.paciente?.nombre}} {{paciente?.paciente?.apellidos}}</td>
                 <td >{{paciente?.paciente?.entidad}}</td>
-                <td >{{cita?.estado}}</td>
+                <td >{{cita.id_cita}}</td>
                 
                 
                           </tbody>
@@ -58,7 +58,7 @@
               
                 
                
-                <app-formulario-citas (propagarCita)="listarCitas()"  [pacienr]="idPaciente"  > </app-formulario-citas>
+                <app-formulario-citas  [pacienr]="idPaciente" [citarecibo]="cita"> </app-formulario-citas>
                
                
                   

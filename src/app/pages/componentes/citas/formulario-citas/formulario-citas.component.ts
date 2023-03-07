@@ -24,6 +24,7 @@ export class FormularioCitasComponent{
    //s:Servicios;
     @Input() pacienr:Pacientes;
     @Input() servicir:Servicios;
+    @Input() citarecibo:Citas;
     
 
     @Output() propagarCita= new EventEmitter<Object>();
@@ -70,8 +71,9 @@ export class FormularioCitasComponent{
     }   
 
 
-   irCitas(){
-       console.log('listarcita12',this.propagarCita.emit(this.cita));
+   irCitas(cita:any){
+    console.log('ange32',this.formCitas.value);
+       console.log('listarcita12',this.propagarCita.emit(this.formCitas.value));
     }
 
     onSubmit():void{
@@ -80,8 +82,19 @@ export class FormularioCitasComponent{
     }
 
     ngOnInit(): void {
-      this.listServiciosp();
-    
+     this.irCitas(this.formCitas);
+     
+    }
+
+    ngOnchanges():void{
+      console.log('citaaaaaaa',this.citarecibo);
+      if(this.citarecibo){
+     this.formCitas.patchValue(this.citarecibo)
+      }
+      else{
+       this.cita=new Citas;
+      }
+
     }
 
 
