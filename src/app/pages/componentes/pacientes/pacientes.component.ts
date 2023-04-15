@@ -44,7 +44,6 @@ export class PacientesComponent{
 
 buscarIdPaciente(pa:Pacientes){
 console.log(this.pacien=pa);
-
 }
 
 

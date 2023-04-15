@@ -17,17 +17,26 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from "ngx-pagination";
+import { FiltercitasPipe } from './pipe/filtercitas.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    FiltercitasPipe,
+    
+    
+
+   
   ],
   imports: [
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, 
     RouterModule.forRoot(AppRoutes,{
       useHash: true
     }),
+    
     SidebarModule,
     NavbarModule,
     ToastrModule.forRoot(),
@@ -35,14 +44,21 @@ import { NgxPaginationModule } from "ngx-pagination";
     FixedPluginModule,
     HttpClientModule,
     FormsModule,
+    
     ReactiveFormsModule,
     NgbModule,
-    NgxPaginationModule
+  
+    NgxPaginationModule,
+   
+    
+    
 
   ],
   exports:[
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    FiltercitasPipe,
+    
 
   ],
   
@@ -50,3 +66,4 @@ import { NgxPaginationModule } from "ngx-pagination";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

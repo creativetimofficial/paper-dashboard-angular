@@ -38,6 +38,7 @@
     "express": "4.18.0",
     "jquery": "^3.5.1",
     "moment": "2.29.1",
+    "ng2-search-filter": "^0.5.1",
     "ngx-pagination": "^6.0.2",
     "ngx-toastr": "14.3.0",
     "rxjs": "^7.5.5",

@@ -1,11 +1,12 @@
 import  {Component,OnInit,Output,EventEmitter,Input} from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import  {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import  {Citas} from 'app/model/citas';
 import { Pacientes } from 'app/model/pacientes';
 import  {Servicios} from 'app/model/servicios'
 import { ServiciosService } from 'app/services/servicios.service';
 import Swal from 'sweetalert2';
+import { formatDate } from '@angular/common';
 
 @Component({ 
   selector: 'app-formulario-citas',
@@ -19,8 +20,9 @@ export class FormularioCitasComponent{
     p:number=1;
     tamano:number=8;
     total:number=0;
-    cita:Citas;
+    cita:Citas= new Citas;
     paciente:Pacientes;
+    dateControl:'';
    //s:Servicios;
     @Input() pacienr:Pacientes;
     @Input() servicir:Servicios;
@@ -32,13 +34,21 @@ export class FormularioCitasComponent{
     constructor(public servicioservice:ServiciosService,public router:Router,public route:ActivatedRoute,public fb:FormBuilder){
       this.idPacienteUrl = this.route.snapshot.paramMap.get('id');
       
+
       this.formCitas=this.fb.group({
-            
-            id_cita:'',
+        id:'',
+        servicio:'',
             estado:'',
-            fecha:'',
+           //fecha:'',
+            
             //  id:'',
-             servicio:''
+            fecha:['', [
+              Validators
+              .required,
+              // validates date format yyyy-mm-dd with regular expression
+              Validators.pattern(/^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/)
+          ]]
+            
         }          
         );
         //this.formCitas.get('servicio').contro valueChanges((value)=>console.log(value))
@@ -58,9 +68,13 @@ export class FormularioCitasComponent{
             Swal.fire('creado correctamente')
             this.formCitas.reset();
             this.cita=null;
+            this.irCitas();
 
 
         })
+    }
+    irCitas(){
+      this.propagarCita.emit(this.cita);
     }
 
     listServiciosp(){
@@ -71,28 +85,31 @@ export class FormularioCitasComponent{
     }   
 
 
-   irCitas(cita:any){
-    console.log('ange32',this.formCitas.value);
-       console.log('listarcita12',this.propagarCita.emit(this.formCitas.value));
-    }
 
     onSubmit():void{
-      this.guardarCitas(this.formCitas)
-        
+      this.guardarCitas(this.formCitas);        
+    }
+    comparaServicio(s1:Servicios,s2:Servicios){
+     return  s1== null || s2==null || s1==undefined || s2== undefined ?false : s1.eid === s2.eid ;
     }
 
-    ngOnInit(): void {
-     this.irCitas(this.formCitas);
+   ngOnInit(): void {
+     
+     this.listServiciosp();
+    
      
     }
 
-    ngOnchanges():void{
-      console.log('citaaaaaaa',this.citarecibo);
+   
+
+
+    ngOnChanges():void{
+      
       if(this.citarecibo){
-     this.formCitas.patchValue(this.citarecibo)
+   this.formCitas.patchValue(this.citarecibo);
       }
-      else{
-       this.cita=new Citas;
+      else  this.cita=new Citas();{
+      
       }
 
     }

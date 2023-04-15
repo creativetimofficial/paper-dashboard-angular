@@ -3,7 +3,7 @@ import { Servicios } from "./servicios";
 
 export class Citas  {
 
-  id_cita:number;
+  id:number;
   estado:String;
   fecha:Date;
   paciente:Pacientes;

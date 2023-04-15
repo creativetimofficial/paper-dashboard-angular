@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-7">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title"> Pacientes</h4>
@@ -7,14 +7,16 @@
       </div>
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table">
+
+
+          <table   class="table">
          
-            
-            
+           
+           <thead class=" text-primary"> 
               
-              <tr *ngFor=" let paciente of pacientes "></tr>
-              <tr *ngFor="let servicio of servicio"></tr>
-              <tr *ngFor="let cita of citas"></tr>
+          
+          
+             
               <th>id</th>
 
               <th>
@@ -28,37 +30,50 @@
                <th>
                 Entidad
               </th>
-
-              <th>
-                Estado
- 
-               </th>
- 
-                <th>
-                 Servicio
-               </th>
-
-               <th>
-                Fecha
-              </th>
-    
+            </thead>
             <tbody>
-            
+             
               <td >{{idPaciente}}</td>
                 <td >{{paciente?.paciente?.cedula}}</td>
                 <td >{{paciente?.paciente?.nombre}} {{paciente?.paciente?.apellidos}}</td>
                 <td >{{paciente?.paciente?.entidad}}</td>
-                <td >{{cita.id_cita}}</td>
-                
-                
+   
+               
+             
+              
                           </tbody>
+                          
+              <thead class=" text-primary"> 
+              <th>id</th>
+              <th>fecha</th>
+              <th>nombres</th>
+              <th>Numero Identificacion</th>
+              <th>servicios</th>
+            </thead>
+                <tbody>
+                  <tr><td>
+                    <input type="text"  [(ngModel)]="query" placeholder="Search...."></td>
+                  
+                  <td>
+                <button (click)="listarFiltro()"  class="btn btn-primary btn-round">FILTRAR</button></td>
+              </tr> 
+            
+                  <tr *ngFor="let c of citas  | paginate: {itemsPerPage: tamano,currentPage:p,totalItems:total}        ">
+                    
+                    <td>{{c?.estado }}</td>
+                  <td>{{c?.fecha | date:"yyyy-MM-dd"}}</td>
+                <!-- <td>{{c.paciente?.nombre }} {{paciente?.apellidos}}</td>
+                 <td>{{c.paciente?.cedula}}</td>
+                  <td>{{c.servicio?.nombre}}</td>-->
+                  <button (click)="seleccionCita(c)" class="btn btn-primary btn-round">Seleccionar</button>
+                </tr>
+                </tbody>
                           </table>
+                          <pagination-controls previousLabel="Anterior"  nextLabel="Siguiente" (pageChange)="p=$event; listarCitas();"></pagination-controls>
                         </div></div></div></div>
+                        <div><div></div>
               
-              
-                
-               
-                <app-formulario-citas  [pacienr]="idPaciente" [citarecibo]="cita"> </app-formulario-citas>
-               
-               
+  <div class="col-md-14">
+        <app-formulario-citas (propagarCita)=" listarCitas()"  [citarecibo]="cita"></app-formulario-citas>
+      </div></div></div>
                   

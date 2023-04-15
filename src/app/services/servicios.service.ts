@@ -26,6 +26,13 @@ nombre:String
   listarPacientes(pagina:number,size:number){
    return this.http.get<Pacientes[]>(this.URL_BACKEND+`api/pacientes/consultar/${(pagina?pagina:1)-1},${size}`);
   }
+  listarCitas(pagina:number,size:number){
+    return this.http.get<Citas[]>(this.URL_BACKEND+ `api/citas/consultar/${(pagina?pagina:1)-1},${size}`);
+
+  }
+  filtrarId(id:any){
+    return this.http.get<Citas[]>(this.URL_BACKEND+`api/citas/listarid?id=${id}&pagina=0&size=8`);
+  }
 
   guardarServicios(servicios:Servicios) : Observable<Object>{
     return this.http.post(this.URL_BACKEND+'api/servicios/create',servicios).pipe(
@@ -98,9 +105,6 @@ return this.http.get<Servicios[]>(this.URL_BACKEND+'api/servicios/consultasp')
     return this.http.delete(this.URL_BACKEND+ `api/servicios/delete/${eid}`);
   }
 
-  listarCitas(){
-    return this.http.get<Citas[]>(this.URL_BACKEND+'api/citas/consultar').pipe(map(pacientes=> pacientes as Citas[]))
 
-  }
 
 }
