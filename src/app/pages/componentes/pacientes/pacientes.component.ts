@@ -22,8 +22,7 @@ export class PacientesComponent{
 
 
     constructor(
-      public serviciosservice: ServiciosService, public route:ActivatedRoute, private router:Router
-    ) {}
+      public serviciosservice: ServiciosService, public route:ActivatedRoute, private router:Router ) {}
 
     ngOnInit(): void {
       this.listarPacientes();

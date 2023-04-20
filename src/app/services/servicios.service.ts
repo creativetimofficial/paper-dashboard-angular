@@ -5,6 +5,7 @@ import { catchError, identity, map, Observable, throwError } from 'rxjs';
 import { Pacientes } from '../model/pacientes';
 import { Citas } from '../model/citas';
 import Swal from 'sweetalert2';
+import { Estados } from '../model/estados';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,11 +15,15 @@ servicios:Servicios[];
 pacientes:Pacientes[];
 citas:Citas[];
 eid:number;
-nombre:String
+nombre:String;
+estados:Estados;
 
   constructor(public http: HttpClient) { }
 
+  listarEstados(pagina:number,size:number){
+    return this.http.get<Estados[]>(this.URL_BACKEND+`api/estados/consultar/${(pagina?pagina:1)-1},${size}`);
 
+  }
   listarServicios(pagina:number ,size:number){
     return this.http.get<Servicios[]>(this.URL_BACKEND+`api/servicios/consultar/${(pagina?pagina:1)-1},${size}`);
   }
@@ -43,12 +48,21 @@ nombre:String
       })
     );
   }
+  guardarEstado(estado:Estados){
+    return this.http.post(this.URL_BACKEND+'api/estados/guardar',estado).pipe(
+      catchError(e=>{
+        console.error(e.error.mensaje)
+        Swal.fire('error',e.error.mensaje,'error')
+        return throwError(e);
+      })
+    )
+  }
   guardarCita(cita:Citas){
   
     return this.http.post(this.URL_BACKEND+'api/citas/guardar',cita).pipe(
       catchError(e=>{
-        console.error(e.mensaje.error)
-        Swal.fire('error',e.error.mensaje,'error')
+        console.error(e.error.mensaje)
+        Swal.fire(`error no se completo la operacion ${e.error.mensaje}`)
         return throwError(e);
 
       })
@@ -63,7 +77,7 @@ return this.http.get<Servicios[]>(this.URL_BACKEND+'api/servicios/consultasp')
     return this.http.post(this.URL_BACKEND+'api/pacientes/guardar',pacientes).pipe(
       catchError(e=>{
         console.error(e.error.mensaje)
-        Swal.fire('error',e.error.mensaje,'error')
+        Swal.fire('error no se completo la operacions',e.error.mensaje,'error')
         return throwError(e)
       })
     )
@@ -75,7 +89,7 @@ return this.http.get<Servicios[]>(this.URL_BACKEND+'api/servicios/consultasp')
     return this.http.get<Pacientes>(this.URL_BACKEND+ `api/pacientes/consultarid/${id}`).pipe(
       catchError(e =>{
        console.error(e.error.mensaje);
-      Swal.fire('error',e.error.mensaje,'error');
+      Swal.fire('error no se completo la operacions',e.error.mensaje,'error');
         return throwError(e);
 
       })
@@ -94,7 +108,7 @@ return this.http.get<Servicios[]>(this.URL_BACKEND+'api/servicios/consultasp')
     return this.http.get<Servicios>(this.URL_BACKEND+ `api/servicios/listareid/${eid}`).pipe(
       catchError(e =>{
        console.error(e.error.mensaje);
-      Swal.fire('error',e.error.mensaje,'error');
+      Swal.fire('error no se completo la operacions',e.error.mensaje,'error');
         return throwError(e);
 
       })

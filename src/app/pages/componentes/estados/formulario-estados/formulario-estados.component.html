@@ -1,0 +1,38 @@
+<div class="card card-user">
+  
+    <div class="card-header">
+      <h2 class="card-title">Estado</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="formEstado" (ngSubmit)="onSumit()">
+        <div class="row">
+          <div class="col-md-12 px-12">
+              <div class="form-group">
+               
+                <label >Id</label>
+                <input type="text" class="form-control" disabled="disabled"   placeholder="id" formControlName="id" value="id">
+              
+                <label >nombre</label>
+                <input type="text"   class="form-control" placeholder="nombre" formControlName="nombre" value="nombre">
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-auto">
+           <button type="submit" class="btn btn-primary btn-round">Guardar y Editar</button> 
+          </div>
+            </div>
+            
+        </form>
+     
+        <div class="row">
+          <div class="update ml-auto mr-auto">
+       <form><button (click)="resetEstado()"  class="btn btn-primary btn-round">nuevo</button> </form>
+  
+          </div>
+        </div> 
+     
+    </div>
+    
+        
+  

@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Lista de Estados</h4>
+        <!--<input #inputstring (keyup)="capturarString(inputstring.value)" type="text" class="form-control" placeholder="Entidad"/>-->
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+
+                <th>
+                id
+                </th>
+                <th>
+                 Nombres 
+
+                </th>
+
+                
+              </thead>
+             
+<tbody>
+
+    <tr *ngFor="let es of estados | paginate: {itemsPerPage: tamano,currentPage:p,totalItems:total}" >
+
+        <td> {{es?.id}}</td>
+        <td> {{es?.nombre}}
+    
+       <button (click)="selectEstado(es)"  class="btn btn-primary btn-round">Detalle</button>
+        </td>
+        </tr>
+        <td class="text-right">
+
+  </tbody>
+   </table>
+ 
+    <pagination-controls previousLabel="Anterior"  nextLabel="Siguiente" (pageChange)="p=$event; listarEstados();"></pagination-controls>
+   
+  </div>
+</div>
+</div>
+  </div>
+   
+
+<div class="col-md-6">
+  
+<app-formulario-estados (propagares)="listarEstados()" [estarecibo]="estado"></app-formulario-estados></div>
+</div>
+

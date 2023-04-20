@@ -9,6 +9,7 @@ import { Citas } from 'app/model/citas';
 import { Servicios } from 'app/model/servicios';
 
 import Swal from 'sweetalert2';
+import { Estados } from 'app/model/estados';
 
 
 @Component({
@@ -25,6 +26,7 @@ export class CitasComponent{
     citas:Citas[];
     cita:Citas;
     query: '';
+    estado:Estados;
   
  
     filterpost:'';

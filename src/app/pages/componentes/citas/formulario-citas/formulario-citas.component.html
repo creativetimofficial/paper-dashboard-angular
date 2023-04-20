@@ -21,11 +21,21 @@
          
            <label>Servicio</label>
           <select [compareWith]="comparaServicio" class="form-control"  class="custom-select mb-3"  formControlName="servicio">
-            <option value="servicio" >Escoge un Servicio</option>
+           <!-- <option value="servicio" >Escoge un Servicio</option>-->
             <option *ngFor="let servicio of servicios" [ngValue]="servicio">
               {{ servicio?.nombre }}
             </option>
           </select>  
+
+          <label> Estado</label>
+          <select [compareWith]="seleccionEstado" class="form-control" class="custom-select mb-3" formControlName="estado">
+            <!--<option value="estado"> Escoge un Estado</option>-->
+            <option *ngFor="let estado of estados" [ngValue]="estado">
+              {{estado.nombre}}
+            </option>
+
+          </select>
+        
          
             <!-- <label > id</label>
               <input type="text"  class="form-control" [placeholder]="pacienr" formControlName="pacienr" id="pacienr" nommbre="pacienr"> -->
@@ -35,9 +45,9 @@
               <option *ngFor="let s of servicio" [ngvalue]="servicio" >{{servi.nombre}}</option>
             </select>-->
            
-            <label>estado</label>
+         <!--   <label>estado</label>
 
-          <input type="text"  class="form-control"  placeholder="estado" formControlName="estado"  value="estado" >
+          <input type="text"  class="form-control"  placeholder="estado" formControlName="estado"  value="estado" >-->
 
 
        <label> fecha </label>
@@ -46,15 +56,21 @@
         </div>
         </div>
         </div>
-     
     <div class="row">
       <div class="update ml-auto mr-auto">
-        <button type="submit" class="btn btn-primary btn-round" >Guardar</button>
+        <button type="submit" class="btn btn-primary btn-round" >Guardar y Modificar</button>
       </div>
        
     </div>
     </form>
+ 
+      <div class="row">
+        <div class="update ml-auto mr-auto">
+          <form>  <button (click)="nuevoReset()" class="btn btn-primary btn-round" >Nuevo</button> </form>
+        </div>
+    
   </div>
+ 
        
 
 

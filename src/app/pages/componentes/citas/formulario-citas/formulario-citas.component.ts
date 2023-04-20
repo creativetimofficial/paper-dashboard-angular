@@ -7,6 +7,7 @@ import  {Servicios} from 'app/model/servicios'
 import { ServiciosService } from 'app/services/servicios.service';
 import Swal from 'sweetalert2';
 import { formatDate } from '@angular/common';
+import { Estados } from 'app/model/estados';
 
 @Component({ 
   selector: 'app-formulario-citas',
@@ -16,6 +17,7 @@ export class FormularioCitasComponent{
     formCitas: FormGroup;
     idPaciente;
     servicios:Servicios[];
+    estados:Estados[];
    // servicio:Servicios;
     p:number=1;
     tamano:number=8;
@@ -38,7 +40,8 @@ export class FormularioCitasComponent{
       this.formCitas=this.fb.group({
         id:'',
         servicio:'',
-            estado:'',
+        estado:'',
+            //estado:'',
            //fecha:'',
             
             //  id:'',
@@ -65,13 +68,17 @@ export class FormularioCitasComponent{
             console.log(dato);
            
            
-            Swal.fire('creado correctamente')
+            Swal.fire(`Cita asignada con fechab ${cita.value.fecha} correctamente `)
             this.formCitas.reset();
             this.cita=null;
             this.irCitas();
 
 
         })
+    }
+
+    nuevoReset(){
+      this.formCitas.reset();
     }
     irCitas(){
       this.propagarCita.emit(this.cita);
@@ -83,6 +90,16 @@ export class FormularioCitasComponent{
           console.log('servi123',this.servicios=dato)
         })
     }   
+
+    listarEstados(){
+      this.servicioservice.listarEstados(this.p,this.tamano).subscribe((dato:any)=>{
+      console.log(dato);
+      setTimeout(()=>{
+        this.estados= dato.content
+        this.total=dato.totalElements
+      })
+    })
+    }
 
 
 
@@ -96,12 +113,16 @@ export class FormularioCitasComponent{
    ngOnInit(): void {
      
      this.listServiciosp();
+     this.listarEstados();
     
      
     }
 
    
+   seleccionEstado(e1:Estados,e2:Estados){
+   return  e1==null || e2==null || e1== undefined || e2== undefined  ?false: e1.id===e2.id
 
+   }
 
     ngOnChanges():void{
       

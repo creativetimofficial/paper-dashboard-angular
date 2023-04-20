@@ -12,6 +12,7 @@ import { PacientesComponent } from 'app/pages/componentes/pacientes/pacientes.co
 import { Servicios } from 'app/model/servicios';
 import { ServiciosComponent } from 'app/pages/componentes/servicios/servicios.component';
 import { CitasComponent } from 'app/pages/componentes/citas/citas.component';
+import { EstadosComponent } from 'app/pages/componentes/estados/estados.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -23,5 +24,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'citas/:id',      component: CitasComponent },
     { path: 'pacientes',      component: PacientesComponent },
-    { path: 'servicios',      component: ServiciosComponent}
+    { path: 'servicios',      component: ServiciosComponent},
+    { path: 'estados',        component:EstadosComponent}
 ];
