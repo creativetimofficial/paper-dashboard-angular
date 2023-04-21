@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Servicios } from 'app/model/servicios';
 import { ServiciosService } from 'app/services/servicios.service';
@@ -20,8 +20,8 @@ export class FormularioServiciosComponent {
    // @Input() servirecibo:Servicios;
     constructor(public servicioservice: ServiciosService, public route: Router,fb:FormBuilder) {
     this.formservicios=fb.group({
-     eid:'',
-     nombre:''
+     eid:['',[Validators.required,Validators.minLength(1)]],
+     nombre:['',[Validators.required,Validators.minLength(4)]]
 
     })
 
@@ -29,7 +29,8 @@ export class FormularioServiciosComponent {
 
 
     public guardarServicio(servicios:any) {
-
+       
+          
         this.servicioservice.guardarServicios(servicios.value).subscribe(dato => {
             console.log(this.servicios)
             Swal.fire('Nuevo servicio',
@@ -42,7 +43,7 @@ export class FormularioServiciosComponent {
 
         }
         )
-
+    
     }
 
     public irServicio() {
