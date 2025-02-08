@@ -27,7 +27,8 @@
               "node_modules/bootstrap/scss/bootstrap.scss",
               "src/assets/scss/paper-dashboard.scss",
               "node_modules/ngx-toastr/toastr.css",
-              "src/assets/css/demo.css"
+              "src/assets/css/demo.css",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -119,7 +120,7 @@
               "src/tsconfig.app.json",
               "src/tsconfig.spec.json"
             ],
-            "exclude": []
+            "exclude": ["src/environments/environment.prod.ts"]
           }
         }
       }
@@ -152,6 +153,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
+      "style": "scss",
       "styleext": "scss"
     },
     "@schematics/angular:directive": {

@@ -1,0 +1,87 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-container img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+/* Modo pantalla completa */
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen img {
+  width: 100vw; /* Usa todo el ancho */
+  height: 100vh; /* Usa toda la altura */
+  object-fit: cover; /* Ajusta sin deformar */
+}
+
+/* Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 38%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.carousel-indicators .active {
+  background-color: white;
+  transform: scale(1.3);
+}
+
+/* Botón de pantalla completa */
+.control-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Botón de cierre en pantalla completa */
+.fullscreen .control-btn {
+  background: rgba(0, 0, 0, 0.1); /* Muy transparente */
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+
+.fullscreen .control-btn:hover {
+  background: rgba(255, 255, 255, 0.3); /* Más clara al pasar el cursor */
+}

@@ -1,0 +1,16 @@
+<div [class.fullscreen]="isFullscreen" class="carousel-container">
+  <img [src]="images[currentIndex].src" [alt]="images[currentIndex].alt">
+
+  <!-- Indicadores centrados sobre la imagen -->
+  <div class="carousel-indicators">
+    <button *ngFor="let image of images; let i = index"
+            [class.active]="i === currentIndex"
+            (click)="currentIndex = i">
+    </button>
+  </div>
+
+  <!-- Botón para pantalla completa -->
+  <button class="control-btn" (click)="toggleFullscreen()" aria-label="Toggle Fullscreen">
+    {{ isFullscreen ? '✖' : '⛶' }}
+  </button>
+</div>
