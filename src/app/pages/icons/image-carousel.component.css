@@ -6,6 +6,11 @@
   overflow: hidden;
 }
 
+.carousel-container img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+
 /* Modo pantalla completa */
 .fullscreen {
   position: fixed;
@@ -71,9 +76,11 @@
 
 /* Botón de cierre en pantalla completa */
 .fullscreen .control-btn {
-  background: rgba(0, 0, 0, 0.5); /* Más transparente */
-  font-size: 22px;
+  background: rgba(0, 0, 0, 0.1); /* Muy transparente */
+  font-size: 20px;
+  padding: 5px 10px;
 }
+
 
 .fullscreen .control-btn:hover {
   background: rgba(255, 255, 255, 0.3); /* Más clara al pasar el cursor */
