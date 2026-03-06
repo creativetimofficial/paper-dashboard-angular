@@ -1,7 +1,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "downlevelIteration": true,
+    "skipLibCheck": true,
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "baseUrl": "src",
@@ -10,6 +13,9 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "types": [
+      "google.maps"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],

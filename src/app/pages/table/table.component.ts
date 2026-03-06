@@ -1,41 +1,62 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-declare interface TableData {
-    headerRow: string[];
-    dataRows: string[][];
+export interface WifiPoint {
+    id: number;
+    latitud: string;
+    longitud: string;
 }
 
 @Component({
     selector: 'table-cmp',
-    moduleId: module.id,
     templateUrl: 'table.component.html'
 })
 
-export class TableComponent implements OnInit{
-    public tableData1: TableData;
-    public tableData2: TableData;
-    ngOnInit(){
-        this.tableData1 = {
-            headerRow: [ 'ID', 'Name', 'Country', 'City', 'Salary'],
-            dataRows: [
-                ['1', 'Dakota Rice', 'Niger', 'Oud-Turnhout', '$36,738'],
-                ['2', 'Minerva Hooper', 'Curaçao', 'Sinaai-Waas', '$23,789'],
-                ['3', 'Sage Rodriguez', 'Netherlands', 'Baileux', '$56,142'],
-                ['4', 'Philip Chaney', 'Korea, South', 'Overland Park', '$38,735'],
-                ['5', 'Doris Greene', 'Malawi', 'Feldkirchen in Kärnten', '$63,542'],
-                ['6', 'Mason Porter', 'Chile', 'Gloucester', '$78,615']
-            ]
-        };
-        this.tableData2 = {
-            headerRow: [ 'ID', 'Name',  'Salary', 'Country', 'City' ],
-            dataRows: [
-                ['1', 'Dakota Rice','$36,738', 'Niger', 'Oud-Turnhout' ],
-                ['2', 'Minerva Hooper', '$23,789', 'Curaçao', 'Sinaai-Waas'],
-                ['3', 'Sage Rodriguez', '$56,142', 'Netherlands', 'Baileux' ],
-                ['4', 'Philip Chaney', '$38,735', 'Korea, South', 'Overland Park' ],
-                ['5', 'Doris Greene', '$63,542', 'Malawi', 'Feldkirchen in Kärnten', ],
-                ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester' ]
-            ]
-        };
+export class TableComponent implements OnInit {
+
+    wifiPoints: WifiPoint[] = [];
+    filteredWifiPoints: WifiPoint[] = [];
+
+    searchText: string = '';
+    totalPoints = 0;
+    limit = 20;
+
+    constructor(private http: HttpClient) { }
+
+    ngOnInit() {
+
+        this.http.get<any>('https://wifi-cdmx-24918-default-rtdb.firebaseio.com/.json')
+            .subscribe(data => {
+                // Convertimos el objeto de Firebase a un array
+                const array = Object.values(data);
+
+                this.wifiPoints = data;
+                this.totalPoints = data.length;
+
+                // mostrar primeros registros
+                this.filteredWifiPoints = this.wifiPoints.slice(0, this.limit);
+
+            });
+
     }
+
+    search() {
+
+        if (!this.searchText) {
+
+            this.filteredWifiPoints = this.wifiPoints.slice(0, this.limit);
+            return;
+
+        }
+
+        this.filteredWifiPoints = this.wifiPoints
+            .filter(p =>
+                p.id.toString().includes(this.searchText) ||
+                p.latitud.toString().includes(this.searchText) ||
+                p.longitud.toString().includes(this.searchText)
+            )
+            .slice(0, this.limit);
+
+    }
+
 }

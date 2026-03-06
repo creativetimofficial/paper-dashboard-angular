@@ -1,4 +1,5 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 declare var google: any;
 
@@ -8,24 +9,120 @@ declare var google: any;
     templateUrl: 'maps.component.html'
 })
 
-export class MapsComponent implements OnInit {
-    ngOnInit() {
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
-        var mapOptions = {
-          zoom: 13,
-          center: myLatlng,
-          scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-          styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+export class MapsComponent implements OnInit, AfterViewInit {
 
-        }
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    @ViewChild('mapContainer') mapElement!: ElementRef;
 
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title:"Hello World!"
+    map: any;
+    wifiPoints: any[] = [];
+
+    constructor(private http: HttpClient) { }
+
+    ngOnInit() { }
+
+    ngAfterViewInit() {
+        const cdmx = new google.maps.LatLng(19.4326, -99.1332);
+
+        const mapOptions = {
+            zoom: 12,
+            center: cdmx,
+            scrollwheel: false
+        };
+
+        this.map = new google.maps.Map(
+            this.mapElement.nativeElement,
+            mapOptions
+        );
+
+        this.loadWifiPoints();
+
+    }
+
+    loadWifiPoints() {
+
+        navigator.geolocation.getCurrentPosition(position => {
+
+            const userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            this.map.setCenter(userLocation);
+            this.map.setZoom(17);
+
+
+            // marcador del usuario
+            new google.maps.Marker({
+                position: userLocation,
+                map: this.map,
+                title: "Tu ubicación",
+                icon: {
+                    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                }
+            });
+
+            this.http.get<any>(
+                'https://wifi-cdmx-24918-default-rtdb.firebaseio.com/.json'
+            )
+                .subscribe(data => {
+
+                    const array = Object.values(data);
+
+                    data.forEach(point => {
+
+                        const distance = this.getDistance(
+                            userLocation.lat,
+                            userLocation.lng,
+                            parseFloat(point.latitud),
+                            parseFloat(point.longitud)
+                        );
+
+                        point.distance = distance;
+
+                    });
+
+                    // ordenar por distancia
+                    this.wifiPoints = data.sort((a, b) => a.distance - b.distance);
+
+                    this.wifiPoints.slice(0, 5).forEach(point => {
+
+                        new google.maps.Marker({
+                            position: {
+                                lat: parseFloat(point.latitud),
+                                lng: parseFloat(point.longitud)
+                            },
+                            map: this.map,
+                            title: point.id
+                        });
+
+                    });
+
+                });
+
         });
 
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
     }
+
+    getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
+
+        const R = 6371; // radio de la tierra km
+
+        const dLat = this.deg2rad(lat2 - lat1);
+        const dLon = this.deg2rad(lon2 - lon1);
+
+        const a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(this.deg2rad(lat1)) *
+            Math.cos(this.deg2rad(lat2)) *
+            Math.sin(dLon / 2) *
+            Math.sin(dLon / 2);
+
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+        return R * c;
+    }
+
+    deg2rad(deg: number) {
+        return deg * (Math.PI / 180);
+    }
+
 }

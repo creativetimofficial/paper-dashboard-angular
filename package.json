@@ -26,9 +26,10 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@googlemaps/markerclusterer": "^2.6.2",
     "@ng-bootstrap/ng-bootstrap": "12.0.1",
-    "@popperjs/core": "^2.11.4",
     "@ngui/map": "0.30.3",
+    "@popperjs/core": "^2.11.4",
     "@types/googlemaps": "3.39.14",
     "arrive": "2.4.1",
     "bootstrap": "4.5.2",
@@ -37,21 +38,24 @@
     "chartist": "0.11.4",
     "express": "4.18.0",
     "jquery": "3.5.1",
+    "leaflet": "^1.9.4",
     "moment": "2.29.1",
     "ngx-toastr": "14.3.0",
     "rxjs": "~7.5.0",
-    "zone.js": "~0.11.4",
-    "web-animations-js": "2.3.2"
+    "web-animations-js": "2.3.2",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.7",
     "@angular/cli": "~14.2.7",
     "@angular/compiler-cli": "^14.2.0",
     "@angular/language-service": "14.2.0",
+    "@types/google.maps": "^3.58.1",
     "@types/jasmine": "~4.0.0",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^17.0.21",
     "codelyzer": "6.0.2",
+    "cross-env": "^7.0.3",
     "jasmine-core": "~4.4.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.0",
@@ -62,7 +66,18 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "protractor": "7.0.0",
     "ts-node": "~10.9.1",
-    "typescript": "~4.7.2",
-    "cross-env": "^7.0.3"
-  }
+    "typescript": "~4.7.2"
+  },
+  "description": "![version](https://img.shields.io/badge/version-2.4.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/paper-dashboard-angular.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/paper-dashboard-angular.svg?maxAge=2592000)]()  [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikaViveroz/App-Angular-con-IA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ErikaViveroz/App-Angular-con-IA/issues"
+  },
+  "homepage": "https://github.com/ErikaViveroz/App-Angular-con-IA#readme"
 }

@@ -1,12 +1,50 @@
-
 <div class="row">
   <div class="col-md-12">
     <div class="card ">
       <div class="card-header ">
         Google Maps
       </div>
+      <div class="alert alert-success" *ngIf="wifiPoints.length">
+
+        📶 WiFi recomendado:
+        <b>{{wifiPoints[0].id}}</b>
+
+        <br>
+
+        Alcaldía: {{wifiPoints[0].alcaldia}}
+
+        <br>
+
+        Distancia:
+        {{wifiPoints[0].distance | number:'1.2-2'}} km
+
+      </div>
       <div class="card-body ">
-        <div id="map" class="map"></div>
+        <div #mapContainer class="map"></div>
+      </div>
+      <div class="card-footer" *ngIf="wifiPoints.length">
+
+        <h5>📍 5 WiFi más cercanos</h5>
+
+        <ul class="list-group">
+
+          <li class="list-group-item" *ngFor="let wifi of wifiPoints | slice:0:5">
+
+            <b>{{wifi.id}}</b>
+
+            <br>
+
+            Alcaldía: {{wifi.alcaldia}}
+
+            <br>
+
+            Distancia:
+            {{wifi.distance | number:'1.2-2'}} km
+
+          </li>
+
+        </ul>
+
       </div>
     </div>
   </div>
